@@ -899,19 +899,19 @@ to obtain your event code.</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceL-Fv-cZf">
-                                <rect key="frame" x="0.0" y="64" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="108" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Event Name" id="YIG-Ms-R8k"/>
                                 </items>
                             </toolbar>
                             <searchBar contentMode="redraw" placeholder="Search by Firstname, Lastname or Confirmation code" translatesAutoresizingMaskIntoConstraints="NO" id="cvH-dd-841">
-                                <rect key="frame" x="0.0" y="113" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="158" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xXP-i1-Yt5">
-                                <rect key="frame" x="0.0" y="162" width="768" height="29"/>
+                                <rect key="frame" x="0.0" y="208" width="768" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="All"/>
@@ -920,7 +920,7 @@ to obtain your event code.</string>
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="R5a-yL-8bY">
-                                <rect key="frame" x="0.0" y="200" width="768" height="668"/>
+                                <rect key="frame" x="0.0" y="252" width="768" height="668"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -932,7 +932,7 @@ to obtain your event code.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12345" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyN-FS-pZ5">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyN-FS-pZ5">
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -953,22 +953,22 @@ to obtain your event code.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTS-Ba-izV">
-                                                    <rect key="frame" x="676" y="0.0" width="42" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <state key="normal" image="placeholder_promotions.png">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12345" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I53-eJ-dvE">
-                                                    <rect key="frame" x="675" y="0.0" width="70" height="44"/>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I53-eJ-dvE">
+                                                    <rect key="frame" x="674" y="0.0" width="94" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTS-Ba-izV">
+                                                    <rect key="frame" x="704" y="11" width="22" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
@@ -990,23 +990,22 @@ to obtain your event code.</string>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="R5a-yL-8bY" firstAttribute="top" secondItem="xXP-i1-Yt5" secondAttribute="bottom" constant="10" id="Ewa-MS-wGH"/>
-                            <constraint firstAttribute="trailing" secondItem="cvH-dd-841" secondAttribute="trailing" id="IKz-pB-L1U"/>
-                            <constraint firstItem="ceL-Fv-cZf" firstAttribute="top" secondItem="M5j-Qn-DTr" secondAttribute="bottom" id="SUw-dm-o77"/>
-                            <constraint firstItem="xXP-i1-Yt5" firstAttribute="trailing" secondItem="R5a-yL-8bY" secondAttribute="trailing" id="Y8g-ss-Ktb"/>
-                            <constraint firstItem="ceL-Fv-cZf" firstAttribute="leading" secondItem="YlH-od-ojo" secondAttribute="leading" id="Z80-xx-tMd"/>
-                            <constraint firstItem="cvH-dd-841" firstAttribute="trailing" secondItem="ceL-Fv-cZf" secondAttribute="trailing" id="bRL-On-B9n"/>
-                            <constraint firstItem="xXP-i1-Yt5" firstAttribute="top" secondItem="cvH-dd-841" secondAttribute="bottom" constant="5" id="dLJ-fm-hBC"/>
-                            <constraint firstItem="ceL-Fv-cZf" firstAttribute="leading" secondItem="cvH-dd-841" secondAttribute="leading" id="eIQ-zg-jab"/>
-                            <constraint firstItem="WLH-1Q-pvT" firstAttribute="top" secondItem="R5a-yL-8bY" secondAttribute="bottom" constant="107" id="fzH-VK-tra"/>
-                            <constraint firstItem="xXP-i1-Yt5" firstAttribute="leading" secondItem="cvH-dd-841" secondAttribute="leading" id="hIS-Tl-teF"/>
-                            <constraint firstItem="R5a-yL-8bY" firstAttribute="leading" secondItem="xXP-i1-Yt5" secondAttribute="leading" id="tGX-Qy-c8V"/>
-                            <constraint firstItem="cvH-dd-841" firstAttribute="top" secondItem="ceL-Fv-cZf" secondAttribute="bottom" constant="5" id="vkt-jH-KUD"/>
-                            <constraint firstItem="xXP-i1-Yt5" firstAttribute="trailing" secondItem="cvH-dd-841" secondAttribute="trailing" id="wHC-Fa-duO"/>
+                            <constraint firstItem="R5a-yL-8bY" firstAttribute="top" secondItem="xXP-i1-Yt5" secondAttribute="bottom" constant="16" id="1Ub-M6-gGz"/>
+                            <constraint firstItem="R5a-yL-8bY" firstAttribute="leading" secondItem="xXP-i1-Yt5" secondAttribute="leading" id="1oc-hb-3wP"/>
+                            <constraint firstItem="R5a-yL-8bY" firstAttribute="leading" secondItem="YlH-od-ojo" secondAttribute="leading" id="5lj-LC-cPa"/>
+                            <constraint firstItem="ceL-Fv-cZf" firstAttribute="top" secondItem="M5j-Qn-DTr" secondAttribute="bottom" constant="44" id="HHO-T1-GSD"/>
+                            <constraint firstItem="ceL-Fv-cZf" firstAttribute="leading" secondItem="cvH-dd-841" secondAttribute="leading" id="NGj-8Y-Yqe"/>
+                            <constraint firstItem="cvH-dd-841" firstAttribute="leading" secondItem="xXP-i1-Yt5" secondAttribute="leading" id="Wzw-9Y-dZi"/>
+                            <constraint firstItem="cvH-dd-841" firstAttribute="trailing" secondItem="ceL-Fv-cZf" secondAttribute="trailing" id="d4O-a7-gvW"/>
+                            <constraint firstItem="xXP-i1-Yt5" firstAttribute="top" secondItem="cvH-dd-841" secondAttribute="bottom" constant="6" id="k5n-MZ-sQg"/>
+                            <constraint firstItem="xXP-i1-Yt5" firstAttribute="trailing" secondItem="cvH-dd-841" secondAttribute="trailing" id="mAV-oX-YpM"/>
+                            <constraint firstAttribute="trailing" secondItem="xXP-i1-Yt5" secondAttribute="trailing" id="oGI-21-srM"/>
+                            <constraint firstItem="WLH-1Q-pvT" firstAttribute="top" secondItem="R5a-yL-8bY" secondAttribute="bottom" constant="55" id="r0w-xj-K41"/>
+                            <constraint firstItem="R5a-yL-8bY" firstAttribute="trailing" secondItem="xXP-i1-Yt5" secondAttribute="trailing" id="tm6-3x-PIk"/>
+                            <constraint firstItem="cvH-dd-841" firstAttribute="top" secondItem="ceL-Fv-cZf" secondAttribute="bottom" constant="6" id="ycx-Yr-0HL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Check In" id="YUj-QQ-fHK"/>
-                    <navigationItem key="navigationItem" id="oP0-tu-2HI"/>
                     <connections>
                         <outlet property="attendeeTableView" destination="R5a-yL-8bY" id="njp-jo-jSP"/>
                         <outlet property="optionSegmentView" destination="xXP-i1-Yt5" id="dVd-52-OsW"/>
@@ -1767,7 +1766,6 @@ to sync your database.</string>
         <image name="down-arrow.png" width="128" height="128"/>
         <image name="home.png" width="49" height="43"/>
         <image name="mac.png" width="184" height="105"/>
-        <image name="placeholder_promotions.png" width="48" height="48"/>
         <image name="tree.png" width="50" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

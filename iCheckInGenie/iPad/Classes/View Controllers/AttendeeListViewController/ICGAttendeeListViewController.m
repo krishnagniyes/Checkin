@@ -10,11 +10,17 @@
 #import "ICGSyncViewController.h"
 #import "ICGAttendeeDetailCell.h"
 #import "ICGAttendeeDetailCell.h"
-@interface ICGAttendeeListViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *attendeeTableView;
 
+@interface ICGAttendeeListViewController ()
+{
+    NSUInteger index;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *attendeeTableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *optionSegmentView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchTextField;
+
+@property (nonatomic, strong) NSMutableArray *attendeesArray;
 @end
 
 @implementation ICGAttendeeListViewController
@@ -32,7 +38,29 @@
 {
     [super viewDidLoad];
     [self.attendeeTableView setBackgroundColor:[UIColor grayColor]];
+    self.attendeesArray = [[NSMutableArray alloc] init];
+    
+    
 
+    NSDictionary* d3 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"1"] forKeys:@[@"subname",@"sublastname"]];
+    NSDictionary* d4 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"2"] forKeys:@[@"subname",@"sublastname"]];
+    NSDictionary* d5 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"3"] forKeys:@[@"subname",@"sublastname"]];
+    
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    
+    [arr addObject:d3];
+    [arr addObject:d4];
+    [arr addObject:d5];
+    
+    NSDictionary* d = [NSDictionary dictionaryWithObjects:@[@"Krishna", @"111", arr] forKeys:@[@"name",@"lastname", @"SB"]];
+
+    
+    NSDictionary* d2 = [NSDictionary dictionaryWithObjects:@[@"ILA", @"2"] forKeys:@[@"name",@"lastname"]];
+
+    
+    [_attendeesArray addObject:d];
+    [_attendeesArray addObject:d2];
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -48,7 +76,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    NSUInteger count = [_attendeesArray count];
+    
+    for(NSDictionary * d in _attendeesArray)
+    {
+        count += [[d objectForKey:@"SB"] count];
+    }
+
+    NSLog(@"Count = %d", count);
+    return count;
 }
 
 
@@ -56,7 +92,43 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"AttendeeDetailCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ICGAttendeeDetailCell *cell = (ICGAttendeeDetailCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.checkInLabel.hidden = NO;
+    cell.checkInLabel.text = @"";
+
+    NSDictionary *d1 = [_attendeesArray objectAtIndex:index
+                       ];
+    
+
+    NSArray* arr = [d1 objectForKey:@"SB"];
+    
+    NSLog(@"ARR COUNT = %d", [arr count]);
+    
+    if([arr count] == indexPath.row){
+        index++;
+        arr = nil;
+    }
+    
+    if([arr count] != 0){
+        NSDictionary* d = [arr objectAtIndex:indexPath.row];
+        cell.snoLabel.text = [d objectForKey:@"sublastname"];
+        cell.infoLabel.text = [d objectForKey:@"subname"];
+        cell.additionalInfoLabel.text = [NSString stringWithFormat:@"[%d]",[arr count]];
+    }else{
+        cell.snoLabel.text = [d1 objectForKey:@"lastname"];
+        cell.infoLabel.text = [d1 objectForKey:@"name"];
+        cell.additionalInfoLabel.text = [NSString stringWithFormat:@"[%d]",[arr count]];
+    
+    }
+    
+//    NSArray *a = [_attendeesArray objectAtIndex:0];
+//    
+//    NSDictionary *d = [a objectAtIndex:indexPath.row];
+//            cell.snoLabel.text = [d objectForKey:@"lastname"];
+//            cell.infoLabel.text = [d objectForKey:@"name"];
+//            cell.additionalInfoLabel.text = [NSString stringWithFormat:@"[%d]",[a count]];
+
     return cell;
 }
 
@@ -69,27 +141,26 @@ heightForHeaderInSection:(NSInteger)section
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-//    UIView *sectionHeaderView = [[UIView alloc] initWithFrame:
-//                                 CGRectMake(0, 0, tableView.frame.size.width, 50.0)];
-//    sectionHeaderView.backgroundColor = [UIColor cyanColor];
-//    
-//    UILabel *headerLabel = [[UILabel alloc] initWithFrame:
-//                            CGRectMake(15, 15, sectionHeaderView.frame.size.width, 25.0)];
-//    
-//    headerLabel.backgroundColor = [UIColor clearColor];
-//    headerLabel.textAlignment = NSTextAlignmentCenter;
-//    [headerLabel setFont:[UIFont fontWithName:@"Verdana" size:20.0]];
-//    [sectionHeaderView addSubview:headerLabel];
-//    
-//    return sectionHeaderView;
-    
     static NSString *CellIdentifier = @"AttendeeDetailCell";
     ICGAttendeeDetailCell *cell = (ICGAttendeeDetailCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    cell.infoLabel.backgroundColor = [UIColor blueColor];
+    cell.additionalInfoLabel.backgroundColor = [UIColor blueColor];
+    cell.checkInLabel.backgroundColor = [UIColor blueColor];
+    cell.snoLabel.backgroundColor = [UIColor blueColor];
+
+    cell.snoLabel.textColor = [UIColor whiteColor];
+    
+    cell.infoLabel.textColor = [UIColor whiteColor];
+    cell.additionalInfoLabel.textColor = [UIColor whiteColor];
+    cell.checkInLabel.textColor = [UIColor whiteColor];
+
     cell.snoLabel.text = @"###";
     cell.infoLabel.text = @"Information";
     cell.additionalInfoLabel.text = @"Additional Guest";
-    cell.checkInLabel.hidden = NO;
     cell.checkInLabel.text = @"Check In";
+
+    cell.checkInLabel.hidden = NO;
     cell.checkedInButton.hidden = YES;
     
     return cell;
