@@ -33,6 +33,10 @@
         [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kBackgroundColor_iPhone]]];
     }
 
+    self.navigationItem.rightBarButtonItem = [self homeButton:@"placeholder_promotions.png"];
+//    self.navigationItem.rightBarButtonItems = @[[self homeButton:@"home.png"], [self addAttendeeButton:@"addAttendee.png"]];
+
+
 	// Do any additional setup after loading the view.
 }
 
@@ -42,4 +46,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIBarButtonItem *)homeButton:(NSString *)imagename {
+    
+    UIImage *checkInImage = nil;
+    UIButton *checkInButton = nil;
+    checkInImage = [UIImage imageNamed:imagename];
+    checkInButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [checkInButton setBackgroundImage:checkInImage forState:UIControlStateNormal];
+    
+    [checkInButton addTarget:self action:@selector(logoutAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    const CGFloat BarButtonOffset = 5.0f;
+    [checkInButton setFrame:CGRectMake(BarButtonOffset, 6, 30, 30)];
+    
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, checkInImage.size.width, checkInImage.size.height)];
+    [containerView addSubview:checkInButton];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:containerView];
+    return item;
+}
+
+- (void)logoutAction:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end
