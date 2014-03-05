@@ -8,6 +8,6 @@
 
 #import "ICGBaseViewController.h"
 
-@interface ICGLandingViewController : ICGBaseViewController
+@interface ICGLandingViewController : UIViewController
 
 @end

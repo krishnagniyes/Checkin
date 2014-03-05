@@ -26,5 +26,11 @@
 		<key>password</key>
 		<string>gniyes</string>
 	</dict>
+	<dict>
+		<key>username</key>
+		<string>sim</string>
+		<key>password</key>
+		<string>sim</string>
+	</dict>
 </array>
 </plist>

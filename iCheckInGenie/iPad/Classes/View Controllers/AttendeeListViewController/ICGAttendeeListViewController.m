@@ -8,7 +8,8 @@
 
 #import "ICGAttendeeListViewController.h"
 #import "ICGSyncViewController.h"
-
+#import "ICGAttendeeDetailCell.h"
+#import "ICGAttendeeDetailCell.h"
 @interface ICGAttendeeListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *attendeeTableView;
 
@@ -30,6 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.attendeeTableView setBackgroundColor:[UIColor grayColor]];
+
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -52,20 +55,11 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
+    static NSString *CellIdentifier = @"AttendeeDetailCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2
-                                       reuseIdentifier:CellIdentifier] ;
-    }
-    
-    cell.textLabel.text = @"Krishna";
-    cell.detailTextLabel.text = @"Sachin";
     return cell;
 }
+
 
 -(CGFloat) tableView:(UITableView *)tableView
 heightForHeaderInSection:(NSInteger)section
@@ -75,19 +69,31 @@ heightForHeaderInSection:(NSInteger)section
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *sectionHeaderView = [[UIView alloc] initWithFrame:
-                                 CGRectMake(0, 0, tableView.frame.size.width, 50.0)];
-    sectionHeaderView.backgroundColor = [UIColor cyanColor];
+//    UIView *sectionHeaderView = [[UIView alloc] initWithFrame:
+//                                 CGRectMake(0, 0, tableView.frame.size.width, 50.0)];
+//    sectionHeaderView.backgroundColor = [UIColor cyanColor];
+//    
+//    UILabel *headerLabel = [[UILabel alloc] initWithFrame:
+//                            CGRectMake(15, 15, sectionHeaderView.frame.size.width, 25.0)];
+//    
+//    headerLabel.backgroundColor = [UIColor clearColor];
+//    headerLabel.textAlignment = NSTextAlignmentCenter;
+//    [headerLabel setFont:[UIFont fontWithName:@"Verdana" size:20.0]];
+//    [sectionHeaderView addSubview:headerLabel];
+//    
+//    return sectionHeaderView;
     
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:
-                            CGRectMake(15, 15, sectionHeaderView.frame.size.width, 25.0)];
+    static NSString *CellIdentifier = @"AttendeeDetailCell";
+    ICGAttendeeDetailCell *cell = (ICGAttendeeDetailCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.snoLabel.text = @"###";
+    cell.infoLabel.text = @"Information";
+    cell.additionalInfoLabel.text = @"Additional Guest";
+    cell.checkInLabel.hidden = NO;
+    cell.checkInLabel.text = @"Check In";
+    cell.checkedInButton.hidden = YES;
     
-    headerLabel.backgroundColor = [UIColor clearColor];
-    headerLabel.textAlignment = NSTextAlignmentCenter;
-    [headerLabel setFont:[UIFont fontWithName:@"Verdana" size:20.0]];
-    [sectionHeaderView addSubview:headerLabel];
-    
-    return sectionHeaderView;
+    return cell;
+
 }
 
 @end

@@ -13,6 +13,7 @@
 		6B16C83F18C6DA3E00DBCC66 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B16C83E18C6DA3E00DBCC66 /* tree.png */; };
 		6B16C84118C6E7C800DBCC66 /* Login.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B16C84018C6E7C800DBCC66 /* Login.plist */; };
 		6B16C84318C6ECD100DBCC66 /* placeholder_promotions.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B16C84218C6ECD100DBCC66 /* placeholder_promotions.png */; };
+		6B16C84618C7046C00DBCC66 /* ICGAttendeeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B16C84518C7046C00DBCC66 /* ICGAttendeeDetailCell.m */; };
 		6B276B9518B6710F00FB717A /* ICGForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9418B6710F00FB717A /* ICGForgotPasswordViewController.m */; };
 		6B276B9918B7985700FB717A /* ICGMyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9818B7985700FB717A /* ICGMyAccountViewController.m */; };
 		6B276B9C18B79AC100FB717A /* ICGParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9B18B79AC100FB717A /* ICGParentViewController.m */; };
@@ -120,6 +121,8 @@
 		6B16C83E18C6DA3E00DBCC66 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		6B16C84018C6E7C800DBCC66 /* Login.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Login.plist; sourceTree = "<group>"; };
 		6B16C84218C6ECD100DBCC66 /* placeholder_promotions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_promotions.png; sourceTree = "<group>"; };
+		6B16C84418C7046C00DBCC66 /* ICGAttendeeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGAttendeeDetailCell.h; sourceTree = "<group>"; };
+		6B16C84518C7046C00DBCC66 /* ICGAttendeeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGAttendeeDetailCell.m; sourceTree = "<group>"; };
 		6B276B9318B6710F00FB717A /* ICGForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGForgotPasswordViewController.h; sourceTree = "<group>"; };
 		6B276B9418B6710F00FB717A /* ICGForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGForgotPasswordViewController.m; sourceTree = "<group>"; };
 		6B276B9718B7985700FB717A /* ICGMyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGMyAccountViewController.h; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 			children = (
 				6B6894E918ABDF9D00619D76 /* ICGAttendeeListViewController.h */,
 				6B6894EA18ABDF9D00619D76 /* ICGAttendeeListViewController.m */,
+				6B16C84418C7046C00DBCC66 /* ICGAttendeeDetailCell.h */,
+				6B16C84518C7046C00DBCC66 /* ICGAttendeeDetailCell.m */,
 			);
 			name = AttendeeListViewController;
 			path = "iPad/Classes/View Controllers/AttendeeListViewController";
@@ -932,6 +937,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
+					6BA4279118A00BE000473959 = {
+						DevelopmentTeam = 72D6D695R7;
+					};
 					6BA427B518A00BE000473959 = {
 						TestTargetID = 6BA4279118A00BE000473959;
 					};
@@ -1043,6 +1051,7 @@
 				6B7449B418BC5E73001D87D1 /* LoginOperation.m in Sources */,
 				6BA427AF18A00BE000473959 /* ICViewController.m in Sources */,
 				6B889B8C18C301FC000C8EDA /* UIProgressView+AFNetworking.m in Sources */,
+				6B16C84618C7046C00DBCC66 /* ICGAttendeeDetailCell.m in Sources */,
 				6B276B9518B6710F00FB717A /* ICGForgotPasswordViewController.m in Sources */,
 				6B6894D318ABDE6500619D76 /* ICGBaseViewController.m in Sources */,
 				6B889B8618C301FC000C8EDA /* AFURLSessionManager.m in Sources */,
@@ -1199,10 +1208,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Krishna Gupta (J2WP82JHA7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Krishna Gupta (J2WP82JHA7)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iCheckInGenie/iCheckInGenie-Prefix.pch";
 				INFOPLIST_FILE = "iCheckInGenie/iCheckInGenie-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1212,10 +1224,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Krishna Gupta (J2WP82JHA7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Krishna Gupta (J2WP82JHA7)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iCheckInGenie/iCheckInGenie-Prefix.pch";
 				INFOPLIST_FILE = "iCheckInGenie/iCheckInGenie-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
