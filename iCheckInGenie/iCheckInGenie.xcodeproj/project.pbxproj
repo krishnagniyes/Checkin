@@ -10,6 +10,7 @@
 		6B0A10DA18BF4407007A7EF0 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10D918BF4407007A7EF0 /* beep.mp3 */; };
 		6B0A10DD18BF4656007A7EF0 /* ScannerKitActivitySpinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10DB18BF4656007A7EF0 /* ScannerKitActivitySpinner.png */; };
 		6B0A10DE18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10DC18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png */; };
+		6B16C83F18C6DA3E00DBCC66 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B16C83E18C6DA3E00DBCC66 /* tree.png */; };
 		6B276B9518B6710F00FB717A /* ICGForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9418B6710F00FB717A /* ICGForgotPasswordViewController.m */; };
 		6B276B9918B7985700FB717A /* ICGMyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9818B7985700FB717A /* ICGMyAccountViewController.m */; };
 		6B276B9C18B79AC100FB717A /* ICGParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9B18B79AC100FB717A /* ICGParentViewController.m */; };
@@ -92,7 +93,6 @@
 		6BA427FB18A00E9E00473959 /* RemoteOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA427F918A00E9E00473959 /* RemoteOperation.m */; };
 		6BA427FC18A00E9E00473959 /* RemoteOperations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BA427FA18A00E9E00473959 /* RemoteOperations.plist */; };
 		6BB0AF3918B20DF80015E299 /* mac.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0AF3718B20DF80015E299 /* mac.png */; };
-		6BB0AF3B18B215610015E299 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0AF3A18B215610015E299 /* tree.png */; };
 		6BB0AF3D18B227BC0015E299 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0AF3C18B227BC0015E299 /* background.png */; };
 		6BB0AF4118B228D10015E299 /* ICASplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0AF4018B228D10015E299 /* ICASplashViewController.m */; };
 		6BB0AF4418B230E10015E299 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0AF4218B230E10015E299 /* Default.png */; };
@@ -115,6 +115,7 @@
 		6B0A10D918BF4407007A7EF0 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		6B0A10DB18BF4656007A7EF0 /* ScannerKitActivitySpinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScannerKitActivitySpinner.png; sourceTree = "<group>"; };
 		6B0A10DC18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScannerKitActivitySpinner@2x.png"; sourceTree = "<group>"; };
+		6B16C83E18C6DA3E00DBCC66 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		6B276B9318B6710F00FB717A /* ICGForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGForgotPasswordViewController.h; sourceTree = "<group>"; };
 		6B276B9418B6710F00FB717A /* ICGForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGForgotPasswordViewController.m; sourceTree = "<group>"; };
 		6B276B9718B7985700FB717A /* ICGMyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGMyAccountViewController.h; sourceTree = "<group>"; };
@@ -258,7 +259,6 @@
 		6BA427F918A00E9E00473959 /* RemoteOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteOperation.m; sourceTree = "<group>"; };
 		6BA427FA18A00E9E00473959 /* RemoteOperations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RemoteOperations.plist; sourceTree = "<group>"; };
 		6BB0AF3718B20DF80015E299 /* mac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mac.png; sourceTree = "<group>"; };
-		6BB0AF3A18B215610015E299 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tree.png; path = "../../../../../../Apple POC's/Go Green/GoGreenClient/GoGreenClient/Images/tree.png"; sourceTree = "<group>"; };
 		6BB0AF3C18B227BC0015E299 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BB0AF3F18B228D10015E299 /* ICASplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICASplashViewController.h; sourceTree = "<group>"; };
 		6BB0AF4018B228D10015E299 /* ICASplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICASplashViewController.m; sourceTree = "<group>"; };
@@ -836,6 +836,7 @@
 		6BB0AF3618B20DF80015E299 /* temp */ = {
 			isa = PBXGroup;
 			children = (
+				6B16C83E18C6DA3E00DBCC66 /* tree.png */,
 				6B0A10DB18BF4656007A7EF0 /* ScannerKitActivitySpinner.png */,
 				6B0A10DC18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png */,
 				6B449A2318B36159007074F0 /* addAttendee.png */,
@@ -845,7 +846,6 @@
 				6BB0AF4218B230E10015E299 /* Default.png */,
 				6BB0AF4318B230E10015E299 /* Default@2x.png */,
 				6BB0AF3C18B227BC0015E299 /* background.png */,
-				6BB0AF3A18B215610015E299 /* tree.png */,
 				6BB0AF3718B20DF80015E299 /* mac.png */,
 			);
 			path = temp;
@@ -963,7 +963,6 @@
 				6B0A10DA18BF4407007A7EF0 /* beep.mp3 in Resources */,
 				6BA427B118A00BE000473959 /* Images.xcassets in Resources */,
 				6B449A2618B36159007074F0 /* home.png in Resources */,
-				6BB0AF3B18B215610015E299 /* tree.png in Resources */,
 				6B449A1B18B3486B007074F0 /* up-arrow.png in Resources */,
 				6BB0AF3918B20DF80015E299 /* mac.png in Resources */,
 				6BB0AF4518B230E10015E299 /* Default@2x.png in Resources */,
@@ -972,6 +971,7 @@
 				6BA427FC18A00E9E00473959 /* RemoteOperations.plist in Resources */,
 				6BB0AF3D18B227BC0015E299 /* background.png in Resources */,
 				6B68950B18ABE29000619D76 /* LandingPage.plist in Resources */,
+				6B16C83F18C6DA3E00DBCC66 /* tree.png in Resources */,
 				6BB0AF4418B230E10015E299 /* Default.png in Resources */,
 				6B449A1F18B348F2007074F0 /* data.plist in Resources */,
 				6B449A1718B30878007074F0 /* Main_iPhone_temp.storyboard in Resources */,
