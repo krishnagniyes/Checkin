@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>menuid</key>
+		<string>11111</string>
+		<key>menutitle</key>
+		<string>Organizer Login</string>
+		<key>menusubtitle</key>
+		<string>Click here to Login as an Event Organizer</string>
+		<key>menuurl</key>
+		<string>NA</string>
+	</dict>
+	<dict>
+		<key>menuid</key>
+		<string>22222</string>
+		<key>menutitle</key>
+		<string>Have an Event Code?</string>
+		<key>menusubtitle</key>
+		<string>Click here to Enter Event Code</string>
+		<key>menuurl</key>
+		<string>NA</string>
+	</dict>
+	<dict>
+		<key>menuid</key>
+		<string>33333</string>
+		<key>menutitle</key>
+		<string>Have a Attendee Confirmation Code?</string>
+		<key>menusubtitle</key>
+		<string>Click here to PRECHECKIN using Confirmation Code</string>
+		<key>menuurl</key>
+		<string>NA</string>
+	</dict>
+	<dict>
+		<key>menuid</key>
+		<string>44444</string>
+		<key>menutitle</key>
+		<string>Would you like to submit your CE credits?</string>
+		<key>menusubtitle</key>
+		<string>Click here to View Sessions and Submit CE Credits</string>
+		<key>menuurl</key>
+		<string>NA</string>
+	</dict>
+	<dict>
+		<key>menuid</key>
+		<string>55555</string>
+		<key>menutitle</key>
+		<string>Exhibitor Lead Retreival Login</string>
+		<key>menusubtitle</key>
+		<string>Click here to Enter your Exhibitor Activation Code</string>
+		<key>menuurl</key>
+		<string>NA</string>
+	</dict>
+</array>
+</plist>

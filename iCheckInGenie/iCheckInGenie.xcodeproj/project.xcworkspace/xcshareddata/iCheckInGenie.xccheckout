@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AAD23255-6C8C-4176-A321-D034A48D4D62</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iCheckInGenie</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DB54F76E-716E-4E47-A5EC-31C26F4F84B3</key>
+		<string>https://github.com/gniyes/iCheckinGenie-Iphone.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iCheckInGenie/iCheckInGenie.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DB54F76E-716E-4E47-A5EC-31C26F4F84B3</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gniyes/iCheckinGenie-Iphone.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DB54F76E-716E-4E47-A5EC-31C26F4F84B3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DB54F76E-716E-4E47-A5EC-31C26F4F84B3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iCheckinGenie-Iphone</string>
+		</dict>
+	</array>
+</dict>
+</plist>
