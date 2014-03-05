@@ -11,6 +11,7 @@
 		6B0A10DD18BF4656007A7EF0 /* ScannerKitActivitySpinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10DB18BF4656007A7EF0 /* ScannerKitActivitySpinner.png */; };
 		6B0A10DE18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10DC18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png */; };
 		6B16C83F18C6DA3E00DBCC66 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B16C83E18C6DA3E00DBCC66 /* tree.png */; };
+		6B16C84118C6E7C800DBCC66 /* Login.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B16C84018C6E7C800DBCC66 /* Login.plist */; };
 		6B276B9518B6710F00FB717A /* ICGForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9418B6710F00FB717A /* ICGForgotPasswordViewController.m */; };
 		6B276B9918B7985700FB717A /* ICGMyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9818B7985700FB717A /* ICGMyAccountViewController.m */; };
 		6B276B9C18B79AC100FB717A /* ICGParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9B18B79AC100FB717A /* ICGParentViewController.m */; };
@@ -116,6 +117,7 @@
 		6B0A10DB18BF4656007A7EF0 /* ScannerKitActivitySpinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScannerKitActivitySpinner.png; sourceTree = "<group>"; };
 		6B0A10DC18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScannerKitActivitySpinner@2x.png"; sourceTree = "<group>"; };
 		6B16C83E18C6DA3E00DBCC66 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
+		6B16C84018C6E7C800DBCC66 /* Login.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Login.plist; sourceTree = "<group>"; };
 		6B276B9318B6710F00FB717A /* ICGForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGForgotPasswordViewController.h; sourceTree = "<group>"; };
 		6B276B9418B6710F00FB717A /* ICGForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGForgotPasswordViewController.m; sourceTree = "<group>"; };
 		6B276B9718B7985700FB717A /* ICGMyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGMyAccountViewController.h; sourceTree = "<group>"; };
@@ -752,6 +754,7 @@
 			children = (
 				6B449A1E18B348F2007074F0 /* data.plist */,
 				6B68950A18ABE29000619D76 /* LandingPage.plist */,
+				6B16C84018C6E7C800DBCC66 /* Login.plist */,
 			);
 			path = "Demo Data";
 			sourceTree = "<group>";
@@ -955,6 +958,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B16C84118C6E7C800DBCC66 /* Login.plist in Resources */,
 				6B0A10DD18BF4656007A7EF0 /* ScannerKitActivitySpinner.png in Resources */,
 				6BA427AC18A00BE000473959 /* Main_iPad.storyboard in Resources */,
 				6B0A10DE18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png in Resources */,
