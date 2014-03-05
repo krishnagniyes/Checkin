@@ -110,13 +110,25 @@
 
 
 - (IBAction)loginAction:(id)sender {
-    
-//    [[ICGDataManager defaultManager] fetchData:^(id data, NSError *error) {
-//        
-//        NSLog(@"DESC = %@", [data description]);
-//
-//    }];
-    
+//    NSArray *loginArray = [CommonUtils getDemoDataFor:@"Login"];
+//    
+//    BOOL isUserAuthenticated = NO;
+//    for(NSDictionary *dict in loginArray)
+//    {
+//        if([[dict objectForKey:@"username"] isEqualToString:_usernameTF.text] && [[dict objectForKey:@"password"] isEqualToString:_userPasswordTF.text])
+//        {
+//            isUserAuthenticated = YES;
+//            break;
+//        }
+//    }
+//    
+//    if(!isUserAuthenticated)
+//    {
+//        [CommonUtils showSimpleAlertWithTitle:@"Invalid User" andMessage:@"Invalid username or password"];
+//        _usernameTF.text = @"";
+//        _userPasswordTF.text = @"";
+//        return;
+//    }
     [self performSegueWithIdentifier:@"eventlistpage" sender:self];
     
 }
