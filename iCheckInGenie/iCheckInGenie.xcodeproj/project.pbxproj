@@ -25,6 +25,7 @@
 		6B449A2218B34A69007074F0 /* ExpandableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B449A2118B34A69007074F0 /* ExpandableTableViewCell.m */; };
 		6B449A2518B36159007074F0 /* addAttendee.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B449A2318B36159007074F0 /* addAttendee.png */; };
 		6B449A2618B36159007074F0 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B449A2418B36159007074F0 /* home.png */; };
+		6B53843A18CB62E200F72939 /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B53843918CB62E200F72939 /* CustomAlertView.m */; };
 		6B6894D318ABDE6500619D76 /* ICGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6894D218ABDE6500619D76 /* ICGBaseViewController.m */; };
 		6B6894D618ABDE9900619D76 /* ICGLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6894D518ABDE9900619D76 /* ICGLandingViewController.m */; };
 		6B6894D918ABDEE800619D76 /* ICGLoginViaEventCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6894D818ABDEE800619D76 /* ICGLoginViaEventCodeViewController.m */; };
@@ -138,6 +139,8 @@
 		6B449A2118B34A69007074F0 /* ExpandableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandableTableViewCell.m; sourceTree = "<group>"; };
 		6B449A2318B36159007074F0 /* addAttendee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addAttendee.png; sourceTree = "<group>"; };
 		6B449A2418B36159007074F0 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		6B53843818CB62E200F72939 /* CustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertView.h; sourceTree = "<group>"; };
+		6B53843918CB62E200F72939 /* CustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertView.m; sourceTree = "<group>"; };
 		6B6894D118ABDE6500619D76 /* ICGBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGBaseViewController.h; sourceTree = "<group>"; };
 		6B6894D218ABDE6500619D76 /* ICGBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGBaseViewController.m; sourceTree = "<group>"; };
 		6B6894D418ABDE9900619D76 /* ICGLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGLandingViewController.h; sourceTree = "<group>"; };
@@ -806,6 +809,8 @@
 				6BA427E818A00DC600473959 /* RadioButton.m */,
 				6BA427E918A00DC600473959 /* Reachability.h */,
 				6BA427EA18A00DC600473959 /* Reachability.m */,
+				6B53843818CB62E200F72939 /* CustomAlertView.h */,
+				6B53843918CB62E200F72939 /* CustomAlertView.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1021,6 +1026,7 @@
 				6B6894E518ABDF6900619D76 /* ICGAttendeeDetailViewController.m in Sources */,
 				6BA427F018A00DC600473959 /* CommonUtils.m in Sources */,
 				6B7B9B9B18B87DDB008CB1EF /* ICGPersonalInfoViewController.m in Sources */,
+				6B53843A18CB62E200F72939 /* CustomAlertView.m in Sources */,
 				6B6894EE18ABDFB300619D76 /* ICGEvenLandingViewController.m in Sources */,
 				6BA427F318A00DC600473959 /* GlobalMemory.m in Sources */,
 				6BA427F518A00DC600473959 /* Reachability.m in Sources */,
