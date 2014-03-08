@@ -40,7 +40,6 @@
     [self.attendeeTableView setBackgroundColor:[UIColor grayColor]];
     self.attendeesArray = [[NSMutableArray alloc] init];
     
-    
 
     NSDictionary* d3 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"1"] forKeys:@[@"subname",@"sublastname"]];
     NSDictionary* d4 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"2"] forKeys:@[@"subname",@"sublastname"]];
@@ -91,7 +90,15 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"AttendeeDetailCell";
+    static NSString *CellIdentifier = nil;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        CellIdentifier = @"AttendeeDetailCell";
+    }
+    else {
+        CellIdentifier = @"AttendeeDetailCellIPhone";
+    }
+
     ICGAttendeeDetailCell *cell = (ICGAttendeeDetailCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.checkInLabel.hidden = NO;
@@ -141,7 +148,15 @@ heightForHeaderInSection:(NSInteger)section
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    static NSString *CellIdentifier = @"AttendeeDetailCell";
+    static NSString *CellIdentifier = nil;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        CellIdentifier = @"AttendeeDetailCell";
+    }
+    else {
+        CellIdentifier = @"AttendeeDetailCellIPhone";
+    }
+
     ICGAttendeeDetailCell *cell = (ICGAttendeeDetailCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     cell.infoLabel.backgroundColor = [UIColor blueColor];

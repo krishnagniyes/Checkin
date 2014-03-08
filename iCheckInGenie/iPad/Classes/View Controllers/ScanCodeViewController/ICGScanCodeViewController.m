@@ -7,6 +7,21 @@
 //
 
 #import "ICGScanCodeViewController.h"
+
+#define  kSuccessTitle @"Success"
+#define  kSuccessMessage @"Success Message"
+
+#define  kFailureTitle @"Failure"
+#define  kFailureMessage @"Failure Message"
+
+#define  kAlreadyScannedTitle @"ID Already Scanned"
+#define  kAlreadyScannedMessage @"This ID has already been scanned for this event."
+
+#define kInvalidBarcodeTitle @"Invalid"
+#define kInvalidBarcodeMessage @"Invalid Barcode! Please scan again or try another ID"
+
+
+
 @import AVFoundation;
 
 @interface ICGScanCodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
@@ -18,6 +33,10 @@
     AVCaptureVideoPreviewLayer *_prevLayer;
     
     UIView *_highlightView;
+
+    ///Flash light stuff
+    UIButton					*_flashlightButton;
+    BOOL						_isFlashlightOn;
 }
 
 -(void) loadBeepSound;
@@ -44,6 +63,8 @@
     [super viewDidLoad];
     
     [self loadBeepSound];
+    
+    [self openTourch];
     
     [self customIndicator];
     _highlightView = [[UIView alloc] init];
@@ -110,6 +131,7 @@
         [_session stopRunning];
         [_audioPlayer play] ;
         _highlightView.frame = _prevLayer.frame;
+        [self showAlert:detectionString];
         return;
     }
     
@@ -169,5 +191,90 @@
         [_audioPlayer prepareToPlay];
     }
 }
+
+#pragma mark -
+#pragma AlertView delegates
+
+- (void) showAlert:(NSString *) code
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Title" message:code delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel", nil];
+    
+    UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
+    [alert addSubview:img];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self.navigationController popViewControllerAnimated:YES];
+
+}
+
+
+- (void)openTourch
+{
+    [self setView:[[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]]];
+    
+	AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+	// If torch supported, add button to toggle flashlight on/off
+	if ([device hasTorch] == YES)
+	{
+        _flashlightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 70, 48, 48)];
+        [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"tree.png"] forState:UIControlStateNormal];
+        [_flashlightButton addTarget:self action:@selector(buttonPressed:) forControlEvents: UIControlEventTouchUpInside];
+        
+        [[self view] addSubview:_flashlightButton];
+	}
+    
+}
+
+/*---------------------------------------------------------------------------
+ *
+ *--------------------------------------------------------------------------*/
+- (void)buttonPressed:(UIButton *)button
+{
+    if (button == _flashlightButton)
+    {
+        if (_isFlashlightOn == NO)
+        {
+            _isFlashlightOn = YES;
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"placeholder_promotions.png"] forState:UIControlStateNormal];
+            
+        }
+        else
+        {
+            _isFlashlightOn = NO;
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"tree.png"] forState:UIControlStateNormal];
+        }
+        
+		[self toggleFlashlight];
+        
+    }
+}
+
+- (void)toggleFlashlight
+{
+    if (_device.torchMode == AVCaptureTorchModeOff)
+    {
+        // Start session configuration
+        [_session beginConfiguration];
+        [_device lockForConfiguration:nil];
+        
+		// Set torch to on
+        [_device setTorchMode:AVCaptureTorchModeOn];
+        
+        [_device unlockForConfiguration];
+        [_session commitConfiguration];
+        
+        // Start the session
+        [_session startRunning];
+    }
+    else 
+    {
+//        [_session stopRunning];
+//        _session = nil;
+    }
+}    
 
 @end
