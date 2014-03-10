@@ -102,6 +102,14 @@
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
+    
+//    EAN/UPC
+//    GS1 DataBar
+//    GS1-128
+//    ITF-14
+//    GS1 DataMatrix
+//    GS1 QR Code
+
     CGRect highlightViewRect = CGRectZero;
     AVMetadataMachineReadableCodeObject *barCodeObject;
     NSString *detectionString = nil;
