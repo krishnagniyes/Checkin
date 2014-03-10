@@ -56,7 +56,6 @@
 		6B7B9BA118B9F094008CB1EF /* ICGLogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B9BA018B9F094008CB1EF /* ICGLogoutViewController.m */; };
 		6B889B1518C2E4E5000C8EDA /* ICGDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B889B1418C2E4E5000C8EDA /* ICGDataBase.m */; };
 		6B889B1818C2E6EA000C8EDA /* CheckIN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B889B1618C2E6EA000C8EDA /* CheckIN.xcdatamodeld */; };
-		6B889B1B18C2E9C3000C8EDA /* AttendeeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B889B1A18C2E9C3000C8EDA /* AttendeeDetail.m */; };
 		6B889B7E18C301FC000C8EDA /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B889B5C18C301FC000C8EDA /* AFHTTPRequestOperation.m */; };
 		6B889B7F18C301FC000C8EDA /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B889B5E18C301FC000C8EDA /* AFHTTPRequestOperationManager.m */; };
 		6B889B8018C301FC000C8EDA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B889B6018C301FC000C8EDA /* AFHTTPSessionManager.m */; };
@@ -73,6 +72,9 @@
 		6B889B8B18C301FC000C8EDA /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B889B7818C301FC000C8EDA /* UIImageView+AFNetworking.m */; };
 		6B889B8C18C301FC000C8EDA /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B889B7B18C301FC000C8EDA /* UIProgressView+AFNetworking.m */; };
 		6B889B8D18C301FC000C8EDA /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B889B7D18C301FC000C8EDA /* UIWebView+AFNetworking.m */; };
+		6B98C1D918CE1AE4006E39A2 /* AttendeeDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B98C1D818CE1AE4006E39A2 /* AttendeeDetail.json */; };
+		6B98C1DC18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B98C1DA18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodeld */; };
+		6B98C1E518CE2C9F006E39A2 /* AttendeeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B98C1E418CE2C9F006E39A2 /* AttendeeDetail.m */; };
 		6BA4279618A00BE000473959 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4279518A00BE000473959 /* Foundation.framework */; };
 		6BA4279818A00BE000473959 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4279718A00BE000473959 /* CoreGraphics.framework */; };
 		6BA4279A18A00BE000473959 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA4279918A00BE000473959 /* UIKit.framework */; };
@@ -195,8 +197,6 @@
 		6B889B1318C2E4E5000C8EDA /* ICGDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGDataBase.h; sourceTree = "<group>"; };
 		6B889B1418C2E4E5000C8EDA /* ICGDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGDataBase.m; sourceTree = "<group>"; };
 		6B889B1718C2E6EA000C8EDA /* CheckIN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CheckIN.xcdatamodel; sourceTree = "<group>"; };
-		6B889B1918C2E9C3000C8EDA /* AttendeeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendeeDetail.h; sourceTree = "<group>"; };
-		6B889B1A18C2E9C3000C8EDA /* AttendeeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendeeDetail.m; sourceTree = "<group>"; };
 		6B889B5B18C301FC000C8EDA /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		6B889B5C18C301FC000C8EDA /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		6B889B5D18C301FC000C8EDA /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -231,6 +231,10 @@
 		6B889B7B18C301FC000C8EDA /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		6B889B7C18C301FC000C8EDA /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		6B889B7D18C301FC000C8EDA /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		6B98C1D818CE1AE4006E39A2 /* AttendeeDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AttendeeDetail.json; sourceTree = "<group>"; };
+		6B98C1DB18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CheckinCoreDataObject.xcdatamodel; sourceTree = "<group>"; };
+		6B98C1E318CE2C9F006E39A2 /* AttendeeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendeeDetail.h; sourceTree = "<group>"; };
+		6B98C1E418CE2C9F006E39A2 /* AttendeeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendeeDetail.m; sourceTree = "<group>"; };
 		6BA4279218A00BE000473959 /* iCheckInGenie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCheckInGenie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA4279518A00BE000473959 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BA4279718A00BE000473959 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -746,6 +750,7 @@
 				6B889B1418C2E4E5000C8EDA /* ICGDataBase.m */,
 				6B7449AF18BC5E01001D87D1 /* ICGDataManager.h */,
 				6B7449B018BC5E01001D87D1 /* ICGDataManager.m */,
+				6B98C1DA18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodeld */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -753,8 +758,8 @@
 		6BA427D918A00DC600473959 /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
-				6B889B1918C2E9C3000C8EDA /* AttendeeDetail.h */,
-				6B889B1A18C2E9C3000C8EDA /* AttendeeDetail.m */,
+				6B98C1E318CE2C9F006E39A2 /* AttendeeDetail.h */,
+				6B98C1E418CE2C9F006E39A2 /* AttendeeDetail.m */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -765,6 +770,7 @@
 				6B449A1E18B348F2007074F0 /* data.plist */,
 				6B68950A18ABE29000619D76 /* LandingPage.plist */,
 				6B16C84018C6E7C800DBCC66 /* Login.plist */,
+				6B98C1D818CE1AE4006E39A2 /* AttendeeDetail.json */,
 			);
 			path = "Demo Data";
 			sourceTree = "<group>";
@@ -978,6 +984,7 @@
 				6B0A10DD18BF4656007A7EF0 /* ScannerKitActivitySpinner.png in Resources */,
 				6BA427AC18A00BE000473959 /* Main_iPad.storyboard in Resources */,
 				6B0A10DE18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png in Resources */,
+				6B98C1D918CE1AE4006E39A2 /* AttendeeDetail.json in Resources */,
 				6B449A2518B36159007074F0 /* addAttendee.png in Resources */,
 				6B449A1A18B3486B007074F0 /* down-arrow.png in Resources */,
 				6B0A10DA18BF4407007A7EF0 /* beep.mp3 in Resources */,
@@ -1021,7 +1028,6 @@
 				6B889B8918C301FC000C8EDA /* UIAlertView+AFNetworking.m in Sources */,
 				6BA427A618A00BE000473959 /* ICAppDelegate.m in Sources */,
 				6B889B8118C301FC000C8EDA /* AFNetworkReachabilityManager.m in Sources */,
-				6B889B1B18C2E9C3000C8EDA /* AttendeeDetail.m in Sources */,
 				6B276B9C18B79AC100FB717A /* ICGParentViewController.m in Sources */,
 				6B6894E518ABDF6900619D76 /* ICGAttendeeDetailViewController.m in Sources */,
 				6BA427F018A00DC600473959 /* CommonUtils.m in Sources */,
@@ -1037,6 +1043,7 @@
 				6B889B8418C301FC000C8EDA /* AFURLRequestSerialization.m in Sources */,
 				6BA427EF18A00DC600473959 /* CommunicationManager.m in Sources */,
 				6B6894F718ABE00800619D76 /* ICGLeadRetrievalDashBoardViewController.m in Sources */,
+				6B98C1E518CE2C9F006E39A2 /* AttendeeDetail.m in Sources */,
 				6B889B7F18C301FC000C8EDA /* AFHTTPRequestOperationManager.m in Sources */,
 				6B7449B118BC5E01001D87D1 /* ICGDataManager.m in Sources */,
 				6BA427F118A00DC600473959 /* GGCustomPicker.m in Sources */,
@@ -1045,6 +1052,7 @@
 				6B6894FD18ABE02F00619D76 /* ICGLeadRetrievalScanController.m in Sources */,
 				6B889B8B18C301FC000C8EDA /* UIImageView+AFNetworking.m in Sources */,
 				6B889B8D18C301FC000C8EDA /* UIWebView+AFNetworking.m in Sources */,
+				6B98C1DC18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodeld in Sources */,
 				6B6894FA18ABE01B00619D76 /* ICGLeadRetrievalLeadListViewController.m in Sources */,
 				6B6894E818ABDF8200619D76 /* ICGAddAttendeeViewController.m in Sources */,
 				6B889B8A18C301FC000C8EDA /* UIButton+AFNetworking.m in Sources */,
@@ -1323,6 +1331,16 @@
 			);
 			currentVersion = 6B889B1718C2E6EA000C8EDA /* CheckIN.xcdatamodel */;
 			path = CheckIN.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		6B98C1DA18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B98C1DB18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodel */,
+			);
+			currentVersion = 6B98C1DB18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodel */;
+			path = CheckinCoreDataObject.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
