@@ -18,6 +18,7 @@
 		6B276B9918B7985700FB717A /* ICGMyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9818B7985700FB717A /* ICGMyAccountViewController.m */; };
 		6B276B9C18B79AC100FB717A /* ICGParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9B18B79AC100FB717A /* ICGParentViewController.m */; };
 		6B2984AE18B4B85B0059841D /* ICGLoginViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2984AD18B4B85B0059841D /* ICGLoginViewControllerTests.m */; };
+		6B2C05D418F7141F00F2DF0E /* ICGLoginOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C05D318F7141F00F2DF0E /* ICGLoginOptionsViewController.m */; };
 		6B449A1718B30878007074F0 /* Main_iPhone_temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B449A1518B30878007074F0 /* Main_iPhone_temp.storyboard */; };
 		6B449A1A18B3486B007074F0 /* down-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B449A1818B3486B007074F0 /* down-arrow.png */; };
 		6B449A1B18B3486B007074F0 /* up-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B449A1918B3486B007074F0 /* up-arrow.png */; };
@@ -133,6 +134,8 @@
 		6B276B9A18B79AC100FB717A /* ICGParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGParentViewController.h; sourceTree = "<group>"; };
 		6B276B9B18B79AC100FB717A /* ICGParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGParentViewController.m; sourceTree = "<group>"; };
 		6B2984AD18B4B85B0059841D /* ICGLoginViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGLoginViewControllerTests.m; sourceTree = "<group>"; };
+		6B2C05D218F7141F00F2DF0E /* ICGLoginOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGLoginOptionsViewController.h; sourceTree = "<group>"; };
+		6B2C05D318F7141F00F2DF0E /* ICGLoginOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGLoginOptionsViewController.m; sourceTree = "<group>"; };
 		6B449A1618B30878007074F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_temp.storyboard; sourceTree = "<group>"; };
 		6B449A1818B3486B007074F0 /* down-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down-arrow.png"; sourceTree = "<group>"; };
 		6B449A1918B3486B007074F0 /* up-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up-arrow.png"; sourceTree = "<group>"; };
@@ -406,6 +409,8 @@
 			children = (
 				6B6894D418ABDE9900619D76 /* ICGLandingViewController.h */,
 				6B6894D518ABDE9900619D76 /* ICGLandingViewController.m */,
+				6B2C05D218F7141F00F2DF0E /* ICGLoginOptionsViewController.h */,
+				6B2C05D318F7141F00F2DF0E /* ICGLoginOptionsViewController.m */,
 			);
 			name = LandingViewController;
 			path = "iPad/Classes/View Controllers/LandingViewController";
@@ -1054,6 +1059,7 @@
 				6B889B8D18C301FC000C8EDA /* UIWebView+AFNetworking.m in Sources */,
 				6B98C1DC18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodeld in Sources */,
 				6B6894FA18ABE01B00619D76 /* ICGLeadRetrievalLeadListViewController.m in Sources */,
+				6B2C05D418F7141F00F2DF0E /* ICGLoginOptionsViewController.m in Sources */,
 				6B6894E818ABDF8200619D76 /* ICGAddAttendeeViewController.m in Sources */,
 				6B889B8A18C301FC000C8EDA /* UIButton+AFNetworking.m in Sources */,
 				6BB0AF4918B233B80015E299 /* ICGSurveyViewController.m in Sources */,
