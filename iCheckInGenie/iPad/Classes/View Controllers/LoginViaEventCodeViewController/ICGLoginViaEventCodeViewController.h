@@ -11,3 +11,4 @@
 @interface ICGLoginViaEventCodeViewController : ICGBaseViewController
 
 @end
+
