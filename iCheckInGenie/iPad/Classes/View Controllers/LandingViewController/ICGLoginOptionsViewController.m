@@ -1,29 +1,22 @@
 //
-//  ICGLandingViewController.m
+//  ICGLoginOptionsViewController.m
 //  iCheckInGenie
 //
-//  Created by Krishna on 12/02/14.
-//  Copyright (c) 2014 Gniyes Inc.. All rights reserved.
+//  Created by Krishna on 10/04/14.
+//  Copyright (c) 2014 Apple. All rights reserved.
 //
 
-#import "ICGLandingViewController.h"
-#import "ICGLoginViewController.h"
-#import "AFAppDotNetAPIClient.h"
 #import "ICGLoginOptionsViewController.h"
-
-@import QuartzCore;
-
-@interface ICGLandingViewController ()
+#import "ICGLoginViewController.h"
+@interface ICGLoginOptionsViewController ()
 {
     NSArray *_landingOptionsArray;
-    NSArray *_optionsArray;
-    NSString *_optionTitle;
 }
-@property (weak, nonatomic) IBOutlet UITableView *landingTableView;
+@property (weak, nonatomic) IBOutlet UITableView *loginOptionsTableView;
 
 @end
 
-@implementation ICGLandingViewController
+@implementation ICGLoginOptionsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,49 +30,36 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.landingTableView setBackgroundColor:[UIColor clearColor]];
-    [self.landingTableView reloadData];
+    [self.loginOptionsTableView setBackgroundColor:[UIColor clearColor]];
+    [self.loginOptionsTableView reloadData];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self.navigationController popToRootViewControllerAnimated:NO];
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-//    self.landingTableView.layer.cornerRadius = 7.0;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
     ///Settingup Options
-    _landingTableView.contentInset = UIEdgeInsetsZero;
-
+    _loginOptionsTableView.contentInset = UIEdgeInsetsZero;
+    
     NSDictionary *option1 = @{ @"title" : @"Organizer Login", @"subtitle" : @"Click here to Login as an Event Organizer"};
     NSDictionary *option2 = @{ @"title" : @"Have an Event Code?", @"subtitle" : @"Click here to Enter Event Code"};
     NSDictionary *option3 = @{ @"title" : @"Have a Attendee Confirmation Code?", @"subtitle" : @"Click here to PRECHECKIN using Confirmation Code"};
     NSDictionary *option4 = @{ @"title" : @"Would you like to submit your CE credits?", @"subtitle" : @"Click here to View Sessions and Submit CE Credits"};
     NSDictionary *option5 = @{ @"title" : @"Exhibitor Lead Retreival Login", @"subtitle" : @"Click here to Enter your Exhibitor Activation Code"};
-    _landingOptionsArray = @[ option1, option2, option3, option4, option5 ];
     
-	// Do any additional setup after loading the view.
-    
-//    https://api.parse.com/1/classes/Holiday
-//    https://api.parse.com/1/classes/Holiday
-//    [[ICGAPIClient sharedClient] GET:@"https://api.parse.com/1/classes/AttendeeDetail?" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
-//        NSLog(@"DESC = %@", [responseObject description]);
-//        
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//
-//    }];
-    
-    
-    _optionsArray = @[@"Organizer", @"Attendee", @"Exhibitor"];
-    
+    NSLog(@"Title Option = %@", self.optionTitle);
+    if([self.optionTitle isEqualToString:@"Organizer"]){
+        _landingOptionsArray = @[ option1, option2];
+    }else if([self.optionTitle isEqualToString:@"Attendee"])
+    {
+        _landingOptionsArray = @[ option3, option4];
+    }else
+    {
+        _landingOptionsArray = @[option5];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,31 +74,47 @@
     return 1;
 }
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    NSLog(@"sections = %d", [_landingOptionsArray count]);
+    return [_landingOptionsArray count];
 }
-
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    NSLog(@"sections = %d", [_optionsArray count]);
-//    return [_optionsArray count];
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"LandingCell";
+    static NSString *cellIdentifier = @"OptionsCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if ( cell == nil ) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-
+    
+    NSDictionary *dict = [_landingOptionsArray objectAtIndex:indexPath.section];
+    
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        cell.textLabel.font = [UIFont systemFontOfSize:25];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:25];
+    }
+    else {
+        cell.textLabel.font = [UIFont systemFontOfSize:12];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+    }
+    
+    
     NSMutableParagraphStyle* linkTitle = [[NSMutableParagraphStyle alloc] init];
     linkTitle.alignment = NSTextAlignmentLeft;
-    cell.textLabel.text = [_optionsArray objectAtIndex:indexPath.section];
-    cell.detailTextLabel.textColor = [UIColor blueColor];
-    cell.textLabel.textAlignment = NSTextAlignmentLeft;
+    
+    NSAttributedString* attrStr = [[NSAttributedString alloc] initWithString:[dict objectForKey:@"subtitle"] attributes:
+                                   @{NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle),
+                                     NSParagraphStyleAttributeName:linkTitle}];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
+    cell.detailTextLabel.numberOfLines = 2;
+    cell.textLabel.text = [dict objectForKey:@"title"];
+    cell.detailTextLabel.attributedText = attrStr;
+    cell.detailTextLabel.textColor = [UIColor grayColor];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     return cell;
 }
 
@@ -135,7 +131,7 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([cell respondsToSelector:@selector(tintColor)]) {
-        if (tableView == self.landingTableView) {
+        if (tableView == self.loginOptionsTableView) {
             CGFloat cornerRadius = 5.f;
             cell.backgroundColor = UIColor.clearColor;
             CAShapeLayer *layer = [[CAShapeLayer alloc] init];
@@ -181,9 +177,25 @@
 #pragma mark - table view delegate methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    _optionTitle = [_optionsArray objectAtIndex:indexPath.section];
-    [self performSegueWithIdentifier:@"LoginOptions" sender:self];
     
+    if([self.optionTitle isEqualToString:@"Organizer"]){
+        if(0 == indexPath.section)
+            [self performSegueWithIdentifier:@"Organizer Login" sender:self];
+        else if(1 == indexPath.section)
+            [self performSegueWithIdentifier:@"LoginViaEventCode" sender:self];
+
+    }else if([self.optionTitle isEqualToString:@"Attendee"])
+    {
+        if(0 == indexPath.section)
+            [self performSegueWithIdentifier:@"LoginViaAttendeeConfirmationCode" sender:self];
+        else if(1 == indexPath.section)
+            [self performSegueWithIdentifier:@"CECredit" sender:self];
+    }else
+    {
+        if(0 == indexPath.section)
+            [self performSegueWithIdentifier:@"Exhibitor Lead Retreival Login" sender:self];
+    }
+
 }
 
 #pragma mark -
@@ -191,7 +203,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSLog(@"VALUE = %@", segue.identifier);
-        ICGLoginOptionsViewController *viewC = segue.destinationViewController
-        ;        viewC.optionTitle = _optionTitle;
+    if ([segue.identifier isEqualToString:@"Organizer Login"]) {
+        ICGLoginViewController *loginVC = segue.destinationViewController
+        ;        loginVC.navTitle = @"Organizer Login";
+    }else if ([segue.identifier isEqualToString:@"LoginViaEventCode"]) {
+    }
+    else if ([segue.identifier isEqualToString:@"LoginViaAttendeeConfirmationCode"]) {
+    }
+    else if ([segue.identifier isEqualToString:@"CECredit"]) {
+    }
+    else if ([segue.identifier isEqualToString:@"Exhibitor Lead Retreival Login"]) {
+    }
 }
+
 @end

@@ -63,16 +63,84 @@
                     <navigationItem key="navigationItem" id="zci-Zb-69O"/>
                     <connections>
                         <outlet property="landingTableView" destination="ez3-s4-tpP" id="Hqk-9N-qLC"/>
-                        <segue destination="DDW-os-OMh" kind="push" identifier="Organizer Login" id="u9K-bG-QZy"/>
-                        <segue destination="xoD-AW-FFs" kind="push" identifier="LoginViaEventCode" id="nSd-ic-lyf"/>
-                        <segue destination="f05-A6-rZm" kind="push" identifier="CECredit" id="ucb-kh-wn5"/>
-                        <segue destination="S0P-I6-QbP" kind="push" identifier="Exhibitor Lead Retreival Login" id="Hax-8d-evc"/>
-                        <segue destination="ICN-Oa-vzV" kind="push" identifier="LoginViaAttendeeConfirmationCode" id="Lqq-gz-Rpe"/>
+                        <segue destination="ub2-ae-Iqw" kind="push" identifier="LoginOptions" id="t9i-FX-nAR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="498" y="-1969"/>
+        </scene>
+        <!--Login Options View Controller-->
+        <scene sceneID="WUD-CH-Fpr">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ub2-ae-Iqw" customClass="ICGLoginOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FeT-G9-owB"/>
+                        <viewControllerLayoutGuide type="bottom" id="G2w-jE-3LO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XM5-8a-oQz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="5" sectionFooterHeight="5" translatesAutoresizingMaskIntoConstraints="NO" id="aaP-8h-E8Q">
+                                <rect key="frame" x="0.0" y="214" width="320" height="140"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OptionsCell" textLabel="OkC-pQ-LW4" detailTextLabel="NH5-Ag-yXC" style="IBUITableViewCellStyleSubtitle" id="hVb-DJ-u2f">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hVb-DJ-u2f" id="uPQ-YK-dmv">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OkC-pQ-LW4">
+                                                    <rect key="frame" x="15" y="4" width="34" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NH5-Ag-yXC">
+                                                    <rect key="frame" x="15" y="26" width="43" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ub2-ae-Iqw" id="pvK-JF-2nZ"/>
+                                    <outlet property="delegate" destination="ub2-ae-Iqw" id="ZKK-1v-yo9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aaP-8h-E8Q" firstAttribute="leading" secondItem="XM5-8a-oQz" secondAttribute="leading" id="A0V-9j-Hu2"/>
+                            <constraint firstAttribute="centerY" secondItem="aaP-8h-E8Q" secondAttribute="centerY" id="L9p-aS-sBK"/>
+                            <constraint firstItem="aaP-8h-E8Q" firstAttribute="top" secondItem="FeT-G9-owB" secondAttribute="bottom" constant="150" id="OZY-rA-5ig"/>
+                            <constraint firstAttribute="centerY" secondItem="aaP-8h-E8Q" secondAttribute="centerY" id="Zap-ge-o5E"/>
+                            <constraint firstAttribute="trailing" secondItem="aaP-8h-E8Q" secondAttribute="trailing" id="v7d-BX-ZJe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Tq-Eh-BB7"/>
+                    <connections>
+                        <outlet property="loginOptionsTableView" destination="aaP-8h-E8Q" id="WIb-jm-whw"/>
+                        <segue destination="DDW-os-OMh" kind="push" identifier="Organizer Login" id="iyz-Ks-eJE"/>
+                        <segue destination="xoD-AW-FFs" kind="push" identifier="LoginViaEventCode" id="Mpx-BQ-xdb"/>
+                        <segue destination="f05-A6-rZm" kind="push" identifier="CECredit" id="ZXU-8L-bfh"/>
+                        <segue destination="ICN-Oa-vzV" kind="push" identifier="LoginViaAttendeeConfirmationCode" id="wBL-Qp-T5H"/>
+                        <segue destination="S0P-I6-QbP" kind="push" identifier="Exhibitor Lead Retreival Login" id="Jn3-gR-M0v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLU-Tr-htX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498" y="-3206"/>
         </scene>
         <!--Lead Retrieval Dash Board View Controller-->
         <scene sceneID="Gsd-k5-vVc">
