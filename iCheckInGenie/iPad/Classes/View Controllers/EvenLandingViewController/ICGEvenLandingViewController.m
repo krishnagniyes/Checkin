@@ -45,6 +45,7 @@
     [super viewDidLoad];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
     self.oprionsTableView.layer.cornerRadius = 7.0;
+    [self.view setBackgroundColor:[UIColor colorWithRed:247.0/255.0 green:247.0/255.0 blue:247.0/255.0 alpha:1.0]];
 
     self.navigationItem.rightBarButtonItems = @[[self homeButton:@"home.png"], [self addAttendeeButton:@"addAttendee.png"]];
     _optionsArray = @[@"CHECK IN ATTENDEES", @"ADD ATTENDEE" , @"SYNC DATABASE", @"SCAN TICKET", @"MY ACCOUNT", @"LOGOUT"];

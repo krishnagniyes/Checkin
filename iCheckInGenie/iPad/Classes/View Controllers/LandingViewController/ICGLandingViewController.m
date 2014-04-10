@@ -14,6 +14,7 @@
 @interface ICGLandingViewController ()
 {
     NSArray *_landingOptionsArray;
+    NSArray *_optionsArray;
 }
 @property (weak, nonatomic) IBOutlet UITableView *landingTableView;
 
@@ -30,19 +31,29 @@
     return self;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.landingTableView setBackgroundColor:[UIColor clearColor]];
+    //    [self.view setBackgroundColor:[UIColor lightGrayColor]];
+    [self.landingTableView reloadData];
+}
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self.navigationController popToRootViewControllerAnimated:NO];
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    self.landingTableView.layer.cornerRadius = 7.0;
+//    self.landingTableView.layer.cornerRadius = 7.0;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
-
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
     ///Settingup Options
     _landingTableView.contentInset = UIEdgeInsetsZero;
 
@@ -57,13 +68,17 @@
     
 //    https://api.parse.com/1/classes/Holiday
 //    https://api.parse.com/1/classes/Holiday
-    [[ICGAPIClient sharedClient] GET:@"https://api.parse.com/1/classes/AttendeeDetail?" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        
-        NSLog(@"DESC = %@", [responseObject description]);
-        
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-
-    }];
+//    [[ICGAPIClient sharedClient] GET:@"https://api.parse.com/1/classes/AttendeeDetail?" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        
+//        NSLog(@"DESC = %@", [responseObject description]);
+//        
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//
+//    }];
+    
+    
+    _optionsArray = @[@"Organizer", @"Attendee", @"Exhibitor"];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,8 +90,19 @@
 #pragma mark - Table View Data Source Methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_landingOptionsArray count];
+    return 1;
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 3;
+}
+
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    NSLog(@"sections = %d", [_optionsArray count]);
+//    return [_optionsArray count];
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -86,32 +112,32 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    NSDictionary *dict = [_landingOptionsArray objectAtIndex:indexPath.row];
+//    NSDictionary *dict = [_landingOptionsArray objectAtIndex:indexPath.row];
     
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        cell.textLabel.font = [UIFont systemFontOfSize:25];
-        cell.detailTextLabel.font = [UIFont systemFontOfSize:25];
-    }
-    else {
-        cell.textLabel.font = [UIFont systemFontOfSize:12];
-        cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
-    }
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+//        cell.textLabel.font = [UIFont systemFontOfSize:25];
+//        cell.detailTextLabel.font = [UIFont systemFontOfSize:25];
+//    }
+//    else {
+//        cell.textLabel.font = [UIFont systemFontOfSize:12];
+//        cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+//    }
 
 
     NSMutableParagraphStyle* linkTitle = [[NSMutableParagraphStyle alloc] init];
     linkTitle.alignment = NSTextAlignmentLeft;
     
-    NSAttributedString* attrStr = [[NSAttributedString alloc] initWithString:[dict objectForKey:@"subtitle"] attributes:
-                                   @{NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle),
-                                     NSParagraphStyleAttributeName:linkTitle}];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    NSAttributedString* attrStr = [[NSAttributedString alloc] initWithString:[dict objectForKey:@"subtitle"] attributes:
+//                                   @{NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle),
+//                                     NSParagraphStyleAttributeName:linkTitle}];
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.detailTextLabel.numberOfLines = 2;
-    cell.textLabel.text = [dict objectForKey:@"title"];
-    cell.detailTextLabel.attributedText = attrStr;
+//    cell.detailTextLabel.numberOfLines = 2;
+    cell.textLabel.text = [_optionsArray objectAtIndex:indexPath.section];
+//    cell.detailTextLabel.attributedText = attrStr;
     cell.detailTextLabel.textColor = [UIColor blueColor];
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.textLabel.textAlignment = NSTextAlignmentLeft;
 
     
     return cell;
@@ -124,6 +150,52 @@
     }
     else {
         return 44.0;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell respondsToSelector:@selector(tintColor)]) {
+        if (tableView == self.landingTableView) {
+            CGFloat cornerRadius = 5.f;
+            cell.backgroundColor = UIColor.clearColor;
+            CAShapeLayer *layer = [[CAShapeLayer alloc] init];
+            CGMutablePathRef pathRef = CGPathCreateMutable();
+            CGRect bounds = CGRectInset(cell.bounds, 10, 0);
+            BOOL addLine = NO;
+            if (indexPath.row == 0 && indexPath.row == [tableView numberOfRowsInSection:indexPath.section] - 1) {
+                CGPathAddRoundedRect(pathRef, nil, bounds, cornerRadius, cornerRadius);
+            } else if (indexPath.row == 0) {
+                CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds));
+                CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMidX(bounds), CGRectGetMinY(bounds), cornerRadius);
+                CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMidY(bounds), cornerRadius);
+                CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds));
+                addLine = YES;
+            } else if (indexPath.row == [tableView numberOfRowsInSection:indexPath.section]-1) {
+                CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds));
+                CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMidX(bounds), CGRectGetMaxY(bounds), cornerRadius);
+                CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMidY(bounds), cornerRadius);
+                CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds));
+            } else {
+                CGPathAddRect(pathRef, nil, bounds);
+                addLine = YES;
+            }
+            layer.path = pathRef;
+            CFRelease(pathRef);
+            layer.fillColor = [UIColor colorWithWhite:1.f alpha:0.8f].CGColor;
+            
+            if (addLine == YES) {
+                CALayer *lineLayer = [[CALayer alloc] init];
+                CGFloat lineHeight = (1.f / [UIScreen mainScreen].scale);
+                lineLayer.frame = CGRectMake(CGRectGetMinX(bounds)+10, bounds.size.height-lineHeight, bounds.size.width-10, lineHeight);
+                lineLayer.backgroundColor = tableView.separatorColor.CGColor;
+                [layer addSublayer:lineLayer];
+            }
+            UIView *testView = [[UIView alloc] initWithFrame:bounds];
+            [testView.layer insertSublayer:layer atIndex:0];
+            testView.backgroundColor = UIColor.clearColor;
+            cell.backgroundView = testView;
+        }
     }
 }
 
