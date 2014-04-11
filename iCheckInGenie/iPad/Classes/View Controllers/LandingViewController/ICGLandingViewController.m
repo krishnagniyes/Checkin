@@ -15,7 +15,6 @@
 
 @interface ICGLandingViewController ()
 {
-    NSArray *_landingOptionsArray;
     NSArray *_optionsArray;
     NSString *_optionTitle;
 }
@@ -57,13 +56,6 @@
     
     ///Settingup Options
     _landingTableView.contentInset = UIEdgeInsetsZero;
-
-    NSDictionary *option1 = @{ @"title" : @"Organizer Login", @"subtitle" : @"Click here to Login as an Event Organizer"};
-    NSDictionary *option2 = @{ @"title" : @"Have an Event Code?", @"subtitle" : @"Click here to Enter Event Code"};
-    NSDictionary *option3 = @{ @"title" : @"Have a Attendee Confirmation Code?", @"subtitle" : @"Click here to PRECHECKIN using Confirmation Code"};
-    NSDictionary *option4 = @{ @"title" : @"Would you like to submit your CE credits?", @"subtitle" : @"Click here to View Sessions and Submit CE Credits"};
-    NSDictionary *option5 = @{ @"title" : @"Exhibitor Lead Retreival Login", @"subtitle" : @"Click here to Enter your Exhibitor Activation Code"};
-    _landingOptionsArray = @[ option1, option2, option3, option4, option5 ];
     
 	// Do any additional setup after loading the view.
     
@@ -85,7 +77,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table View Data Source Methods
@@ -96,14 +87,8 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return _optionsArray.count;
 }
-
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    NSLog(@"sections = %d", [_optionsArray count]);
-//    return [_optionsArray count];
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
