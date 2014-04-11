@@ -45,6 +45,7 @@
 		6B68950618ABE06500619D76 /* ICGScanCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68950518ABE06500619D76 /* ICGScanCodeViewController.m */; };
 		6B68950918ABE07600619D76 /* ICGSyncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68950818ABE07600619D76 /* ICGSyncViewController.m */; };
 		6B68950B18ABE29000619D76 /* LandingPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B68950A18ABE29000619D76 /* LandingPage.plist */; };
+		6B6BA62B18F79DC900E7D725 /* MenuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6BA62A18F79DC900E7D725 /* MenuBackground@2x.png */; };
 		6B7449B118BC5E01001D87D1 /* ICGDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7449B018BC5E01001D87D1 /* ICGDataManager.m */; };
 		6B7449B418BC5E73001D87D1 /* LoginOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7449B318BC5E73001D87D1 /* LoginOperation.m */; };
 		6B7449B918BCD9B0001D87D1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7449B818BCD9B0001D87D1 /* MobileCoreServices.framework */; };
@@ -181,6 +182,7 @@
 		6B68950718ABE07600619D76 /* ICGSyncViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGSyncViewController.h; sourceTree = "<group>"; };
 		6B68950818ABE07600619D76 /* ICGSyncViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGSyncViewController.m; sourceTree = "<group>"; };
 		6B68950A18ABE29000619D76 /* LandingPage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LandingPage.plist; sourceTree = "<group>"; };
+		6B6BA62A18F79DC900E7D725 /* MenuBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuBackground@2x.png"; path = "temp/MenuBackground@2x.png"; sourceTree = "<group>"; };
 		6B7449AF18BC5E01001D87D1 /* ICGDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGDataManager.h; sourceTree = "<group>"; };
 		6B7449B018BC5E01001D87D1 /* ICGDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGDataManager.m; sourceTree = "<group>"; };
 		6B7449B218BC5E73001D87D1 /* LoginOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOperation.h; sourceTree = "<group>"; };
@@ -881,6 +883,7 @@
 		6BB0AF3818B20DF80015E299 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				6B6BA62A18F79DC900E7D725 /* MenuBackground@2x.png */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -1000,6 +1003,7 @@
 				6BB0AF4518B230E10015E299 /* Default@2x.png in Resources */,
 				6BCAC73418C061EF003D3D42 /* Main_iPhone.storyboard in Resources */,
 				6BA427A018A00BE000473959 /* InfoPlist.strings in Resources */,
+				6B6BA62B18F79DC900E7D725 /* MenuBackground@2x.png in Resources */,
 				6BA427FC18A00E9E00473959 /* RemoteOperations.plist in Resources */,
 				6B16C84318C6ECD100DBCC66 /* placeholder_promotions.png in Resources */,
 				6BB0AF3D18B227BC0015E299 /* background.png in Resources */,
