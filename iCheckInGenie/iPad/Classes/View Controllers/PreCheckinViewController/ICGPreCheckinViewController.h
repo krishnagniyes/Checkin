@@ -7,7 +7,7 @@
 //
 
 #import "ICGBaseViewController.h"
-
+#import "RESideMenu.h"
 @interface ICGPreCheckinViewController : ICGBaseViewController
 {
 }

@@ -52,7 +52,7 @@
 
 //    self.landingTableView.layer.cornerRadius = 7.0;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
-    self.navigationItem.rightBarButtonItem.enabled = NO;
+    self.navigationItem.rightBarButtonItem.enabled = YES;
     
     ///Settingup Options
     _landingTableView.contentInset = UIEdgeInsetsZero;

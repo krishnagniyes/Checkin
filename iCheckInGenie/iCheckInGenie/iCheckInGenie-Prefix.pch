@@ -15,5 +15,6 @@
     #import <Foundation/Foundation.h>
     #import "GlobalMemory.h"
     #import "CommonUtils.h"
-    #import"AppConstants.h"
+    #import "AppConstants.h"
+    #import "RESideMenu.h"
 #endif

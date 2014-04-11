@@ -49,6 +49,8 @@
 		6B6BA63318F79EB600E7D725 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BA62E18F79EB500E7D725 /* RECommonFunctions.m */; };
 		6B6BA63418F79EB600E7D725 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BA63018F79EB600E7D725 /* RESideMenu.m */; };
 		6B6BA63518F79EB600E7D725 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BA63218F79EB600E7D725 /* UIViewController+RESideMenu.m */; };
+		6B6BA64718F7C28900E7D725 /* ICRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BA64618F7C28900E7D725 /* ICRootViewController.m */; };
+		6B6BA64A18F7C56800E7D725 /* ICQuickMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BA64918F7C56800E7D725 /* ICQuickMenuViewController.m */; };
 		6B7449B118BC5E01001D87D1 /* ICGDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7449B018BC5E01001D87D1 /* ICGDataManager.m */; };
 		6B7449B418BC5E73001D87D1 /* LoginOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7449B318BC5E73001D87D1 /* LoginOperation.m */; };
 		6B7449B918BCD9B0001D87D1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7449B818BCD9B0001D87D1 /* MobileCoreServices.framework */; };
@@ -192,6 +194,10 @@
 		6B6BA63018F79EB600E7D725 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
 		6B6BA63118F79EB600E7D725 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
 		6B6BA63218F79EB600E7D725 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		6B6BA64518F7C28900E7D725 /* ICRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICRootViewController.h; sourceTree = "<group>"; };
+		6B6BA64618F7C28900E7D725 /* ICRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICRootViewController.m; sourceTree = "<group>"; };
+		6B6BA64818F7C56800E7D725 /* ICQuickMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICQuickMenuViewController.h; sourceTree = "<group>"; };
+		6B6BA64918F7C56800E7D725 /* ICQuickMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICQuickMenuViewController.m; sourceTree = "<group>"; };
 		6B7449AF18BC5E01001D87D1 /* ICGDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGDataManager.h; sourceTree = "<group>"; };
 		6B7449B018BC5E01001D87D1 /* ICGDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGDataManager.m; sourceTree = "<group>"; };
 		6B7449B218BC5E73001D87D1 /* LoginOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOperation.h; sourceTree = "<group>"; };
@@ -522,6 +528,10 @@
 			children = (
 				6B6894D118ABDE6500619D76 /* ICGBaseViewController.h */,
 				6B6894D218ABDE6500619D76 /* ICGBaseViewController.m */,
+				6B6BA64518F7C28900E7D725 /* ICRootViewController.h */,
+				6B6BA64618F7C28900E7D725 /* ICRootViewController.m */,
+				6B6BA64818F7C56800E7D725 /* ICQuickMenuViewController.h */,
+				6B6BA64918F7C56800E7D725 /* ICQuickMenuViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -1064,6 +1074,7 @@
 				6B6894E518ABDF6900619D76 /* ICGAttendeeDetailViewController.m in Sources */,
 				6BA427F018A00DC600473959 /* CommonUtils.m in Sources */,
 				6B7B9B9B18B87DDB008CB1EF /* ICGPersonalInfoViewController.m in Sources */,
+				6B6BA64A18F7C56800E7D725 /* ICQuickMenuViewController.m in Sources */,
 				6B53843A18CB62E200F72939 /* CustomAlertView.m in Sources */,
 				6B6894EE18ABDFB300619D76 /* ICGEvenLandingViewController.m in Sources */,
 				6BA427F318A00DC600473959 /* GlobalMemory.m in Sources */,
@@ -1076,6 +1087,7 @@
 				6B889B8418C301FC000C8EDA /* AFURLRequestSerialization.m in Sources */,
 				6BA427EF18A00DC600473959 /* CommunicationManager.m in Sources */,
 				6B6894F718ABE00800619D76 /* ICGLeadRetrievalDashBoardViewController.m in Sources */,
+				6B6BA64718F7C28900E7D725 /* ICRootViewController.m in Sources */,
 				6B98C1E518CE2C9F006E39A2 /* AttendeeDetail.m in Sources */,
 				6B889B7F18C301FC000C8EDA /* AFHTTPRequestOperationManager.m in Sources */,
 				6B7449B118BC5E01001D87D1 /* ICGDataManager.m in Sources */,
