@@ -46,6 +46,9 @@
 		6B68950918ABE07600619D76 /* ICGSyncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B68950818ABE07600619D76 /* ICGSyncViewController.m */; };
 		6B68950B18ABE29000619D76 /* LandingPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B68950A18ABE29000619D76 /* LandingPage.plist */; };
 		6B6BA62B18F79DC900E7D725 /* MenuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6BA62A18F79DC900E7D725 /* MenuBackground@2x.png */; };
+		6B6BA63318F79EB600E7D725 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BA62E18F79EB500E7D725 /* RECommonFunctions.m */; };
+		6B6BA63418F79EB600E7D725 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BA63018F79EB600E7D725 /* RESideMenu.m */; };
+		6B6BA63518F79EB600E7D725 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BA63218F79EB600E7D725 /* UIViewController+RESideMenu.m */; };
 		6B7449B118BC5E01001D87D1 /* ICGDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7449B018BC5E01001D87D1 /* ICGDataManager.m */; };
 		6B7449B418BC5E73001D87D1 /* LoginOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7449B318BC5E73001D87D1 /* LoginOperation.m */; };
 		6B7449B918BCD9B0001D87D1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7449B818BCD9B0001D87D1 /* MobileCoreServices.framework */; };
@@ -183,6 +186,12 @@
 		6B68950818ABE07600619D76 /* ICGSyncViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGSyncViewController.m; sourceTree = "<group>"; };
 		6B68950A18ABE29000619D76 /* LandingPage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LandingPage.plist; sourceTree = "<group>"; };
 		6B6BA62A18F79DC900E7D725 /* MenuBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuBackground@2x.png"; path = "temp/MenuBackground@2x.png"; sourceTree = "<group>"; };
+		6B6BA62D18F79EB500E7D725 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		6B6BA62E18F79EB500E7D725 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		6B6BA62F18F79EB500E7D725 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		6B6BA63018F79EB600E7D725 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		6B6BA63118F79EB600E7D725 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		6B6BA63218F79EB600E7D725 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		6B7449AF18BC5E01001D87D1 /* ICGDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGDataManager.h; sourceTree = "<group>"; };
 		6B7449B018BC5E01001D87D1 /* ICGDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGDataManager.m; sourceTree = "<group>"; };
 		6B7449B218BC5E73001D87D1 /* LoginOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOperation.h; sourceTree = "<group>"; };
@@ -517,9 +526,23 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		6B6BA62C18F79EB500E7D725 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6B6BA62D18F79EB500E7D725 /* RECommonFunctions.h */,
+				6B6BA62E18F79EB500E7D725 /* RECommonFunctions.m */,
+				6B6BA62F18F79EB500E7D725 /* RESideMenu.h */,
+				6B6BA63018F79EB600E7D725 /* RESideMenu.m */,
+				6B6BA63118F79EB600E7D725 /* UIViewController+RESideMenu.h */,
+				6B6BA63218F79EB600E7D725 /* UIViewController+RESideMenu.m */,
+			);
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
 		6B889B5918C301FC000C8EDA /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				6B6BA62C18F79EB500E7D725 /* RESideMenu */,
 				6B889B5A18C301FC000C8EDA /* AFNetworking */,
 				6B889B6E18C301FC000C8EDA /* UIKit+AFNetworking */,
 			);
@@ -1048,6 +1071,7 @@
 				6B889B1818C2E6EA000C8EDA /* CheckIN.xcdatamodeld in Sources */,
 				6B889B8018C301FC000C8EDA /* AFHTTPSessionManager.m in Sources */,
 				6BA427A218A00BE000473959 /* main.m in Sources */,
+				6B6BA63418F79EB600E7D725 /* RESideMenu.m in Sources */,
 				6BA427F418A00DC600473959 /* RadioButton.m in Sources */,
 				6B889B8418C301FC000C8EDA /* AFURLRequestSerialization.m in Sources */,
 				6BA427EF18A00DC600473959 /* CommunicationManager.m in Sources */,
@@ -1069,6 +1093,7 @@
 				6BB0AF4918B233B80015E299 /* ICGSurveyViewController.m in Sources */,
 				6BB0AF4118B228D10015E299 /* ICASplashViewController.m in Sources */,
 				6B889B8318C301FC000C8EDA /* AFURLConnectionOperation.m in Sources */,
+				6B6BA63318F79EB600E7D725 /* RECommonFunctions.m in Sources */,
 				6B889B8218C301FC000C8EDA /* AFSecurityPolicy.m in Sources */,
 				6B449A2218B34A69007074F0 /* ExpandableTableViewCell.m in Sources */,
 				6B276B9918B7985700FB717A /* ICGMyAccountViewController.m in Sources */,
@@ -1093,6 +1118,7 @@
 				6B6894D918ABDEE800619D76 /* ICGLoginViaEventCodeViewController.m in Sources */,
 				6B889B1518C2E4E5000C8EDA /* ICGDataBase.m in Sources */,
 				6B6894F118ABDFC500619D76 /* ICGEventListViewController.m in Sources */,
+				6B6BA63518F79EB600E7D725 /* UIViewController+RESideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
