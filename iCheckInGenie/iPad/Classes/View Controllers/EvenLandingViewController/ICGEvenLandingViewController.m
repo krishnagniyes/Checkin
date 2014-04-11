@@ -45,9 +45,7 @@
     [super viewDidLoad];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
     self.oprionsTableView.layer.cornerRadius = 7.0;
-    [self.view setBackgroundColor:[UIColor colorWithRed:247.0/255.0 green:247.0/255.0 blue:247.0/255.0 alpha:1.0]];
 
-    self.navigationItem.rightBarButtonItems = @[[self homeButton:@"home.png"], [self addAttendeeButton:@"addAttendee.png"]];
     _optionsArray = @[@"CHECK IN ATTENDEES", @"ADD ATTENDEE" , @"SYNC DATABASE", @"SCAN TICKET", @"MY ACCOUNT", @"LOGOUT"];
 }
 
@@ -57,45 +55,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIBarButtonItem *)homeButton:(NSString *)imagename {
-    
-    UIImage *checkInImage = nil;
-    UIButton *checkInButton = nil;
-    checkInImage = [UIImage imageNamed:imagename];
-    checkInButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [checkInButton setBackgroundImage:checkInImage forState:UIControlStateNormal];
-
-    [checkInButton addTarget:self action:@selector(homeAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    const CGFloat BarButtonOffset = 5.0f;
-    [checkInButton setFrame:CGRectMake(BarButtonOffset, 0, checkInImage.size.width, checkInImage.size.height)];
-    
-    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, checkInImage.size.width, checkInImage.size.height)];
-    [containerView addSubview:checkInButton];
-    
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:containerView];
-    return item;
-}
-
-- (UIBarButtonItem *)addAttendeeButton:(NSString *)imagename {
-    
-    UIImage *checkInImage = nil;
-    UIButton *checkInButton = nil;
-    checkInImage = [UIImage imageNamed:imagename];
-    checkInButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [checkInButton setBackgroundImage:checkInImage forState:UIControlStateNormal];
-    
-    [checkInButton addTarget:self action:@selector(addAttendeeAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    const CGFloat BarButtonOffset = 5.0f;
-    [checkInButton setFrame:CGRectMake(BarButtonOffset, 0, checkInImage.size.width, checkInImage.size.height)];
-    
-    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, checkInImage.size.width, checkInImage.size.height)];
-    [containerView addSubview:checkInButton];
-    
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:containerView];
-    return item;
-}
 
 #pragma mark - Table View Data Source Methods
 
@@ -181,16 +140,6 @@
 }
 
 
-- (void)homeAction:(id) sender
-{
-    NSLog(@"Home");
-}
-
-- (void)addAttendeeAction:(id) sender
-{
-    NSLog(@"addAttendeeAction");
-}
-
 #pragma -
 #pragma UItabbar delegate
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
@@ -201,15 +150,36 @@
 #pragma PrepareSeague for specific controller
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
     UITabBarController *tabVC = (UITabBarController *) segue.destinationViewController;
     NSLog(@"Index = %d", _selectedOption);
-
+    
     if(_selectedOption < 4){
+        tabVC.navigationItem.rightBarButtonItem = [self homeButton:@"placeholder_promotions.png"];
+        
         [tabVC setSelectedViewController:[tabVC.viewControllers objectAtIndex:_selectedOption]];
     }
 }
 
+
+
+- (UIBarButtonItem *)homeButton:(NSString *)imagename {
+    UIImage *checkInImage = nil;
+    UIButton *checkInButton = nil;
+    checkInImage = [UIImage imageNamed:imagename];
+    checkInButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [checkInButton setBackgroundImage:checkInImage forState:UIControlStateNormal];
+    
+    [checkInButton addTarget:self action:@selector(presentRightMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
+    
+    const CGFloat BarButtonOffset = 5.0f;
+    [checkInButton setFrame:CGRectMake(BarButtonOffset + 20, 6, 30, 30)];
+    
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, checkInImage.size.width, checkInImage.size.height)];
+    [containerView addSubview:checkInButton];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:containerView];
+    return item;
+}
 #pragma -
 #pragma AlertView delegate
 

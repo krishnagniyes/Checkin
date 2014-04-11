@@ -37,10 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.attendeeTableView setBackgroundColor:[UIColor grayColor]];
     self.attendeesArray = [[NSMutableArray alloc] init];
     
-
     NSDictionary* d3 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"1"] forKeys:@[@"subname",@"sublastname"]];
     NSDictionary* d4 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"2"] forKeys:@[@"subname",@"sublastname"]];
     NSDictionary* d5 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"3"] forKeys:@[@"subname",@"sublastname"]];
@@ -51,7 +49,7 @@
     [arr addObject:d4];
     [arr addObject:d5];
     
-    NSDictionary* d = [NSDictionary dictionaryWithObjects:@[@"Krishna", @"111", arr] forKeys:@[@"name",@"lastname", @"SB"]];
+    NSDictionary* d = [NSDictionary dictionaryWithObjects:@[@"Krishna", @"1211", arr] forKeys:@[@"name",@"lastname", @"SB"]];
 
     
     NSDictionary* d2 = [NSDictionary dictionaryWithObjects:@[@"ILA", @"2"] forKeys:@[@"name",@"lastname"]];
@@ -59,7 +57,6 @@
     
     [_attendeesArray addObject:d];
     [_attendeesArray addObject:d2];
-    
 }
 
 - (void) viewWillAppear:(BOOL)animated

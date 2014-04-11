@@ -25,8 +25,17 @@
 
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kBackgroundColor_iPhone]]];
 
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [button addTarget:self
+//               action:@selector(aMethod:)
+//     forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Start" forState:UIControlStateNormal];
+    button.frame = CGRectMake(self.view.frame.size.width - 90, 100, 100, 44) ;
+    [self.view addSubview:button];
+    
+    
     self.tableView = ({
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 5) / 2.0f, self.view.frame.size.width, 54 * 5) style:UITableViewStylePlain];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 60 * 5) / 2.0f, self.view.frame.size.width, 60 * 5) style:UITableViewStylePlain];
         tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
         tableView.delegate = self;
         tableView.dataSource = self;
@@ -111,7 +120,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.backgroundColor = [UIColor clearColor];
-        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:18];
         cell.textLabel.textColor = [UIColor whiteColor];
         cell.textLabel.highlightedTextColor = [UIColor lightGrayColor];
         cell.selectedBackgroundView = [[UIView alloc] init];
@@ -121,6 +130,23 @@
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     
     return cell;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width - 30, 30)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width - 30, 30)];
+    label.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
+    label.textAlignment =  NSTextAlignmentRight;
+    label.textColor = [UIColor darkGrayColor];
+    label.highlightedTextColor = [UIColor whiteColor];
+
+    /* Section header is in 0th index... */
+    [label setText:@"Jump to Section"];
+    [view addSubview:label];
+    [view setBackgroundColor:[UIColor clearColor]]; //your background color...
+    return view;
 }
 
 

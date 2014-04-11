@@ -955,7 +955,7 @@ to obtain your event code.</string>
             </objects>
             <point key="canvasLocation" x="467" y="3514"/>
         </scene>
-        <!--Attendee List View Controller - Check In-->
+        <!--Attendee List View Controller - Attendee List-->
         <scene sceneID="t67-2B-PMw">
             <objects>
                 <viewController id="ZcH-TD-sfU" customClass="ICGAttendeeListViewController" sceneMemberID="viewController">
@@ -967,19 +967,12 @@ to obtain your event code.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceL-Fv-cZf">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Event Name" id="YIG-Ms-R8k"/>
-                                </items>
-                            </toolbar>
-                            <searchBar contentMode="redraw" placeholder="Search by Firstname, Lastname or Confirmation code" translatesAutoresizingMaskIntoConstraints="NO" id="cvH-dd-841">
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="Search by Firstname, Lastname or Confirmation code" translatesAutoresizingMaskIntoConstraints="NO" id="cvH-dd-841">
                                 <rect key="frame" x="0.0" y="113" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xXP-i1-Yt5">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xXP-i1-Yt5">
                                 <rect key="frame" x="0.0" y="162" width="320" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -988,7 +981,7 @@ to obtain your event code.</string>
                                     <segment title="Pending"/>
                                 </segments>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="R5a-yL-8bY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="R5a-yL-8bY">
                                 <rect key="frame" x="0.0" y="200" width="320" height="212"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1060,21 +1053,22 @@ to obtain your event code.</string>
                         <constraints>
                             <constraint firstItem="R5a-yL-8bY" firstAttribute="top" secondItem="xXP-i1-Yt5" secondAttribute="bottom" constant="10" id="Ewa-MS-wGH"/>
                             <constraint firstAttribute="trailing" secondItem="cvH-dd-841" secondAttribute="trailing" id="IKz-pB-L1U"/>
-                            <constraint firstItem="ceL-Fv-cZf" firstAttribute="top" secondItem="M5j-Qn-DTr" secondAttribute="bottom" id="SUw-dm-o77"/>
                             <constraint firstItem="xXP-i1-Yt5" firstAttribute="trailing" secondItem="R5a-yL-8bY" secondAttribute="trailing" id="Y8g-ss-Ktb"/>
-                            <constraint firstItem="ceL-Fv-cZf" firstAttribute="leading" secondItem="YlH-od-ojo" secondAttribute="leading" id="Z80-xx-tMd"/>
-                            <constraint firstItem="cvH-dd-841" firstAttribute="trailing" secondItem="ceL-Fv-cZf" secondAttribute="trailing" id="bRL-On-B9n"/>
                             <constraint firstItem="xXP-i1-Yt5" firstAttribute="top" secondItem="cvH-dd-841" secondAttribute="bottom" constant="5" id="dLJ-fm-hBC"/>
-                            <constraint firstItem="ceL-Fv-cZf" firstAttribute="leading" secondItem="cvH-dd-841" secondAttribute="leading" id="eIQ-zg-jab"/>
                             <constraint firstItem="WLH-1Q-pvT" firstAttribute="top" secondItem="R5a-yL-8bY" secondAttribute="bottom" constant="107" id="fzH-VK-tra"/>
                             <constraint firstItem="xXP-i1-Yt5" firstAttribute="leading" secondItem="cvH-dd-841" secondAttribute="leading" id="hIS-Tl-teF"/>
                             <constraint firstItem="R5a-yL-8bY" firstAttribute="leading" secondItem="xXP-i1-Yt5" secondAttribute="leading" id="tGX-Qy-c8V"/>
-                            <constraint firstItem="cvH-dd-841" firstAttribute="top" secondItem="ceL-Fv-cZf" secondAttribute="bottom" constant="5" id="vkt-jH-KUD"/>
                             <constraint firstItem="xXP-i1-Yt5" firstAttribute="trailing" secondItem="cvH-dd-841" secondAttribute="trailing" id="wHC-Fa-duO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Check In" id="YUj-QQ-fHK"/>
-                    <navigationItem key="navigationItem" id="oP0-tu-2HI"/>
+                    <navigationItem key="navigationItem" title="Attendee List" id="oP0-tu-2HI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="TQY-Ef-Y7V">
+                            <connections>
+                                <action selector="presentRightMenuViewController:" destination="ZcH-TD-sfU" id="pqK-vF-RzH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="attendeeTableView" destination="R5a-yL-8bY" id="njp-jo-jSP"/>
                         <outlet property="optionSegmentView" destination="xXP-i1-Yt5" id="dVd-52-OsW"/>
@@ -1838,7 +1832,9 @@ to sync your database.</string>
                                 <rect key="frame" x="0.0" y="18" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="J2n-31-Jai"/>
+                                    <barButtonItem image="tree.png" id="J2n-31-Jai"/>
+                                    <barButtonItem title="Name" width="183" style="plain" id="TDa-Er-Eee"/>
+                                    <barButtonItem image="tree.png" style="plain" id="IN4-51-Oi8"/>
                                 </items>
                             </toolbar>
                         </subviews>
