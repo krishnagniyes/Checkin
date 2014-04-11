@@ -34,17 +34,20 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
     
     if(!_isForgotPassword){
-        [[self.toolBar.items objectAtIndex:0] setTitle:@"Forgot Username?"];
+//        [[self.toolBar.items objectAtIndex:0] setTitle:@"Forgot Username?"];
+        self.title = @"Forgot Username?";
         [self.titileLabel setText:@"Please Enter Email Address below:"];
         self.usernameTf.placeholder = @"Enter Email Address";
         self.usernameTf.keyboardType = UIKeyboardTypeEmailAddress;
         [self.forgotButton setTitle:@"Forgot Password" forState:UIControlStateNormal];
     }
     else{
-        [[self.toolBar.items objectAtIndex:0] setTitle:@"Forgot Password?"];
+//        [[self.toolBar.items objectAtIndex:0] setTitle:@"Forgot Password?"];
+        self.title = @"Forgot Password?";
+
         [self.titileLabel setText:@"Please Enter your Username below:"];
         self.usernameTf.placeholder = @"Enter your Username";
         [self.forgotButton setTitle:@"Forgot Username" forState:UIControlStateNormal];
@@ -117,14 +120,18 @@
 - (IBAction)forButtonAction:(id)sender {
     _isForgotPassword = !_isForgotPassword;
     if(!_isForgotPassword){
-        [[self.toolBar.items objectAtIndex:0] setTitle:@"Forgot Username?"];
+//        [[self.toolBar.items objectAtIndex:0] setTitle:@"Forgot Username?"];
+        self.title = @"Forgot Username?";
+
         self.usernameTf.placeholder = @"Enter Email Address";
         [self.titileLabel setText:@"Please Enter Email Address below:"];
         self.usernameTf.keyboardType = UIKeyboardTypeEmailAddress;
         [self.forgotButton setTitle:@"Forgot Password" forState:UIControlStateNormal];
     }
     else{
-        [[self.toolBar.items objectAtIndex:0] setTitle:@"Forgot Password?"];
+        self.title = @"Forgot Password?";
+
+//        [[self.toolBar.items objectAtIndex:0] setTitle:@"Forgot Password?"];
         self.usernameTf.placeholder = @"Enter your Username";
 
         [self.titileLabel setText:@"Please Enter your Username below:"];

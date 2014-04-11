@@ -34,7 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
+    self.title = @"Events";
 
     NSDictionary *dict=[[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"]];
 	self.items=[dict valueForKey:@"Items"];
@@ -52,15 +53,15 @@
 
 #pragma mark - Table View Data Source Methods
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-    if(section == 0 && !_ischangedTab)
-        return @"Active Events";
-    else
-        return @"Closed Events";
-    
-    return nil;
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    
+//    if(section == 0 && !_ischangedTab)
+//        return @"Active Events";
+//    else
+//        return @"Closed Events";
+//    
+//    return nil;
+//}
 
 
 #pragma mark - Table view data source
