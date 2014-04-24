@@ -17,11 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="5" sectionFooterHeight="5" translatesAutoresizingMaskIntoConstraints="NO" id="ez3-s4-tpP">
-                                <rect key="frame" x="0.0" y="218" width="320" height="210"/>
+                                <rect key="frame" x="0.0" y="200" width="320" height="210"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="210" id="sn3-yN-dRv"/>
+                                    <constraint firstAttribute="width" constant="320" id="PK5-y4-GBq"/>
+                                    <constraint firstAttribute="height" constant="210" id="keA-wi-F5N"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LandingCell" textLabel="1Yh-J3-rcL" rowHeight="44" style="IBUITableViewCellStyleDefault" id="3WS-5T-THu">
@@ -47,17 +48,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="jfS-MZ-67X"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mac.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Qf-a9-fmq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iCheckinGenieLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Qf-a9-fmq">
                                 <rect key="frame" x="30" y="100" width="260" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.21199247260000001" green="0.66497490879999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="ez3-s4-tpP" secondAttribute="centerY" constant="-39" id="KrA-BF-Gpm"/>
-                            <constraint firstItem="ez3-s4-tpP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eqB-rC-8cX"/>
-                            <constraint firstItem="ez3-s4-tpP" firstAttribute="top" secondItem="2y3-VC-VrR" secondAttribute="bottom" constant="154" id="kbf-dX-7Fc"/>
-                            <constraint firstItem="ez3-s4-tpP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s9f-BK-NEd"/>
+                            <constraint firstItem="nHL-a2-Kaa" firstAttribute="top" secondItem="ez3-s4-tpP" secondAttribute="bottom" constant="158" id="1Gq-gI-e8W"/>
+                            <constraint firstAttribute="centerY" secondItem="ez3-s4-tpP" secondAttribute="centerY" constant="-21" id="90n-tm-ldo"/>
+                            <constraint firstAttribute="trailing" secondItem="ez3-s4-tpP" secondAttribute="trailing" id="CXf-lF-U0e"/>
+                            <constraint firstItem="8Qf-a9-fmq" firstAttribute="centerX" secondItem="ez3-s4-tpP" secondAttribute="centerX" id="Jum-pv-L9j"/>
+                            <constraint firstItem="ez3-s4-tpP" firstAttribute="top" secondItem="8Qf-a9-fmq" secondAttribute="bottom" id="lMe-Gm-ydw"/>
+                            <constraint firstItem="8Qf-a9-fmq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="ntl-EA-Vdy"/>
+                            <constraint firstItem="8Qf-a9-fmq" firstAttribute="top" secondItem="2y3-VC-VrR" secondAttribute="bottom" constant="36" id="sbK-wd-hZp"/>
+                            <constraint firstItem="ez3-s4-tpP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zWE-Rx-B0O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zci-Zb-69O"/>
@@ -118,7 +123,7 @@
                                     <outlet property="delegate" destination="ub2-ae-Iqw" id="ZKK-1v-yo9"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mac.png" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-Hu-bEo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iCheckinGenieLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-Hu-bEo">
                                 <rect key="frame" x="30" y="86" width="260" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -370,7 +375,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mac.png" translatesAutoresizingMaskIntoConstraints="NO" id="kOU-94-MHM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iCheckinGenieLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="kOU-94-MHM">
                                 <rect key="frame" x="10" y="148" width="300" height="105"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -417,21 +422,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kOU-94-MHM" firstAttribute="top" secondItem="AGw-Kp-Yv1" secondAttribute="bottom" constant="84" id="8VU-mH-dkf"/>
                             <constraint firstItem="ewd-up-IYK" firstAttribute="leading" secondItem="Kyg-Qc-zuV" secondAttribute="leading" id="8if-Rc-ARf"/>
+                            <constraint firstItem="E5H-Vm-Ghb" firstAttribute="top" secondItem="kOU-94-MHM" secondAttribute="bottom" constant="16" id="9Sg-zP-Nfx"/>
                             <constraint firstItem="dXR-Oi-uBc" firstAttribute="trailing" secondItem="E5H-Vm-Ghb" secondAttribute="trailing" id="BwX-IQ-dVV"/>
                             <constraint firstItem="E5H-Vm-Ghb" firstAttribute="centerY" secondItem="tbR-o3-fGg" secondAttribute="centerY" id="DUC-uS-1mm"/>
+                            <constraint firstItem="kOU-94-MHM" firstAttribute="trailing" secondItem="ewd-up-IYK" secondAttribute="trailing" id="Gkc-Qe-juh"/>
                             <constraint firstItem="ewd-up-IYK" firstAttribute="centerX" secondItem="tbR-o3-fGg" secondAttribute="centerX" id="HiH-1U-Jik"/>
                             <constraint firstItem="M06-8h-CKK" firstAttribute="top" secondItem="ewd-up-IYK" secondAttribute="bottom" constant="28" id="JGo-5M-VdX"/>
                             <constraint firstItem="E5H-Vm-Ghb" firstAttribute="leading" secondItem="dXR-Oi-uBc" secondAttribute="leading" id="PRV-mq-j9N"/>
                             <constraint firstItem="M06-8h-CKK" firstAttribute="leading" secondItem="Kyg-Qc-zuV" secondAttribute="trailing" constant="5" id="QXg-Rj-fyS"/>
-                            <constraint firstItem="kOU-94-MHM" firstAttribute="leading" secondItem="tbR-o3-fGg" secondAttribute="leading" constant="10" id="aYY-ad-lhA"/>
+                            <constraint firstItem="kOU-94-MHM" firstAttribute="leading" secondItem="ewd-up-IYK" secondAttribute="leading" id="SpS-JE-NyY"/>
+                            <constraint firstItem="kOU-94-MHM" firstAttribute="leading" secondItem="tbR-o3-fGg" secondAttribute="leading" constant="10" id="YYS-Q6-ZL3"/>
                             <constraint firstItem="ewd-up-IYK" firstAttribute="top" secondItem="dXR-Oi-uBc" secondAttribute="bottom" constant="20" id="b9A-pM-Q8w"/>
                             <constraint firstItem="dXR-Oi-uBc" firstAttribute="top" secondItem="E5H-Vm-Ghb" secondAttribute="bottom" constant="6" id="f9c-kY-li0"/>
                             <constraint firstItem="dXR-Oi-uBc" firstAttribute="trailing" secondItem="ewd-up-IYK" secondAttribute="trailing" constant="-20" id="jmK-lS-HeU"/>
                             <constraint firstItem="Kyg-Qc-zuV" firstAttribute="top" secondItem="ewd-up-IYK" secondAttribute="bottom" constant="29" id="lCW-Pc-CrK"/>
-                            <constraint firstItem="kOU-94-MHM" firstAttribute="leading" secondItem="ewd-up-IYK" secondAttribute="leading" id="lWW-NY-UJx"/>
-                            <constraint firstItem="ewd-up-IYK" firstAttribute="trailing" secondItem="kOU-94-MHM" secondAttribute="trailing" id="vXs-WT-maI"/>
+                            <constraint firstItem="kOU-94-MHM" firstAttribute="top" secondItem="AGw-Kp-Yv1" secondAttribute="bottom" constant="84" id="tgd-OD-9Pa"/>
                             <constraint firstItem="dXR-Oi-uBc" firstAttribute="leading" secondItem="ewd-up-IYK" secondAttribute="leading" constant="20" id="xRJ-Od-7I0"/>
                         </constraints>
                     </view>
@@ -1856,7 +1862,7 @@ to sync your database.</string>
         <image name="background.png" width="640" height="963"/>
         <image name="down-arrow.png" width="128" height="128"/>
         <image name="home.png" width="49" height="43"/>
-        <image name="mac.png" width="184" height="105"/>
+        <image name="iCheckinGenieLogo.png" width="472" height="270"/>
         <image name="tree.png" width="50" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

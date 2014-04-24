@@ -108,10 +108,10 @@
 		6BB0AF3918B20DF80015E299 /* mac.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0AF3718B20DF80015E299 /* mac.png */; };
 		6BB0AF3D18B227BC0015E299 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0AF3C18B227BC0015E299 /* background.png */; };
 		6BB0AF4118B228D10015E299 /* ICASplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0AF4018B228D10015E299 /* ICASplashViewController.m */; };
-		6BB0AF4418B230E10015E299 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0AF4218B230E10015E299 /* Default.png */; };
-		6BB0AF4518B230E10015E299 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0AF4318B230E10015E299 /* Default@2x.png */; };
 		6BB0AF4918B233B80015E299 /* ICGSurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0AF4818B233B80015E299 /* ICGSurveyViewController.m */; };
 		6BCAC73418C061EF003D3D42 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCAC73318C061EF003D3D42 /* Main_iPhone.storyboard */; };
+		6BF18ABD1908E28300F1FC6A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BF18ABC1908E28300F1FC6A /* Default@2x.png */; };
+		6BF18ABF1908E38800F1FC6A /* iCheckinGenieLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BF18ABE1908E38800F1FC6A /* iCheckinGenieLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -296,11 +296,11 @@
 		6BB0AF3C18B227BC0015E299 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6BB0AF3F18B228D10015E299 /* ICASplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICASplashViewController.h; sourceTree = "<group>"; };
 		6BB0AF4018B228D10015E299 /* ICASplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICASplashViewController.m; sourceTree = "<group>"; };
-		6BB0AF4218B230E10015E299 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		6BB0AF4318B230E10015E299 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6BB0AF4718B233B80015E299 /* ICGSurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGSurveyViewController.h; sourceTree = "<group>"; };
 		6BB0AF4818B233B80015E299 /* ICGSurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGSurveyViewController.m; sourceTree = "<group>"; };
 		6BCAC73318C061EF003D3D42 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		6BF18ABC1908E28300F1FC6A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6BF18ABE1908E38800F1FC6A /* iCheckinGenieLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iCheckinGenieLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -905,8 +905,6 @@
 				6B449A2418B36159007074F0 /* home.png */,
 				6B449A1818B3486B007074F0 /* down-arrow.png */,
 				6B449A1918B3486B007074F0 /* up-arrow.png */,
-				6BB0AF4218B230E10015E299 /* Default.png */,
-				6BB0AF4318B230E10015E299 /* Default@2x.png */,
 				6BB0AF3C18B227BC0015E299 /* background.png */,
 				6BB0AF3718B20DF80015E299 /* mac.png */,
 			);
@@ -916,6 +914,8 @@
 		6BB0AF3818B20DF80015E299 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				6BF18ABE1908E38800F1FC6A /* iCheckinGenieLogo.png */,
+				6BF18ABC1908E28300F1FC6A /* Default@2x.png */,
 				6B6BA62A18F79DC900E7D725 /* MenuBackground@2x.png */,
 			);
 			path = iPhone;
@@ -1031,9 +1031,10 @@
 				6B0A10DA18BF4407007A7EF0 /* beep.mp3 in Resources */,
 				6BA427B118A00BE000473959 /* Images.xcassets in Resources */,
 				6B449A2618B36159007074F0 /* home.png in Resources */,
+				6BF18ABF1908E38800F1FC6A /* iCheckinGenieLogo.png in Resources */,
 				6B449A1B18B3486B007074F0 /* up-arrow.png in Resources */,
 				6BB0AF3918B20DF80015E299 /* mac.png in Resources */,
-				6BB0AF4518B230E10015E299 /* Default@2x.png in Resources */,
+				6BF18ABD1908E28300F1FC6A /* Default@2x.png in Resources */,
 				6BCAC73418C061EF003D3D42 /* Main_iPhone.storyboard in Resources */,
 				6BA427A018A00BE000473959 /* InfoPlist.strings in Resources */,
 				6B6BA62B18F79DC900E7D725 /* MenuBackground@2x.png in Resources */,
@@ -1042,7 +1043,6 @@
 				6BB0AF3D18B227BC0015E299 /* background.png in Resources */,
 				6B68950B18ABE29000619D76 /* LandingPage.plist in Resources */,
 				6B16C83F18C6DA3E00DBCC66 /* tree.png in Resources */,
-				6BB0AF4418B230E10015E299 /* Default.png in Resources */,
 				6B449A1F18B348F2007074F0 /* data.plist in Resources */,
 				6B449A1718B30878007074F0 /* Main_iPhone_temp.storyboard in Resources */,
 			);
