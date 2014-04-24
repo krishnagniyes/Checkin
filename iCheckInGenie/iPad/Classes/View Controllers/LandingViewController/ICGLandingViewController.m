@@ -36,6 +36,12 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+
     [self.landingTableView setBackgroundColor:[UIColor clearColor]];
     [self.landingTableView reloadData];
 }
@@ -43,6 +49,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+
     [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
@@ -51,8 +58,9 @@
     [super viewDidLoad];
 
 //    self.landingTableView.layer.cornerRadius = 7.0;
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
-    self.navigationItem.rightBarButtonItem.enabled = YES;
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
+    self.navigationItem.rightBarButtonItem.enabled = 1;
+    
     
     ///Settingup Options
     _landingTableView.contentInset = UIEdgeInsetsZero;

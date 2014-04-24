@@ -46,7 +46,7 @@ typedef enum
 //        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kBackgroundColor_iPhone]]];
 //    }
 
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
     self.tableView.layer.cornerRadius = 7.0;
     _optionsArray = @[@"SCAN", @"ENTER A LEAD", @"VIEW LEADS", @"MY ACCOUNT"];
     

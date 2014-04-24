@@ -3,7 +3,7 @@
 //  iCheckInGenie
 //
 //  Created by Krishna on 10/04/14.
-//  Copyright (c) 2014 Apple. All rights reserved.
+//  Copyright (c) 2014 Gniyes. All rights reserved.
 //
 
 #import "ICGLoginOptionsViewController.h"
@@ -38,8 +38,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
-    self.navigationItem.rightBarButtonItem.enabled = NO;
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
+    
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+
     
     ///Settingup Options
     _loginOptionsTableView.contentInset = UIEdgeInsetsZero;

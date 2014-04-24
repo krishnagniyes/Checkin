@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
 
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
     _optionsArray = @[@"Notifications", @"Alerts", @"Vibrate on CheckIn"];
 //    self.tableView.layer.cornerRadius = 7.0;
 }
