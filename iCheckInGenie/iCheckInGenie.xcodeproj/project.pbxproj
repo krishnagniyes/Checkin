@@ -19,6 +19,10 @@
 		6B276B9C18B79AC100FB717A /* ICGParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B276B9B18B79AC100FB717A /* ICGParentViewController.m */; };
 		6B2984AE18B4B85B0059841D /* ICGLoginViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2984AD18B4B85B0059841D /* ICGLoginViewControllerTests.m */; };
 		6B2C05D418F7141F00F2DF0E /* ICGLoginOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C05D318F7141F00F2DF0E /* ICGLoginOptionsViewController.m */; };
+		6B3A8EA4190A266A0098A6BA /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A8EA0190A266A0098A6BA /* add.png */; };
+		6B3A8EA5190A266A0098A6BA /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A8EA1190A266A0098A6BA /* menu.png */; };
+		6B3A8EA6190A266A0098A6BA /* sort.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A8EA2190A266A0098A6BA /* sort.png */; };
+		6B3A8EA7190A266A0098A6BA /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3A8EA3190A266A0098A6BA /* share.png */; };
 		6B449A1718B30878007074F0 /* Main_iPhone_temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B449A1518B30878007074F0 /* Main_iPhone_temp.storyboard */; };
 		6B449A1A18B3486B007074F0 /* down-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B449A1818B3486B007074F0 /* down-arrow.png */; };
 		6B449A1B18B3486B007074F0 /* up-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B449A1918B3486B007074F0 /* up-arrow.png */; };
@@ -142,6 +146,10 @@
 		6B2984AD18B4B85B0059841D /* ICGLoginViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGLoginViewControllerTests.m; sourceTree = "<group>"; };
 		6B2C05D218F7141F00F2DF0E /* ICGLoginOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGLoginOptionsViewController.h; sourceTree = "<group>"; };
 		6B2C05D318F7141F00F2DF0E /* ICGLoginOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGLoginOptionsViewController.m; sourceTree = "<group>"; };
+		6B3A8EA0190A266A0098A6BA /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		6B3A8EA1190A266A0098A6BA /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		6B3A8EA2190A266A0098A6BA /* sort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sort.png; sourceTree = "<group>"; };
+		6B3A8EA3190A266A0098A6BA /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		6B449A1618B30878007074F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_temp.storyboard; sourceTree = "<group>"; };
 		6B449A1818B3486B007074F0 /* down-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down-arrow.png"; sourceTree = "<group>"; };
 		6B449A1918B3486B007074F0 /* up-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up-arrow.png"; sourceTree = "<group>"; };
@@ -914,6 +922,10 @@
 		6BB0AF3818B20DF80015E299 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				6B3A8EA0190A266A0098A6BA /* add.png */,
+				6B3A8EA1190A266A0098A6BA /* menu.png */,
+				6B3A8EA2190A266A0098A6BA /* sort.png */,
+				6B3A8EA3190A266A0098A6BA /* share.png */,
 				6BF18ABE1908E38800F1FC6A /* iCheckinGenieLogo.png */,
 				6BF18ABC1908E28300F1FC6A /* Default@2x.png */,
 				6B6BA62A18F79DC900E7D725 /* MenuBackground@2x.png */,
@@ -1023,6 +1035,8 @@
 			files = (
 				6B16C84118C6E7C800DBCC66 /* Login.plist in Resources */,
 				6B0A10DD18BF4656007A7EF0 /* ScannerKitActivitySpinner.png in Resources */,
+				6B3A8EA6190A266A0098A6BA /* sort.png in Resources */,
+				6B3A8EA7190A266A0098A6BA /* share.png in Resources */,
 				6BA427AC18A00BE000473959 /* Main_iPad.storyboard in Resources */,
 				6B0A10DE18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png in Resources */,
 				6B98C1D918CE1AE4006E39A2 /* AttendeeDetail.json in Resources */,
@@ -1034,8 +1048,10 @@
 				6BF18ABF1908E38800F1FC6A /* iCheckinGenieLogo.png in Resources */,
 				6B449A1B18B3486B007074F0 /* up-arrow.png in Resources */,
 				6BB0AF3918B20DF80015E299 /* mac.png in Resources */,
+				6B3A8EA4190A266A0098A6BA /* add.png in Resources */,
 				6BF18ABD1908E28300F1FC6A /* Default@2x.png in Resources */,
 				6BCAC73418C061EF003D3D42 /* Main_iPhone.storyboard in Resources */,
+				6B3A8EA5190A266A0098A6BA /* menu.png in Resources */,
 				6BA427A018A00BE000473959 /* InfoPlist.strings in Resources */,
 				6B6BA62B18F79DC900E7D725 /* MenuBackground@2x.png in Resources */,
 				6BA427FC18A00E9E00473959 /* RemoteOperations.plist in Resources */,
