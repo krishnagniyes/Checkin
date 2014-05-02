@@ -3,7 +3,7 @@
 //  iCheckInGenie
 //
 //  Created by Krishna on 11/04/14.
-//  Copyright (c) 2014 Apple. All rights reserved.
+//  Copyright (c) 2014 Gniyes. All rights reserved.
 //
 
 #import "ICQuickMenuViewController.h"
