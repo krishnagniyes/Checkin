@@ -17,7 +17,6 @@
         self.lblTitle = [[UILabel alloc]initWithFrame:CGRectMake(15, 10, 320, 20)];
         self.lblTitle.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.lblTitle];
-        // Initialization code
     }
     return self;
 }
