@@ -1839,9 +1839,9 @@ to sync your database.</string>
                                 <rect key="frame" x="0.0" y="18" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem image="tree.png" id="J2n-31-Jai"/>
+                                    <barButtonItem image="share.png" style="plain" id="J2n-31-Jai"/>
                                     <barButtonItem title="Name" width="183" style="plain" id="TDa-Er-Eee"/>
-                                    <barButtonItem image="tree.png" style="plain" id="IN4-51-Oi8"/>
+                                    <barButtonItem image="add.png" style="plain" id="IN4-51-Oi8"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -1895,6 +1895,7 @@ to sync your database.</string>
     </scenes>
     <resources>
         <image name="add.png" width="32" height="32"/>
+        <image name="add.png" width="32" height="32"/>
         <image name="addAttendee.png" width="42" height="48"/>
         <image name="background.png" width="640" height="963"/>
         <image name="home.png" width="49" height="43"/>
@@ -1902,9 +1903,8 @@ to sync your database.</string>
         <image name="iCheckinGenieLogo.png" width="472" height="270"/>
         <image name="iCheckinGenieLogo.png" width="472" height="270"/>
         <image name="iCheckinGenieLogo.png" width="472" height="270"/>
+        <image name="share.png" width="32" height="32"/>
         <image name="sort.png" width="32" height="32"/>
-        <image name="tree.png" width="50" height="33"/>
-        <image name="tree.png" width="50" height="33"/>
         <image name="tree.png" width="50" height="33"/>
         <image name="tree.png" width="50" height="33"/>
         <image name="tree.png" width="50" height="33"/>
