@@ -8,6 +8,8 @@
 
 #import "ICGEventListViewController.h"
 #import "ExpandableTableViewCell.h"
+#define kBorderWidth 1.0
+#define kCornerRadius 15.0
 
 @interface ICGEventListViewController ()
 {
@@ -145,6 +147,25 @@
 {
     NSString *CellIdentifier = @"Cell";
     ExpandableTableViewCell* cell = [self.eventListTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    
+    
+    CALayer *borderLayer = [CALayer layer];
+    CGRect borderFrame = CGRectMake(0, 0, (cell.imgView.frame.size.width), (cell.imgView.frame.size.height));
+    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+    [borderLayer setFrame:borderFrame];
+    [borderLayer setCornerRadius:kCornerRadius];
+    [borderLayer setBorderWidth:kBorderWidth];
+    [borderLayer setBorderColor:[[UIColor lightGrayColor] CGColor]];
+    [cell.imgView.layer addSublayer:borderLayer];
+    
+    if(indexPath.row % 2 == 0){
+        
+        cell.imgView.image = [UIImage imageNamed:@"mac"];
+    }
+
+
+    
     UIView *bgView = [[UIView alloc] init];
     bgView.backgroundColor = [UIColor grayColor];
     cell.selectedBackgroundView = bgView;

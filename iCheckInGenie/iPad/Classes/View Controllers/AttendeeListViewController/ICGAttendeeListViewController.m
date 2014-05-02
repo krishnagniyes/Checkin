@@ -10,6 +10,8 @@
 #import "ICGSyncViewController.h"
 #import "ICGAttendeeDetailCell.h"
 #import "ICGAttendeeDetailCell.h"
+#define kBorderWidth 3.0
+#define kCornerRadius 8.0
 
 @interface ICGAttendeeListViewController ()
 {
@@ -126,6 +128,21 @@
     
     }
     
+    cell.infoLabel.backgroundColor = [UIColor lightGrayColor];
+    cell.additionalInfoLabel.backgroundColor = [UIColor lightGrayColor];
+    cell.checkInLabel.backgroundColor = [UIColor blueColor];
+
+    
+//    CALayer *borderLayer = [CALayer layer];
+//    CGRect borderFrame = CGRectMake(0, 0, (cell.additionalInfoLabel.frame.size.width), (cell.additionalInfoLabel.frame.size.height));
+//    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer setFrame:borderFrame];
+//    [borderLayer setCornerRadius:kCornerRadius];
+//    [borderLayer setBorderWidth:kBorderWidth];
+//    [borderLayer setBorderColor:[[UIColor redColor] CGColor]];
+//    [cell.additionalInfoLabel.layer addSublayer:borderLayer];
+
+    
 //    NSArray *a = [_attendeesArray objectAtIndex:0];
 //    
 //    NSDictionary *d = [a objectAtIndex:indexPath.row];
@@ -156,21 +173,19 @@ heightForHeaderInSection:(NSInteger)section
 
     ICGAttendeeDetailCell *cell = (ICGAttendeeDetailCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    cell.infoLabel.backgroundColor = [UIColor blueColor];
-    cell.additionalInfoLabel.backgroundColor = [UIColor blueColor];
-    cell.checkInLabel.backgroundColor = [UIColor blueColor];
-    cell.snoLabel.backgroundColor = [UIColor blueColor];
-
+    cell.infoLabel.backgroundColor = [UIColor darkGrayColor];
+    cell.additionalInfoLabel.backgroundColor = [UIColor darkGrayColor];
+    cell.checkInLabel.backgroundColor = [UIColor darkGrayColor];
+    cell.snoLabel.backgroundColor = [UIColor darkGrayColor];
     cell.snoLabel.textColor = [UIColor whiteColor];
-    
     cell.infoLabel.textColor = [UIColor whiteColor];
     cell.additionalInfoLabel.textColor = [UIColor whiteColor];
     cell.checkInLabel.textColor = [UIColor whiteColor];
 
-    cell.snoLabel.text = @"###";
+    cell.snoLabel.text = @"#";
     cell.infoLabel.text = @"Information";
-    cell.additionalInfoLabel.text = @"Additional Guest";
-    cell.checkInLabel.text = @"Check In";
+    cell.additionalInfoLabel.text = @"Guests";
+    cell.checkInLabel.text = @"Check-In";
 
     cell.checkInLabel.hidden = NO;
     cell.checkedInButton.hidden = YES;

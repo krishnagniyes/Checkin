@@ -38,7 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = _navTitle;
+//    self.title = _navTitle;
 //    self.navigationController.navigationBarHidden = YES;
 	// Do any additional setup after loading the view.
 }

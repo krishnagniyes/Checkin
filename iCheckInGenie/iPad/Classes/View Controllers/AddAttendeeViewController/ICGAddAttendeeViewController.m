@@ -34,7 +34,6 @@
 {
     [super viewDidLoad];
     self.tabBarController.hidesBottomBarWhenPushed = NO;
-    [self.view setBackgroundColor:[UIColor grayColor]];
     attendeeTableView.layer.cornerRadius = 7.0;
 
     _attendeeDetailDict = [[NSMutableDictionary alloc] init];

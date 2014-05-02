@@ -247,7 +247,7 @@
         if (_isFlashlightOn == NO)
         {
             _isFlashlightOn = YES;
-            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"placeholder_promotions.png"] forState:UIControlStateNormal];
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"sort.png"] forState:UIControlStateNormal];
             
         }
         else

@@ -8,6 +8,6 @@
 
 #import "ICGBaseViewController.h"
 
-@interface ICGAttendeeListViewController : UIViewController
+@interface ICGAttendeeListViewController : ICGBaseViewController
 
 @end
