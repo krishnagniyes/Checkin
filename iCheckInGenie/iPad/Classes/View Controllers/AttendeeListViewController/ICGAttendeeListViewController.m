@@ -131,10 +131,14 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
         cell.additionalInfoLabel.text = [NSString stringWithFormat:@"[%d]",[arr count]];
     
     }
-    
-    cell.infoLabel.backgroundColor = [UIColor lightGrayColor];
-    cell.additionalInfoLabel.backgroundColor = [UIColor lightGrayColor];
-    cell.checkInLabel.backgroundColor = [UIColor blueColor];
+
+    cell.snoLabel.backgroundColor = [UIColor lightGrayColor];
+
+    cell.infoLabel.backgroundColor = [UIColor whiteColor];
+    cell.additionalInfoLabel.backgroundColor = [UIColor whiteColor];
+    cell.confCodeLabel.backgroundColor = [UIColor whiteColor];
+    cell.packageDEtailLabel.backgroundColor = [UIColor whiteColor];
+
 
     
 //    CALayer *borderLayer = [CALayer layer];
@@ -157,11 +161,16 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90.0;
+}
+
 
 -(CGFloat) tableView:(UITableView *)tableView
 heightForHeaderInSection:(NSInteger)section
 {
-    return 44.0;
+    return 35.0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -174,27 +183,45 @@ heightForHeaderInSection:(NSInteger)section
     else {
         CellIdentifier = @"AttendeeDetailCellIPhone";
     }
-
-    ICGAttendeeDetailCell *cell = (ICGAttendeeDetailCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
-    cell.infoLabel.backgroundColor = [UIColor darkGrayColor];
-    cell.additionalInfoLabel.backgroundColor = [UIColor darkGrayColor];
-    cell.checkInLabel.backgroundColor = [UIColor darkGrayColor];
-    cell.snoLabel.backgroundColor = [UIColor darkGrayColor];
-    cell.snoLabel.textColor = [UIColor whiteColor];
-    cell.infoLabel.textColor = [UIColor whiteColor];
-    cell.additionalInfoLabel.textColor = [UIColor whiteColor];
-    cell.checkInLabel.textColor = [UIColor whiteColor];
-
-    cell.snoLabel.text = @"#";
-    cell.infoLabel.text = @"Information";
-    cell.additionalInfoLabel.text = @"Guests";
-    cell.checkInLabel.text = @"Check-In";
-
-    cell.checkInLabel.hidden = NO;
-    cell.checkedInButton.hidden = YES;
     
-    return cell;
+    //TODO - write conditional code here for iPad
+
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(tableView.frame.origin.x, tableView.frame.origin.x, tableView.frame.size.width, 35)];
+    [headerView setBackgroundColor:[UIColor blackColor]];
+
+    UILabel* sno = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 35)];
+    [sno setBackgroundColor:[UIColor blackColor]];
+    sno.textColor = [UIColor whiteColor];
+    sno.text = @"#";
+    sno.textAlignment = NSTextAlignmentCenter;
+    sno.font = [UIFont boldSystemFontOfSize:11.0];
+    [headerView addSubview:sno];
+
+    UILabel* info = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, 150, 35)];
+    [info setBackgroundColor:[UIColor blackColor]];
+    info.textColor = [UIColor whiteColor];
+    info.text = @"Information";
+    info.font = [UIFont boldSystemFontOfSize:11.0];
+    info.textAlignment = NSTextAlignmentLeft;
+    [headerView addSubview:info];
+
+    UILabel* additionalInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 0, 40, 35)];
+    [additionalInfoLabel setBackgroundColor:[UIColor blackColor]];
+    additionalInfoLabel.font = [UIFont boldSystemFontOfSize:11.0];
+    additionalInfoLabel.textColor = [UIColor whiteColor];
+    additionalInfoLabel.text = @"Guests";
+    additionalInfoLabel.textAlignment = NSTextAlignmentLeft;
+    [headerView addSubview:additionalInfoLabel];
+
+    UILabel* checkInLabel = [[UILabel alloc] initWithFrame:CGRectMake(240, 0, 60, 35)];
+    [checkInLabel setBackgroundColor:[UIColor blackColor]];
+    checkInLabel.textColor = [UIColor whiteColor];
+    checkInLabel.font = [UIFont boldSystemFontOfSize:11.0];
+    checkInLabel.text = @"Check-In";
+    checkInLabel.textAlignment = NSTextAlignmentRight;
+    [headerView addSubview:checkInLabel];
+
+    return headerView;
 
 }
 

@@ -38,7 +38,6 @@
     [super viewDidLoad];
 //    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
     self.title = @"Events";
-
     NSDictionary *dict=[[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"]];
 	self.items=[dict valueForKey:@"Items"];
 	self.itemsInTable=[[NSMutableArray alloc] init];

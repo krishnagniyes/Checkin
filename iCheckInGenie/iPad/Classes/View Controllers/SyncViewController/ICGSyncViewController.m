@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"SYNC";
+    self.navigationController.title = @"SYNC";
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"LLL d yyyy HH:mm:ss"];
     _lastSyncTimeStamp.text = [dateFormat stringFromDate:[NSDate date]];

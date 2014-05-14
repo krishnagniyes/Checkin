@@ -16,6 +16,8 @@
 @property (nonatomic, strong) IBOutlet UILabel *infoLabel;
 @property (nonatomic, strong) IBOutlet UILabel *additionalInfoLabel;
 @property (nonatomic, strong) IBOutlet UILabel *checkInLabel;
+@property (nonatomic, strong) IBOutlet UILabel *confCodeLabel;
+@property (nonatomic, strong) IBOutlet UILabel *packageDEtailLabel;
 
 @property (nonatomic, strong) IBOutlet UIButton *checkedInButton;
 @end

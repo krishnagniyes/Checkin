@@ -45,7 +45,7 @@
     [super viewDidLoad];
 //    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
     
-//    self.title = @"Events";
+    self.navigationController.title = @"Details";
 //    self.oprionsTableView.layer.cornerRadius = 7.0;
 
     _optionsArray = @[@"CHECK IN ATTENDEES", @"ADD ATTENDEE" , @"SYNC DATABASE", @"SCAN TICKET", @"MY ACCOUNT", @"LOGOUT"];
