@@ -13,6 +13,10 @@
 #define kBorderWidth 3.0
 #define kCornerRadius 8.0
 
+#define WORD_LENGTH 5
+
+static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
+
 @interface ICGAttendeeListViewController ()
 {
     NSUInteger index;
@@ -193,5 +197,31 @@ heightForHeaderInSection:(NSInteger)section
     return cell;
 
 }
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    NSMutableArray *sectionedArray = [[NSMutableArray alloc] init];
+    for(char c ='A' ; c <= 'Z' ;  c++)
+    {
+        [sectionedArray addObject:[NSString stringWithFormat:@"%c",c]];
+    }
+    return sectionedArray;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    NSInteger count = 0;
+//    for(NSString *character in nameIndex)
+//    {
+//        if([character isEqualToString:title])
+//        {
+//            return count;
+//        }
+//        count ++;
+//    }
+    return 0;
+}
+
 
 @end

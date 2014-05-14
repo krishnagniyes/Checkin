@@ -10,6 +10,7 @@
 #define keyBoardMovementDistance 120
 #define keyBoardMovementDuration 0.3f
 
+
 @interface ICGAddAttendeeViewController ()
 {
     NSMutableArray *_detailFieldArray;
