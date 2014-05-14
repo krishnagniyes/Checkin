@@ -125,7 +125,8 @@
         cell.textLabel.highlightedTextColor = [UIColor lightGrayColor];
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
-    
+
+    cell.textLabel.textColor = [UIColor blackColor];
     cell.textLabel.text = _titlesArray[indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     
