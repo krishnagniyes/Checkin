@@ -190,25 +190,15 @@
                                 <color key="textColor" red="0.088661898119999999" green="0.11049006140000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-O6-SRg">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Exhibitor Lead Retreival Dashboard" id="VNA-hr-9lT"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="0.43396441605839414" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tzY-yA-58x" firstAttribute="centerX" secondItem="9So-5e-kI9" secondAttribute="centerX" id="Aiz-i9-rAB"/>
                             <constraint firstItem="tzY-yA-58x" firstAttribute="trailing" secondItem="enF-Lv-lZT" secondAttribute="trailing" id="H1b-Vj-9R5"/>
                             <constraint firstItem="RIC-yy-DGu" firstAttribute="top" secondItem="tzY-yA-58x" secondAttribute="bottom" constant="87" id="Obh-Zo-pwi"/>
-                            <constraint firstItem="KuW-O6-SRg" firstAttribute="top" secondItem="vXy-kh-T7B" secondAttribute="bottom" id="SHe-6s-Y1W"/>
                             <constraint firstItem="tzY-yA-58x" firstAttribute="top" secondItem="enF-Lv-lZT" secondAttribute="bottom" constant="29" id="Sx4-ZB-3oI"/>
                             <constraint firstItem="tzY-yA-58x" firstAttribute="leading" secondItem="9So-5e-kI9" secondAttribute="leading" constant="10" id="XvL-iJ-Sel"/>
                             <constraint firstItem="tzY-yA-58x" firstAttribute="leading" secondItem="enF-Lv-lZT" secondAttribute="leading" id="eTw-Uu-vQc"/>
-                            <constraint firstItem="tzY-yA-58x" firstAttribute="centerX" secondItem="KuW-O6-SRg" secondAttribute="centerX" id="fNf-aN-lki"/>
-                            <constraint firstItem="KuW-O6-SRg" firstAttribute="leading" secondItem="9So-5e-kI9" secondAttribute="leading" id="yGi-Gq-B2P"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xLz-ge-Kt1"/>
@@ -234,37 +224,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="av5-Ea-kmD">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem width="100" style="plain" systemItem="fixedSpace" id="VgY-Zw-70s"/>
-                                    <barButtonItem title="Scan a Ticket" id="dR3-HP-cTM"/>
-                                </items>
-                            </toolbar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point the lase at a baecode. hold still" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="kQV-X7-iy9">
-                                <rect key="frame" x="10" y="200" width="300" height="48"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point the lase at a baecode. hold still" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="kQV-X7-iy9">
+                                <rect key="frame" x="10" y="200" width="295" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning Barcode...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="zVD-6H-Qfw">
-                                <rect key="frame" x="10" y="250" width="300" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning Barcode...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="zVD-6H-Qfw">
+                                <rect key="frame" x="10" y="250" width="295" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54U-G0-WaP">
+                                <rect key="frame" x="135" y="81" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="ScannerKitActivitySpinner.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openFlash:" destination="h7q-WM-Gal" eventType="touchUpInside" id="Fhq-H3-6af"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.67435561129999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="csB-D5-RpB" firstAttribute="top" secondItem="zVD-6H-Qfw" secondAttribute="bottom" constant="239" id="HRo-FN-BDl"/>
                             <constraint firstItem="zVD-6H-Qfw" firstAttribute="top" secondItem="kQV-X7-iy9" secondAttribute="bottom" constant="2" id="Lej-a4-8FB"/>
-                            <constraint firstItem="kQV-X7-iy9" firstAttribute="centerX" secondItem="av5-Ea-kmD" secondAttribute="centerX" id="XW2-o8-J7w"/>
-                            <constraint firstAttribute="trailing" secondItem="av5-Ea-kmD" secondAttribute="trailing" id="bMb-gG-Svi"/>
                             <constraint firstItem="kQV-X7-iy9" firstAttribute="trailing" secondItem="zVD-6H-Qfw" secondAttribute="trailing" id="hiu-wZ-n9i"/>
                             <constraint firstItem="kQV-X7-iy9" firstAttribute="leading" secondItem="MHw-Bo-yY2" secondAttribute="leading" constant="10" id="m3r-EV-vzk"/>
-                            <constraint firstItem="av5-Ea-kmD" firstAttribute="leading" secondItem="MHw-Bo-yY2" secondAttribute="leading" id="rM6-UC-xly"/>
-                            <constraint firstItem="kQV-X7-iy9" firstAttribute="top" secondItem="av5-Ea-kmD" secondAttribute="bottom" constant="92" id="v0x-Ns-DcU"/>
                             <constraint firstItem="zVD-6H-Qfw" firstAttribute="leading" secondItem="kQV-X7-iy9" secondAttribute="leading" id="vQf-dZ-diX"/>
                         </constraints>
                     </view>
@@ -1251,37 +1240,36 @@ to obtain your event code.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icX-IB-gbT">
-                                <rect key="frame" x="0.0" y="63" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem width="111" style="plain" systemItem="fixedSpace" id="alM-Uw-R28"/>
-                                    <barButtonItem title="Scan a Ticket" id="MLr-2Z-QM0"/>
-                                </items>
-                            </toolbar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point the lase at a baecode. hold still" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="wiy-p0-5Ir">
-                                <rect key="frame" x="10" y="199" width="300" height="48"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point the lase at a baecode. hold still" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="wiy-p0-5Ir">
+                                <rect key="frame" x="10" y="199" width="295" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning Barcode...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="7ZX-87-fMA">
-                                <rect key="frame" x="10" y="247" width="300" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="400" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning Barcode...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="7ZX-87-fMA">
+                                <rect key="frame" x="10" y="247" width="295" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wws-YS-O6w">
+                                <rect key="frame" x="135" y="82" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="ScannerKitActivitySpinner.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openFlash:" destination="DKB-pK-6HD" eventType="touchUpInside" id="UB9-fe-lnM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21199247260000001" green="0.66497490879999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7ZX-87-fMA" firstAttribute="top" secondItem="wiy-p0-5Ir" secondAttribute="bottom" id="5bP-mq-L7Q"/>
                             <constraint firstItem="wiy-p0-5Ir" firstAttribute="leading" secondItem="64K-3v-4Cd" secondAttribute="leading" constant="10" id="7yE-VM-IhA"/>
-                            <constraint firstItem="icX-IB-gbT" firstAttribute="leading" secondItem="64K-3v-4Cd" secondAttribute="leading" id="9KQ-WK-oFs"/>
                             <constraint firstItem="wiy-p0-5Ir" firstAttribute="leading" secondItem="7ZX-87-fMA" secondAttribute="leading" id="AHA-bV-d0e"/>
-                            <constraint firstItem="wiy-p0-5Ir" firstAttribute="top" secondItem="icX-IB-gbT" secondAttribute="bottom" constant="92" id="WFn-Hf-iAG"/>
                             <constraint firstItem="7ZX-87-fMA" firstAttribute="trailing" secondItem="wiy-p0-5Ir" secondAttribute="trailing" id="YHm-0f-0hZ"/>
-                            <constraint firstItem="icX-IB-gbT" firstAttribute="centerX" secondItem="wiy-p0-5Ir" secondAttribute="centerX" id="o6q-7o-CRe"/>
-                            <constraint firstAttribute="trailing" secondItem="icX-IB-gbT" secondAttribute="trailing" id="sJU-Bd-Ymr"/>
                             <constraint firstItem="ycz-Lf-yPJ" firstAttribute="top" secondItem="7ZX-87-fMA" secondAttribute="bottom" constant="242" id="w4z-D6-23R"/>
                         </constraints>
                     </view>
@@ -1910,6 +1898,7 @@ to sync your database.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="ScannerKitActivitySpinner.png" width="20" height="20"/>
         <image name="add.png" width="32" height="32"/>
         <image name="addAttendee.png" width="42" height="48"/>
         <image name="background.png" width="640" height="963"/>

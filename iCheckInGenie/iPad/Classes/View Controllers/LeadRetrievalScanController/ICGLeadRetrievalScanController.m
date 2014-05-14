@@ -45,7 +45,7 @@
     
     [self loadBeepSound];
     
-    [self customIndicator];
+//    [self customIndicator];
     _highlightView = [[UIView alloc] init];
     _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
     _highlightView.layer.borderColor = [UIColor greenColor].CGColor;
@@ -168,6 +168,98 @@
     else{
         [_audioPlayer prepareToPlay];
     }
+}
+
+- (void)openTourch
+{
+    [self setView:[[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]]];
+    
+	AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+	// If torch supported, add button to toggle flashlight on/off
+	if ([device hasTorch] == YES)
+	{
+        _flashlightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 70, 48, 48)];
+        [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"tree.png"] forState:UIControlStateNormal];
+        [_flashlightButton addTarget:self action:@selector(buttonPressed:) forControlEvents: UIControlEventTouchUpInside];
+        
+        [[self view] addSubview:_flashlightButton];
+	}
+    
+}
+
+/*---------------------------------------------------------------------------
+ *
+ *--------------------------------------------------------------------------*/
+- (void)buttonPressed:(UIButton *)button
+{
+    [self openTourch];
+
+    if (button == _flashlightButton)
+    {
+        if (_isFlashlightOn == NO)
+        {
+            _isFlashlightOn = YES;
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"sort.png"] forState:UIControlStateNormal];
+            
+        }
+        else
+        {
+            _isFlashlightOn = NO;
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"tree.png"] forState:UIControlStateNormal];
+        }
+        
+		[self toggleFlashlight];
+        
+    }
+}
+
+- (void)toggleFlashlight
+{
+    if (_device.torchMode == AVCaptureTorchModeOff)
+    {
+        // Start session configuration
+        [_session beginConfiguration];
+        [_device lockForConfiguration:nil];
+        
+		// Set torch to on
+        [_device setTorchMode:AVCaptureTorchModeOn];
+        
+        [_device unlockForConfiguration];
+        [_session commitConfiguration];
+        
+        // Start the session
+        [_session startRunning];
+    }
+    else
+    {
+        //        [_session stopRunning];
+        //        _session = nil;
+    }
+}    
+
+- (IBAction)openFlash:(id)sender {
+    
+    UIButton * button = (UIButton *)sender;
+    if (button == _flashlightButton)
+    {
+        if (_isFlashlightOn == NO)
+        {
+            _isFlashlightOn = YES;
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"sort.png"] forState:UIControlStateNormal];
+            
+        }
+        else
+        {
+            _isFlashlightOn = NO;
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"tree.png"] forState:UIControlStateNormal];
+        }
+        
+		[self toggleFlashlight];
+        
+    }
+    
+
 }
 
 @end

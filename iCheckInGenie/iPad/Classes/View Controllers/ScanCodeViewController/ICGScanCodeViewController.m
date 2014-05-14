@@ -64,9 +64,8 @@
     
     [self loadBeepSound];
     
-    [self openTourch];
     
-    [self customIndicator];
+//    [self customIndicator];
     _highlightView = [[UIView alloc] init];
     _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
     _highlightView.layer.borderColor = [UIColor greenColor].CGColor;
@@ -221,6 +220,7 @@
 
 - (void)openTourch
 {
+    
     [self setView:[[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]]];
     
 	AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -242,6 +242,7 @@
  *--------------------------------------------------------------------------*/
 - (void)buttonPressed:(UIButton *)button
 {
+    [self openTourch];
     if (button == _flashlightButton)
     {
         if (_isFlashlightOn == NO)
@@ -284,5 +285,27 @@
 //        _session = nil;
     }
 }    
+- (IBAction)openFlash:(id)sender {
+    
+    UIButton * button = (UIButton *)sender;
+    if (button == _flashlightButton)
+    {
+        if (_isFlashlightOn == NO)
+        {
+            _isFlashlightOn = YES;
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"sort.png"] forState:UIControlStateNormal];
+            
+        }
+        else
+        {
+            _isFlashlightOn = NO;
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"tree.png"] forState:UIControlStateNormal];
+        }
+        
+		[self toggleFlashlight];
+        
+    }
+
+}
 
 @end
