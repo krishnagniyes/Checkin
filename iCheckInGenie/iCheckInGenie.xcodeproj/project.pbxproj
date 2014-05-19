@@ -58,7 +58,6 @@
 		6B5465D01929C1A700B6DA0C /* iPhone 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465991929C1A700B6DA0C /* iPhone 6.jpg */; };
 		6B5465D31929C1A700B6DA0C /* iPhone 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B54659D1929C1A700B6DA0C /* iPhone 10.jpg */; };
 		6B5465D91929C1A700B6DA0C /* iPhone 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465A41929C1A700B6DA0C /* iPhone 4.jpg */; };
-		6B5465DA1929C1A700B6DA0C /* Submit Button-with text.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465A51929C1A700B6DA0C /* Submit Button-with text.png */; };
 		6B5465DB1929C1A700B6DA0C /* Submit Button-without text.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465A61929C1A700B6DA0C /* Submit Button-without text.png */; };
 		6B5465DC1929C1A700B6DA0C /* Textbox for event code.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465A71929C1A700B6DA0C /* Textbox for event code.png */; };
 		6B5465DD1929C1A700B6DA0C /* flag_event-blue circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465A91929C1A700B6DA0C /* flag_event-blue circle.png */; };
@@ -82,6 +81,7 @@
 		6B5465F61929CB4200B6DA0C /* check box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465F51929CB4200B6DA0C /* check box@2x.png */; };
 		6B5465F91929CC1D00B6DA0C /* User icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465F71929CC1D00B6DA0C /* User icon@2x.png */; };
 		6B5465FA1929CC1D00B6DA0C /* plus sign@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465F81929CC1D00B6DA0C /* plus sign@2x.png */; };
+		6B5465FC1929CE3A00B6DA0C /* Submit Button-with text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5465FB1929CE3A00B6DA0C /* Submit Button-with text@2x.png */; };
 		6B6894D318ABDE6500619D76 /* ICGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6894D218ABDE6500619D76 /* ICGBaseViewController.m */; };
 		6B6894D618ABDE9900619D76 /* ICGLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6894D518ABDE9900619D76 /* ICGLandingViewController.m */; };
 		6B6894D918ABDEE800619D76 /* ICGLoginViaEventCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6894D818ABDEE800619D76 /* ICGLoginViaEventCodeViewController.m */; };
@@ -238,7 +238,6 @@
 		6B5465991929C1A700B6DA0C /* iPhone 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iPhone 6.jpg"; sourceTree = "<group>"; };
 		6B54659D1929C1A700B6DA0C /* iPhone 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iPhone 10.jpg"; sourceTree = "<group>"; };
 		6B5465A41929C1A700B6DA0C /* iPhone 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iPhone 4.jpg"; sourceTree = "<group>"; };
-		6B5465A51929C1A700B6DA0C /* Submit Button-with text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Submit Button-with text.png"; sourceTree = "<group>"; };
 		6B5465A61929C1A700B6DA0C /* Submit Button-without text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Submit Button-without text.png"; sourceTree = "<group>"; };
 		6B5465A71929C1A700B6DA0C /* Textbox for event code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Textbox for event code.png"; sourceTree = "<group>"; };
 		6B5465A91929C1A700B6DA0C /* flag_event-blue circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flag_event-blue circle.png"; sourceTree = "<group>"; };
@@ -262,6 +261,7 @@
 		6B5465F51929CB4200B6DA0C /* check box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check box@2x.png"; sourceTree = "<group>"; };
 		6B5465F71929CC1D00B6DA0C /* User icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User icon@2x.png"; sourceTree = "<group>"; };
 		6B5465F81929CC1D00B6DA0C /* plus sign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus sign@2x.png"; sourceTree = "<group>"; };
+		6B5465FB1929CE3A00B6DA0C /* Submit Button-with text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Submit Button-with text@2x.png"; sourceTree = "<group>"; };
 		6B6894D118ABDE6500619D76 /* ICGBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGBaseViewController.h; sourceTree = "<group>"; };
 		6B6894D218ABDE6500619D76 /* ICGBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGBaseViewController.m; sourceTree = "<group>"; };
 		6B6894D418ABDE9900619D76 /* ICGLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGLandingViewController.h; sourceTree = "<group>"; };
@@ -574,8 +574,8 @@
 		6B5465A31929C1A700B6DA0C /* app screen iphone4 */ = {
 			isa = PBXGroup;
 			children = (
+				6B5465FB1929CE3A00B6DA0C /* Submit Button-with text@2x.png */,
 				6B5465A41929C1A700B6DA0C /* iPhone 4.jpg */,
-				6B5465A51929C1A700B6DA0C /* Submit Button-with text.png */,
 				6B5465A61929C1A700B6DA0C /* Submit Button-without text.png */,
 				6B5465A71929C1A700B6DA0C /* Textbox for event code.png */,
 			);
@@ -1290,6 +1290,7 @@
 				6B5465B71929C1A700B6DA0C /* camera.png in Resources */,
 				6BA427AC18A00BE000473959 /* Main_iPad.storyboard in Resources */,
 				6B5465CB1929C1A700B6DA0C /* progress Bar.png in Resources */,
+				6B5465FC1929CE3A00B6DA0C /* Submit Button-with text@2x.png in Resources */,
 				6B0A10DE18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png in Resources */,
 				6B98C1D918CE1AE4006E39A2 /* AttendeeDetail.json in Resources */,
 				6B449A2518B36159007074F0 /* addAttendee.png in Resources */,
@@ -1328,7 +1329,6 @@
 				6B5465DD1929C1A700B6DA0C /* flag_event-blue circle.png in Resources */,
 				6B3A8EA5190A266A0098A6BA /* menu.png in Resources */,
 				6B5465C91929C1A700B6DA0C /* Background.png in Resources */,
-				6B5465DA1929C1A700B6DA0C /* Submit Button-with text.png in Resources */,
 				6BA427A018A00BE000473959 /* InfoPlist.strings in Resources */,
 				6B5465FA1929CC1D00B6DA0C /* plus sign@2x.png in Resources */,
 				6B6BA62B18F79DC900E7D725 /* MenuBackground@2x.png in Resources */,
