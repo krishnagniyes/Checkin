@@ -120,7 +120,7 @@
 - (void) customIndicator
 {
     //Create the first status image and the indicator view
-    UIImage *statusImage = [UIImage imageNamed:@"ScannerKitActivitySpinner.png"];
+    UIImage *statusImage = [UIImage imageNamed:@"torch.png"];
     UIImageView *activityImageView = [[UIImageView alloc]
                                       initWithImage:statusImage];
     
@@ -200,7 +200,7 @@
         if (_isFlashlightOn == NO)
         {
             _isFlashlightOn = YES;
-            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"sort.png"] forState:UIControlStateNormal];
+            [_flashlightButton setBackgroundImage:[UIImage imageNamed:@"menu icon.png"] forState:UIControlStateNormal];
             
         }
         else

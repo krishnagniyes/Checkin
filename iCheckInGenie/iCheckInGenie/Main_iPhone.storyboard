@@ -240,7 +240,7 @@
                                 <rect key="frame" x="135" y="81" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="ScannerKitActivitySpinner.png">
+                                <state key="normal" image="torch.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1256,7 +1256,7 @@ to obtain your event code.</string>
                                 <rect key="frame" x="135" y="82" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="ScannerKitActivitySpinner.png">
+                                <state key="normal" image="torch.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1898,14 +1898,21 @@ to sync your database.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="ScannerKitActivitySpinner.png" width="20" height="20"/>
+        <image name="add.png" width="32" height="32"/>
         <image name="add.png" width="32" height="32"/>
         <image name="addAttendee.png" width="42" height="48"/>
         <image name="background.png" width="640" height="963"/>
         <image name="home.png" width="49" height="43"/>
+        <image name="home.png" width="49" height="43"/>
+        <image name="iCheckinGenieLogo.png" width="472" height="270"/>
+        <image name="iCheckinGenieLogo.png" width="472" height="270"/>
         <image name="iCheckinGenieLogo.png" width="472" height="270"/>
         <image name="share.png" width="32" height="32"/>
         <image name="sort.png" width="32" height="32"/>
+        <image name="torch.png" width="120" height="121"/>
+        <image name="torch.png" width="120" height="121"/>
+        <image name="tree.png" width="50" height="33"/>
+        <image name="tree.png" width="50" height="33"/>
         <image name="tree.png" width="50" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
