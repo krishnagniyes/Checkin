@@ -165,7 +165,7 @@
     NSLog(@"Index = %d", _selectedOption);
     
     if(_selectedOption < 4){
-        tabVC.navigationItem.rightBarButtonItem = [self homeButton:@"placeholder_promotions.png"];
+        tabVC.navigationItem.rightBarButtonItem = [self homeButton:@"menu icon.png"];
         
         [tabVC setSelectedViewController:[tabVC.viewControllers objectAtIndex:_selectedOption]];
     }
