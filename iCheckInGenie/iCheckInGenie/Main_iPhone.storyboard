@@ -240,7 +240,7 @@
                                 <rect key="frame" x="135" y="81" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="6EA4E357-DC3B-4C5B-8ECB-A6F233FC0F6E">
+                                <state key="normal" image="F126A12F-5E0E-4EF6-8990-1062118F8B98">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -465,13 +465,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Af-x8-i1J">
-                                <rect key="frame" x="11" y="281" width="300" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Af-x8-i1J">
+                                <rect key="frame" x="85" y="281" width="123" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ook-5A-5bk"/>
+                                    <constraint firstAttribute="height" constant="39" id="Ook-5A-5bk"/>
                                 </constraints>
-                                <state key="normal" title="Submit">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="Submit Button-with text.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -479,7 +480,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="XJv-Wp-Gs5">
-                                <rect key="frame" x="11" y="358" width="300" height="51"/>
+                                <rect key="frame" x="11" y="367" width="300" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Can't find your Event Code?
 Please contact your event administrator
@@ -492,14 +493,14 @@ to obtain your event code.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0qL-AF-eSz" firstAttribute="trailing" secondItem="qAw-EF-cvI" secondAttribute="trailing" id="AUX-jK-zBJ"/>
-                            <constraint firstItem="XJv-Wp-Gs5" firstAttribute="trailing" secondItem="2Af-x8-i1J" secondAttribute="trailing" id="KMN-AG-O8V"/>
+                            <constraint firstItem="XJv-Wp-Gs5" firstAttribute="trailing" secondItem="2Af-x8-i1J" secondAttribute="trailing" constant="103" id="KMN-AG-O8V"/>
                             <constraint firstItem="2Af-x8-i1J" firstAttribute="top" secondItem="qAw-EF-cvI" secondAttribute="bottom" constant="29" id="ORZ-zP-8md"/>
-                            <constraint firstItem="2Af-x8-i1J" firstAttribute="leading" secondItem="ppg-UR-LbW" secondAttribute="leading" constant="11" id="Owo-gF-Wam"/>
+                            <constraint firstItem="2Af-x8-i1J" firstAttribute="leading" secondItem="ppg-UR-LbW" secondAttribute="leading" constant="85" id="Owo-gF-Wam"/>
                             <constraint firstItem="0qL-AF-eSz" firstAttribute="leading" secondItem="qAw-EF-cvI" secondAttribute="leading" id="RQx-ux-G14"/>
-                            <constraint firstItem="2Af-x8-i1J" firstAttribute="leading" secondItem="XJv-Wp-Gs5" secondAttribute="leading" id="TUR-tR-b1Z"/>
+                            <constraint firstItem="2Af-x8-i1J" firstAttribute="leading" secondItem="XJv-Wp-Gs5" secondAttribute="leading" constant="74" id="TUR-tR-b1Z"/>
                             <constraint firstItem="0qL-AF-eSz" firstAttribute="centerX" secondItem="ppg-UR-LbW" secondAttribute="centerX" id="Xjv-Jp-7nj"/>
                             <constraint firstItem="0qL-AF-eSz" firstAttribute="leading" secondItem="ppg-UR-LbW" secondAttribute="leading" constant="30" id="kVe-Ba-fDi"/>
-                            <constraint firstAttribute="trailing" secondItem="2Af-x8-i1J" secondAttribute="trailing" constant="9" id="pbc-IG-Znb"/>
+                            <constraint firstAttribute="trailing" secondItem="2Af-x8-i1J" secondAttribute="trailing" constant="112" id="pbc-IG-Znb"/>
                             <constraint firstItem="XJv-Wp-Gs5" firstAttribute="top" secondItem="2Af-x8-i1J" secondAttribute="bottom" constant="47" id="uR5-X6-D3G"/>
                             <constraint firstItem="qAw-EF-cvI" firstAttribute="top" secondItem="0qL-AF-eSz" secondAttribute="bottom" constant="16" id="vsd-Cl-0JL"/>
                             <constraint firstItem="0qL-AF-eSz" firstAttribute="top" secondItem="JUh-uT-TD9" secondAttribute="bottom" constant="92" id="wD9-Wc-U3E"/>
@@ -1256,7 +1257,7 @@ to obtain your event code.</string>
                                 <rect key="frame" x="135" y="82" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="F5C7EA4D-D7E5-4AE7-9228-3D81BA025BCE">
+                                <state key="normal" image="6701A97D-1F3E-42B2-958F-44FBDD56673A">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1899,7 +1900,7 @@ to sync your database.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="6EA4E357-DC3B-4C5B-8ECB-A6F233FC0F6E" width="20" height="20">
+        <image name="6701A97D-1F3E-42B2-958F-44FBDD56673A" width="20" height="20">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -1976,7 +1977,7 @@ sgC1ALcAuQC7AL0AwgDZANsA3Q+PD5QPnw+oD7sPvw/SD90P5g/rD/MP9g/7EAoQDhAVEB0QKhAvEDEQ
 MxA4EEAQQxBIEFAQUxBlEGgQbQAAAAAAAAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABBvA
 </mutableData>
         </image>
-        <image name="F5C7EA4D-D7E5-4AE7-9228-3D81BA025BCE" width="20" height="20">
+        <image name="F126A12F-5E0E-4EF6-8990-1062118F8B98" width="20" height="20">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2054,19 +2055,28 @@ MxA4EEAQQxBIEFAQUxBlEGgQbQAAAAAAAAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABBvA
 </mutableData>
         </image>
         <image name="Submit Button-with text.png" width="123" height="39"/>
+        <image name="Submit Button-with text.png" width="123" height="39"/>
         <image name="User icon.png" width="50" height="49"/>
         <image name="add.png" width="32" height="32"/>
         <image name="addAttendee.png" width="42" height="48"/>
         <image name="background.png" width="640" height="963"/>
         <image name="check box.png" width="17" height="16"/>
         <image name="home.png" width="49" height="43"/>
+        <image name="home.png" width="49" height="43"/>
+        <image name="iCheckinGenieLogo.png" width="472" height="270"/>
+        <image name="iCheckinGenieLogo.png" width="472" height="270"/>
         <image name="iCheckinGenieLogo.png" width="472" height="270"/>
         <image name="login btn.png" width="123" height="39"/>
         <image name="logout tab bar.png" width="18" height="23"/>
+        <image name="logout tab bar.png" width="18" height="23"/>
+        <image name="logout tab bar.png" width="18" height="23"/>
         <image name="plus sign.png" width="25" height="24"/>
+        <image name="scan tab bar.png" width="31" height="24"/>
         <image name="scan tab bar.png" width="31" height="24"/>
         <image name="share.png" width="32" height="32"/>
         <image name="sync tab bar.png" width="23" height="26"/>
+        <image name="tree.png" width="50" height="33"/>
+        <image name="tree.png" width="50" height="33"/>
         <image name="tree.png" width="50" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
