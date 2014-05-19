@@ -39,7 +39,7 @@
     
     self.navigationItem.rightBarButtonItem.enabled = YES;
 
-    self.navigationItem.rightBarButtonItem = [self homeButton:@"sort.png"];
+    self.navigationItem.rightBarButtonItem = [self homeButton:@"menu icon.png"];
 }
 
 - (void)didReceiveMemoryWarning

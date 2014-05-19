@@ -13,6 +13,8 @@
 @interface ICGEvenLandingViewController ()<UITabBarDelegate>
 {
     NSArray *_optionsArray;
+    NSArray *_optionsImageArray;
+
     NSUInteger _selectedOption;
 }
 @property (weak, nonatomic) IBOutlet UITabBar *optionsTabBar;
@@ -26,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalAttendeeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalAttendeesCheckinLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pendingCheckinLabel;
+
+
 
 @end
 
@@ -49,6 +53,8 @@
 //    self.oprionsTableView.layer.cornerRadius = 7.0;
 
     _optionsArray = @[@"CHECK IN ATTENDEES", @"ADD ATTENDEE" , @"SYNC DATABASE", @"SCAN TICKET", @"MY ACCOUNT", @"LOGOUT"];
+    
+    _optionsImageArray = @[@"Check in Nav button",@"addAttendee",@"Sync Database",@"Scan ticket",@"setting",@"logout"];
 
     [self.oprionsTableView setBackgroundColor:[UIColor clearColor]];
     self.oprionsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -83,6 +89,9 @@
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
+    UIImageView *imgView = (UIImageView*) [cell viewWithTag:0];
+    imgView.image = [UIImage imageNamed:[_optionsImageArray objectAtIndex:indexPath.section]];
+    
     UILabel *l =   (UILabel*) [cell viewWithTag:1];
     l.text = [_optionsArray objectAtIndex:indexPath.section];
     return cell;
