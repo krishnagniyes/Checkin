@@ -121,7 +121,7 @@ typedef enum
     NSLog(@"Index = %d", _selectedOption);
     
     if(_selectedOption < 4){
-        tabVC.navigationItem.rightBarButtonItem = [self homeButton:@"menu icon.png"];
+        tabVC.navigationItem.rightBarButtonItem = [self homeButton:@"quickmenu.png"];
 
         [tabVC setSelectedViewController:[tabVC.viewControllers objectAtIndex:_selectedOption]];
     }
@@ -157,7 +157,7 @@ typedef enum
     [checkInButton addTarget:self action:@selector(presentRightMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
     
     const CGFloat BarButtonOffset = 5.0f;
-    [checkInButton setFrame:CGRectMake(BarButtonOffset + 20, 6, 30, 30)];
+    [checkInButton setFrame:CGRectMake(BarButtonOffset , 6, 60, 30)];
     
     UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, checkInImage.size.width, checkInImage.size.height)];
     [containerView addSubview:checkInButton];
