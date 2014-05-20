@@ -6,7 +6,7 @@
 #define kLogoutMessage @"The database will automatically sync before logging out"
 
 
-#define kBackgroundColor_iPhone @"Default.png"
+#define kBackgroundColor_iPhone @"bg_iphone5.png"
 #define kBackgroundColor_iPad @"background.png"
 
 //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
