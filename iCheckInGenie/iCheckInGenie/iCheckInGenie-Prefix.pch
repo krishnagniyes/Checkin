@@ -17,4 +17,5 @@
     #import "CommonUtils.h"
     #import "AppConstants.h"
     #import "RESideMenu.h"
+    #import "Lib2ErgoRequestUtils.h"
 #endif

@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "RemoteOperation.h"
+#import "LoginResponse.h"
 
 @interface ICGDataManager : NSObject
 + (instancetype) defaultManager;
 - (RemoteOperation *)operationForType:(NSString *)type;
-
 - (void) fetchData:(CommpletionHandler)block;
+
+- (void)parseDataForLogin:(id) data;
+@property (nonatomic, strong) LoginResponse *loginResponse;
+
 @end

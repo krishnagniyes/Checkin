@@ -9,6 +9,8 @@
 #import "ICGLogoutViewController.h"
 #import "ICGLoginViewController.h"
 #import "AppConstants.h"
+#import "ICGDataManager.h"
+
 @interface ICGLogoutViewController ()
 
 @end
@@ -53,6 +55,7 @@
         return;
     else
     {
+        [[ICGDataManager defaultManager] setLoginResponse:nil];
         [self.navigationController popToRootViewControllerAnimated:YES];
 
 //        for(id VC in [self.navigationController viewControllers])

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26495EFA198758E4008C1F96 /* PickerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495EF0198758E4008C1F96 /* PickerPopupViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26495EFB198758E4008C1F96 /* Lib2ErgoRequestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495EF2198758E4008C1F96 /* Lib2ErgoRequestUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26495EFD198758E4008C1F96 /* CustomActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495EF7198758E4008C1F96 /* CustomActivityIndicatorView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26495EFE198758E4008C1F96 /* SimpleImageDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495EF9198758E4008C1F96 /* SimpleImageDownLoad.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26495F02198770EE008C1F96 /* LoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495F01198770EE008C1F96 /* LoginResponse.m */; };
 		6B0A10DA18BF4407007A7EF0 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10D918BF4407007A7EF0 /* beep.mp3 */; };
 		6B0A10DD18BF4656007A7EF0 /* ScannerKitActivitySpinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10DB18BF4656007A7EF0 /* ScannerKitActivitySpinner.png */; };
 		6B0A10DE18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10DC18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png */; };
@@ -184,6 +189,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26495EEF198758E4008C1F96 /* Lib2ErgoRequestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib2ErgoRequestUtils.h; sourceTree = "<group>"; };
+		26495EF0198758E4008C1F96 /* PickerPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerPopupViewController.m; sourceTree = "<group>"; };
+		26495EF1198758E4008C1F96 /* PickerPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerPopupViewController.h; sourceTree = "<group>"; };
+		26495EF2198758E4008C1F96 /* Lib2ErgoRequestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lib2ErgoRequestUtils.m; sourceTree = "<group>"; };
+		26495EF5198758E4008C1F96 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		26495EF6198758E4008C1F96 /* CustomActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomActivityIndicatorView.h; sourceTree = "<group>"; };
+		26495EF7198758E4008C1F96 /* CustomActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActivityIndicatorView.m; sourceTree = "<group>"; };
+		26495EF8198758E4008C1F96 /* SimpleImageDownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleImageDownLoad.h; sourceTree = "<group>"; };
+		26495EF9198758E4008C1F96 /* SimpleImageDownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleImageDownLoad.m; sourceTree = "<group>"; };
+		26495EFF1987591C008C1F96 /* PickerPopupDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerPopupDelegateProtocol.h; sourceTree = "<group>"; };
+		26495F00198770EE008C1F96 /* LoginResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
+		26495F01198770EE008C1F96 /* LoginResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginResponse.m; sourceTree = "<group>"; };
 		6B0A10D918BF4407007A7EF0 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		6B0A10DB18BF4656007A7EF0 /* ScannerKitActivitySpinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScannerKitActivitySpinner.png; sourceTree = "<group>"; };
 		6B0A10DC18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScannerKitActivitySpinner@2x.png"; sourceTree = "<group>"; };
@@ -1047,6 +1064,8 @@
 				6B7449AF18BC5E01001D87D1 /* ICGDataManager.h */,
 				6B7449B018BC5E01001D87D1 /* ICGDataManager.m */,
 				6B98C1DA18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodeld */,
+				26495F00198770EE008C1F96 /* LoginResponse.h */,
+				26495F01198770EE008C1F96 /* LoginResponse.m */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -1096,6 +1115,16 @@
 		6BA427DD18A00DC600473959 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				26495EFF1987591C008C1F96 /* PickerPopupDelegateProtocol.h */,
+				26495EEF198758E4008C1F96 /* Lib2ErgoRequestUtils.h */,
+				26495EF0198758E4008C1F96 /* PickerPopupViewController.m */,
+				26495EF1198758E4008C1F96 /* PickerPopupViewController.h */,
+				26495EF2198758E4008C1F96 /* Lib2ErgoRequestUtils.m */,
+				26495EF5198758E4008C1F96 /* CommonDefine.h */,
+				26495EF6198758E4008C1F96 /* CustomActivityIndicatorView.h */,
+				26495EF7198758E4008C1F96 /* CustomActivityIndicatorView.m */,
+				26495EF8198758E4008C1F96 /* SimpleImageDownLoad.h */,
+				26495EF9198758E4008C1F96 /* SimpleImageDownLoad.m */,
 				6B449A2018B34A69007074F0 /* ExpandableTableViewCell.h */,
 				6B449A2118B34A69007074F0 /* ExpandableTableViewCell.m */,
 				6BA427DE18A00DC600473959 /* AppConstants.h */,
@@ -1388,6 +1417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B889B8718C301FC000C8EDA /* AFNetworkActivityIndicatorManager.m in Sources */,
+				26495EFA198758E4008C1F96 /* PickerPopupViewController.m in Sources */,
 				6B6894EB18ABDF9D00619D76 /* ICGAttendeeListViewController.m in Sources */,
 				6BA427FB18A00E9E00473959 /* RemoteOperation.m in Sources */,
 				6BA427F218A00DC600473959 /* GGLocationPlacemark.m in Sources */,
@@ -1421,6 +1451,7 @@
 				6B6894FD18ABE02F00619D76 /* ICGLeadRetrievalScanController.m in Sources */,
 				6B889B8B18C301FC000C8EDA /* UIImageView+AFNetworking.m in Sources */,
 				6B889B8D18C301FC000C8EDA /* UIWebView+AFNetworking.m in Sources */,
+				26495EFE198758E4008C1F96 /* SimpleImageDownLoad.m in Sources */,
 				6B98C1DC18CE1DA4006E39A2 /* CheckinCoreDataObject.xcdatamodeld in Sources */,
 				6B6894FA18ABE01B00619D76 /* ICGLeadRetrievalLeadListViewController.m in Sources */,
 				6B2C05D418F7141F00F2DF0E /* ICGLoginOptionsViewController.m in Sources */,
@@ -1445,16 +1476,19 @@
 				6B7B9B9E18B87DE9008CB1EF /* ICGAboutViewController.m in Sources */,
 				6B7B9BA118B9F094008CB1EF /* ICGLogoutViewController.m in Sources */,
 				6B6894D618ABDE9900619D76 /* ICGLandingViewController.m in Sources */,
+				26495F02198770EE008C1F96 /* LoginResponse.m in Sources */,
 				6B7449C218BCDBD5001D87D1 /* AFAppDotNetAPIClient.m in Sources */,
 				6B68950318ABE05500619D76 /* ICGPreCheckinViewController.m in Sources */,
 				6B6894DC18ABDF1800619D76 /* ICGLoginViewController.m in Sources */,
 				6B68950618ABE06500619D76 /* ICGScanCodeViewController.m in Sources */,
+				26495EFD198758E4008C1F96 /* CustomActivityIndicatorView.m in Sources */,
 				6B889B8518C301FC000C8EDA /* AFURLResponseSerialization.m in Sources */,
 				6B68950918ABE07600619D76 /* ICGSyncViewController.m in Sources */,
 				6B6894D918ABDEE800619D76 /* ICGLoginViaEventCodeViewController.m in Sources */,
 				6B889B1518C2E4E5000C8EDA /* ICGDataBase.m in Sources */,
 				6B6894F118ABDFC500619D76 /* ICGEventListViewController.m in Sources */,
 				6B6BA63518F79EB600E7D725 /* UIViewController+RESideMenu.m in Sources */,
+				26495EFB198758E4008C1F96 /* Lib2ErgoRequestUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

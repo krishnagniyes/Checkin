@@ -11,7 +11,7 @@
 #import "CommunicationManager.h"
 #import "AFAppDotNetAPIClient.h"
 #import "LoginOperation.h"
-
+#import "LoginResponse.h"
 @implementation ICGDataManager
 
 +(instancetype) defaultManager {
@@ -40,6 +40,17 @@
         block(op, error);
     }];
 
+}
+/// Login
+- (void)parseDataForLogin:(id) data {
+    NSDictionary *dict = (NSDictionary *)data;
+    LoginResponse* res = [[LoginResponse alloc] init];
+    [res setCreatedTimestamp:[dict objectForKey:@"CreatedTimestamp"]];
+    [res setDeviceID:[dict objectForKey:@"DeviceID"]];
+    [res setID:[dict objectForKey:@"ID"]];
+    [res setOrganizerID:[dict objectForKey:@"OrganizerID"]];
+    [res setToken:[dict objectForKey:@"Token"]];
+    self.loginResponse = res;
 }
 
 

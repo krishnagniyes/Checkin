@@ -110,27 +110,41 @@
 
 
 - (IBAction)loginAction:(id)sender {
-//    NSArray *loginArray = [CommonUtils getDemoDataFor:@"Login"];
-//    
-//    BOOL isUserAuthenticated = NO;
-//    for(NSDictionary *dict in loginArray)
-//    {
-//        if([[dict objectForKey:@"username"] isEqualToString:_usernameTF.text] && [[dict objectForKey:@"password"] isEqualToString:_userPasswordTF.text])
-//        {
-//            isUserAuthenticated = YES;
-//            break;
-//        }
-//    }
-//    
-//    if(!isUserAuthenticated)
-//    {
-//        [CommonUtils showSimpleAlertWithTitle:@"Invalid User" andMessage:@"Invalid username or password"];
-//        _usernameTF.text = @"";
-//        _userPasswordTF.text = @"";
-//        return;
-//    }
-    [self performSegueWithIdentifier:@"eventlistpage" sender:self];
     
+    
+//    DeviceID=5654&Username=Aditya&password=aditya123
+    
+    Lib2ErgoRequestUtils *util = [[Lib2ErgoRequestUtils alloc] init];
+    
+    if ([self.usernameTF.text length] == 0 || [self.userPasswordTF.text length] == 0) {
+    
+        [CommonUtils showSimpleAlertWithTitle:@"" andMessage:@"Username & and password can not be left empty"];
+        return;
+    }
+    else {
+        
+        [CommonUtils startActivityIndicatorOnView:self.view withText:@"Authenticating..."];
+        NSString *service = [NSString stringWithFormat:@"%@DeviceID=%@&Username=%@&password=%@",kServiceLogin,kUniqueDeviceID,
+                             self.usernameTF.text,self.userPasswordTF.text];
+        [util doRequestForService:service usingCompletionBlock:^(id data, NSError *error) {
+        [[ICGDataManager defaultManager] parseDataForLogin:data];
+            
+            if (data != nil) {
+                NSDictionary *dict = (NSDictionary *)data;
+                if([[dict allKeys] containsObject:@"Result"])
+                {
+                    [CommonUtils showSimpleAlertWithTitle:@"Login Failed" andMessage:@"Username or password was entered incorrectly!"];
+                    [CommonUtils stopActivityIndicatorOnView:self.view];
+                }
+                else {
+                    [self performSegueWithIdentifier:@"eventlistpage" sender:self];
+                }
+            }
+            
+            [CommonUtils stopActivityIndicatorOnView:self.view];
+        }];
+        
+    }
 }
 - (IBAction)forgotUsername:(id)sender {
     

@@ -8,6 +8,7 @@
 
 #import "ICGEventListViewController.h"
 #import "ExpandableTableViewCell.h"
+#import "ICGDataManager.h"
 #define kBorderWidth 1.0
 #define kCornerRadius 15.0
 
@@ -36,7 +37,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
+//    LoginResponse * res = [[ICGDataManager defaultManager] loginResponse];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kBackgroundColor_iPhone]]];
+
+    self.navigationItem.hidesBackButton = YES;
     self.title = @"Events";
     NSDictionary *dict=[[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"]];
 	self.items=[dict valueForKey:@"Items"];
