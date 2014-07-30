@@ -9,5 +9,5 @@
 #import "ICGBaseViewController.h"
 
 @interface ICGEventListViewController : ICGBaseViewController
-
+@property (nonatomic, strong) NSArray *eventsList;
 @end

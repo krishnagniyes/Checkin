@@ -12,6 +12,8 @@
 		26495EFD198758E4008C1F96 /* CustomActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495EF7198758E4008C1F96 /* CustomActivityIndicatorView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26495EFE198758E4008C1F96 /* SimpleImageDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495EF9198758E4008C1F96 /* SimpleImageDownLoad.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26495F02198770EE008C1F96 /* LoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495F01198770EE008C1F96 /* LoginResponse.m */; };
+		26B6CE3119889F8200B08E04 /* AttendeeDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B6CE3019889F8200B08E04 /* AttendeeDetails.m */; };
+		26B6CE341988AFD900B08E04 /* EventList.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B6CE331988AFD900B08E04 /* EventList.m */; };
 		6B0A10DA18BF4407007A7EF0 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10D918BF4407007A7EF0 /* beep.mp3 */; };
 		6B0A10DD18BF4656007A7EF0 /* ScannerKitActivitySpinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10DB18BF4656007A7EF0 /* ScannerKitActivitySpinner.png */; };
 		6B0A10DE18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10DC18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png */; };
@@ -201,6 +203,10 @@
 		26495EFF1987591C008C1F96 /* PickerPopupDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerPopupDelegateProtocol.h; sourceTree = "<group>"; };
 		26495F00198770EE008C1F96 /* LoginResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
 		26495F01198770EE008C1F96 /* LoginResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginResponse.m; sourceTree = "<group>"; };
+		26B6CE2F19889F8200B08E04 /* AttendeeDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendeeDetails.h; sourceTree = "<group>"; };
+		26B6CE3019889F8200B08E04 /* AttendeeDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendeeDetails.m; sourceTree = "<group>"; };
+		26B6CE321988AFD900B08E04 /* EventList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventList.h; sourceTree = "<group>"; };
+		26B6CE331988AFD900B08E04 /* EventList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventList.m; sourceTree = "<group>"; };
 		6B0A10D918BF4407007A7EF0 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		6B0A10DB18BF4656007A7EF0 /* ScannerKitActivitySpinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScannerKitActivitySpinner.png; sourceTree = "<group>"; };
 		6B0A10DC18BF4656007A7EF0 /* ScannerKitActivitySpinner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScannerKitActivitySpinner@2x.png"; sourceTree = "<group>"; };
@@ -1075,6 +1081,10 @@
 			children = (
 				6B98C1E318CE2C9F006E39A2 /* AttendeeDetail.h */,
 				6B98C1E418CE2C9F006E39A2 /* AttendeeDetail.m */,
+				26B6CE2F19889F8200B08E04 /* AttendeeDetails.h */,
+				26B6CE3019889F8200B08E04 /* AttendeeDetails.m */,
+				26B6CE321988AFD900B08E04 /* EventList.h */,
+				26B6CE331988AFD900B08E04 /* EventList.m */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -1447,6 +1457,7 @@
 				6B7449B118BC5E01001D87D1 /* ICGDataManager.m in Sources */,
 				6BA427F118A00DC600473959 /* GGCustomPicker.m in Sources */,
 				6B889B8818C301FC000C8EDA /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				26B6CE341988AFD900B08E04 /* EventList.m in Sources */,
 				6B68950018ABE04400619D76 /* ICGPreCheckinEventListViewController.m in Sources */,
 				6B6894FD18ABE02F00619D76 /* ICGLeadRetrievalScanController.m in Sources */,
 				6B889B8B18C301FC000C8EDA /* UIImageView+AFNetworking.m in Sources */,
@@ -1476,6 +1487,7 @@
 				6B7B9B9E18B87DE9008CB1EF /* ICGAboutViewController.m in Sources */,
 				6B7B9BA118B9F094008CB1EF /* ICGLogoutViewController.m in Sources */,
 				6B6894D618ABDE9900619D76 /* ICGLandingViewController.m in Sources */,
+				26B6CE3119889F8200B08E04 /* AttendeeDetails.m in Sources */,
 				26495F02198770EE008C1F96 /* LoginResponse.m in Sources */,
 				6B7449C218BCDBD5001D87D1 /* AFAppDotNetAPIClient.m in Sources */,
 				6B68950318ABE05500619D76 /* ICGPreCheckinViewController.m in Sources */,

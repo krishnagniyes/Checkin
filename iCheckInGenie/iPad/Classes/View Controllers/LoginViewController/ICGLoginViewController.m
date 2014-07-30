@@ -9,6 +9,7 @@
 #import "ICGLoginViewController.h"
 #import "ICGForgotPasswordViewController.h"
 #import "ICGDataManager.h"
+#import "ICGEventListViewController.h"
 
 #define keyBoardMovementDistance 120
 #define keyBoardMovementDuration 0.3f
@@ -137,7 +138,26 @@
                     [CommonUtils stopActivityIndicatorOnView:self.view];
                 }
                 else {
-                    [self performSegueWithIdentifier:@"eventlistpage" sender:self];
+                    
+                    /// Get all the data if login sucessfull
+                    
+                    [CommonUtils startActivityIndicatorOnView:self.view withText:@"Loading..."];
+//                    LoginResponse *res = [[ICGDataManager defaultManager] loginResponse];
+                    NSString* temp = @"GetEventList?DeviceID=5654&token=ZO9VK3LSPTGKAXH983A7TEVC15379G&OrganizerID=2";
+                    
+//                    [util doRequestForService:[NSString stringWithFormat:kGetEventListService,[res DeviceID],
+//                                               [res Token], [res OrganizerID]] usingCompletionBlock:^(id data, NSError *error) {
+                        [util doRequestForService:temp usingCompletionBlock:^(id data, NSError *error) {
+
+                            if(![[dict allKeys] containsObject:@"Result"]) {
+                               NSArray* arr = [[ICGDataManager defaultManager] listOfEventsFromData:data];
+                                
+                                
+                                [self performSegueWithIdentifier:@"eventlistpage" sender:self];
+                            }
+                    }];
+                    
+                    [CommonUtils stopActivityIndicatorOnView:self.view];
                 }
             }
             
@@ -206,6 +226,9 @@
     
     NSLog(@"VALUE = %@", segue.identifier);
     if ([segue.identifier isEqualToString:@"eventlistpage"]) {
+        ICGEventListViewController *viewC =  (ICGEventListViewController*) segue.destinationViewController;
+        viewC.eventsList = [[ICGDataManager defaultManager] eventsList];
+        
         
     }else if([segue.identifier isEqualToString:@"forgotUsername"])
     {
