@@ -24,11 +24,8 @@ typedef void (^RequestCommpletionHandler) (id data, NSError *error);
 @property (nonatomic, retain) NSString* callurl;
 @property (nonatomic, retain) NSMutableData *mdata;
 
-- (void)doRequestForService:(NSString *)service usingCompletionBlock:(RequestCommpletionHandler )block;
-
-
 //Async Requests
-- (void)doRequestForUrl:(NSString*)url withDelegate:(id)del noNetworkPopupRequired:(BOOL) popup;
+- (void)doRequestForService:(NSString *)service usingCompletionBlock:(RequestCommpletionHandler )block;
 - (void) handleNoNetworkCondition;
 
 @end

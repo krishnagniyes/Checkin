@@ -47,4 +47,7 @@
 + (NSString*) dateAsString:(NSDate*) date;
 
 
++ (void) startActivityIndicatorOnView:(UIView*)view withText:(NSString*)text;
++ (void) stopActivityIndicatorOnView:(UIView*) view;
+
 @end

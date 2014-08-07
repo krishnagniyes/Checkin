@@ -10,7 +10,7 @@
 #import "ExpandableTableViewCell.h"
 #import "ICGDataManager.h"
 #import "EventList.h"
-
+#import "ICSubEventsListViewController.h"
 
 #define kBorderWidth 1.0
 #define kCornerRadius 15.0
@@ -43,7 +43,6 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kBackgroundColor_iPhone]]];
     self.navigationItem.hidesBackButton = YES;
-    self.title = @"Events";
     self.activeEvents = [[NSMutableArray alloc] init];
     self.closedEvents = [[NSMutableArray alloc] init];
 
@@ -60,23 +59,16 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.title = @"Events";
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table View Data Source Methods
-
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-//    
-//    if(section == 0 && !_ischangedTab)
-//        return @"Active Events";
-//    else
-//        return @"Closed Events";
-//    
-//    return nil;
-//}
 
 
 #pragma mark - Table view data source
@@ -108,7 +100,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    self.title = @"Back";
+    [self performSegueWithIdentifier:@"subEventPage" sender:indexPath];
 }
 
 - (IBAction)segmentOptionAction:(id)sender {
@@ -133,9 +126,10 @@
 #pragma PrepareSeague for specific controller
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
-    NSLog(@"VALUE = %@", segue.identifier);
-    if ([segue.identifier isEqualToString:@"eventlistpage"]) {
+    NSIndexPath *indexpath = (NSIndexPath *)sender;
+    if ([segue.identifier isEqualToString:@"subEventPage"]) {
+        ICSubEventsListViewController *viewC =  (ICSubEventsListViewController*) segue.destinationViewController;
+        viewC.subEventsList = [[ICGDataManager defaultManager] eventsList];
     }
 }
 

@@ -1,5 +1,6 @@
 
 #import "CommonUtils.h"
+#import "CustomActivityIndicatorView.h"
 
 #define kDoneButtonX 0
 #define kDoneButtonY 163
@@ -8,7 +9,6 @@
 
 #define kDebugMode @"DebugMode"
 #define kAppPreferencesFileName	@"AppPreferences.plist"
-
 @implementation CommonUtils
 
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
@@ -346,11 +346,32 @@ static CGFloat animatedDistance = 0;
 	//	NSDate* date = [self.userDetailsArray objectAtIndex:4] ;
 	NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
 	//[dateFormatter setDateFormat:@"dd/MM/yyyy"];
-	[dateFormatter setDateFormat:@"yyyy-MM-dd"];
+	[dateFormatter setDateFormat:@"MM-dd-yyyy"];
 	NSString *strDate = [dateFormatter stringFromDate:date];
 	//	NSLog(@"%@", strDate);
 	[dateFormatter autorelease];
 	return strDate;
 }
+
+#pragma mark -
+#pragma mark StartAndStop Activity
++ (void) startActivityIndicatorOnView:(UIView*)view withText:(NSString*)text
+{
+	CustomActivityIndicatorView* cutsAct = [[CustomActivityIndicatorView alloc] initWithText:text];
+	[view addSubview:cutsAct];
+	[cutsAct autorelease];
+}
+
++ (void) stopActivityIndicatorOnView:(UIView*) view
+{
+	NSArray* arr = [view subviews];
+	for (UIView* vi in arr) {
+		if([vi isKindOfClass:[CustomActivityIndicatorView class]])
+		{
+			[vi removeFromSuperview];
+		}
+	}
+}
+
 
 @end

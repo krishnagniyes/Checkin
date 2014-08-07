@@ -29,7 +29,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalAttendeesCheckinLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pendingCheckinLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *subEventName;
 
+@property (weak, nonatomic) IBOutlet UILabel *mainEventName;
 
 @end
 
@@ -48,17 +50,42 @@
 {
     [super viewDidLoad];
 //    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tree"]];
-    
-    self.navigationController.title = @"Details";
+    self.title = @"Details";
 //    self.oprionsTableView.layer.cornerRadius = 7.0;
 
     _optionsArray = @[@"CHECK IN ATTENDEES", @"ADD ATTENDEE" , @"SYNC DATABASE", @"SCAN TICKET", @"MY ACCOUNT", @"LOGOUT"];
-    
     _optionsImageArray = @[@"Check in Nav button",@"addAttendee",@"Sync Database",@"Scan ticket",@"setting",@"logout"];
 
+    
+    self.mainEventName.text = [self.event Ev_Nm];
+    self.subEventName.text = [self.event Ev_Desc];
+    if(![[self.event Ev_End_Dt] isKindOfClass:[NSNull class]]) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+        NSDate *d = [dateFormatter dateFromString:[self.event Ev_End_Dt]];
+        [self.eventDateLabel setText:[CommonUtils dateAsString:d]];
+    }
+
+    if(![[self.event Ev_Chk_In_End_Dttm] isKindOfClass:[NSNull class]]) {
+        [self.eventTimeLabel setText:[self.event Ev_Chk_In_End_Dttm]];
+    }
+    if(![[self.event Ev_City_Txt] isKindOfClass:[NSNull class]]) {
+        [self.eventVenueLabel setText:[self.event Ev_City_Txt]];
+    }
+    if(![[self.event TotalAttendees] isKindOfClass:[NSNull class]]) {
+        [self.totalAttendeeLabel setText:[[self.event TotalAttendees] stringValue]];
+    }
+    if(![[self.event TotalCheckIns] isKindOfClass:[NSNull class]]) {
+        [self.totalAttendeesCheckinLabel setText:[[self.event TotalCheckIns] stringValue]];
+    }
+    if(![[self.event PendingCheckIns] isKindOfClass:[NSNull class]]) {
+        [self.pendingCheckinLabel setText:[[self.event PendingCheckIns] stringValue]];
+    }
+    
+    
     [self.oprionsTableView setBackgroundColor:[UIColor clearColor]];
     self.oprionsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.oprionsTableView reloadData];
+//    [self.oprionsTableView reloadData];
 
 }
 

@@ -7,6 +7,8 @@
 //
 
 #import "ICGBaseViewController.h"
+#import "EventList.h"
+
 typedef enum
 {
     kCheckInOption = 0,
@@ -18,6 +20,7 @@ typedef enum
 }OptionName;
 
 @interface ICGEvenLandingViewController : ICGBaseViewController
+@property (nonatomic, strong) EventList* event;
 @end
 
 

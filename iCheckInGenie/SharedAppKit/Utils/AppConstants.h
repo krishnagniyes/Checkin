@@ -1,4 +1,5 @@
 
+#define kUniqueDeviceID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 
 
 
@@ -10,9 +11,10 @@
 #define kGetEventListService @"GetEventList?DeviceID=%@&token=%@&OrganizerID=%@"
 #define kGetEventDetail @"GetEventDetail?DeviceID=%@&token=%@&OrganizerID=%@&EventID=%@"
 
-#define kUniqueDeviceID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
+#define kGetAttendeeList @"GetAttendeeList?DeviceID=%@&token=%@&OrganizerID=%@&EventID=%@"
 
 
+#define  kTempGetAttendee @"GetAttendeeList?DeviceID=5654&token=ZO9VK3LSPTGKAXH983A7TEVC15379G&OrganizerID=2&EventID=12"
 
 
 #define kLogoutAlertTitle @"Are you sure you would like to Logout?"

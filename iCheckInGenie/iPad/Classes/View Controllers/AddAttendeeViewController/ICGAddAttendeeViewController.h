@@ -7,10 +7,13 @@
 //
 
 #import "ICGBaseViewController.h"
+#import "AttendeeDetails.h"
 
 @interface ICGAddAttendeeViewController : ICGBaseViewController
 
 -(IBAction)cancelDetailView:(id)sender;
 -(IBAction)saveDetailView:(id)sender;
+
+@property (nonatomic, strong) AttendeeDetails *attendeeDetail;
 
 @end

@@ -10,6 +10,10 @@
 #import "ICGSyncViewController.h"
 #import "ICGAttendeeDetailCell.h"
 #import "ICGAttendeeDetailCell.h"
+#import "ICGDataManager.h"
+#import "AttendeeDetails.h"
+#import "ICGAddAttendeeViewController.h"
+
 #define kBorderWidth 3.0
 #define kCornerRadius 8.0
 
@@ -27,6 +31,15 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
 @property (weak, nonatomic) IBOutlet UISearchBar *searchTextField;
 
 @property (nonatomic, strong) NSMutableArray *attendeesArray;
+
+
+@property (nonatomic, strong) NSMutableArray *checkedInAttendeeArr;
+@property (nonatomic, strong) NSMutableArray *allAttendeeArray;
+@property (nonatomic, strong) NSMutableArray *pendingCheckinAttendeeArray;
+
+
+
+
 @end
 
 @implementation ICGAttendeeListViewController
@@ -43,26 +56,19 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.attendeesArray = [[NSMutableArray alloc] init];
     
-    NSDictionary* d3 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"1"] forKeys:@[@"subname",@"sublastname"]];
-    NSDictionary* d4 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"2"] forKeys:@[@"subname",@"sublastname"]];
-    NSDictionary* d5 = [NSDictionary dictionaryWithObjects:@[@"SIM", @"3"] forKeys:@[@"subname",@"sublastname"]];
+    self.attendeesArray = (NSMutableArray *)[[ICGDataManager defaultManager] attendeesList];
     
-    NSMutableArray *arr = [[NSMutableArray alloc] init];
-    
-    [arr addObject:d3];
-    [arr addObject:d4];
-    [arr addObject:d5];
-    
-    NSDictionary* d = [NSDictionary dictionaryWithObjects:@[@"Krishna", @"1211", arr] forKeys:@[@"name",@"lastname", @"SB"]];
+//    for (ICGAttendeeDetailCell *attendee in self.attendeesArray) {
+//        if ([[event Ev_Sts_Cd] isEqualToString:@"Active"]) {
+//        }
+//        else if (){
+//        }
+//        else {
+//        
+//        }
+//    }
 
-    
-    NSDictionary* d2 = [NSDictionary dictionaryWithObjects:@[@"ILA", @"2"] forKeys:@[@"name",@"lastname"]];
-
-    
-    [_attendeesArray addObject:d];
-    [_attendeesArray addObject:d2];
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -80,10 +86,10 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
 {
     NSUInteger count = [_attendeesArray count];
     
-    for(NSDictionary * d in _attendeesArray)
-    {
-        count += [[d objectForKey:@"SB"] count];
-    }
+//    for(NSDictionary * d in _attendeesArray)
+//    {
+//        count += [[d objectForKey:@"SB"] count];
+//    }
 
     NSLog(@"Count = %d", count);
     return count;
@@ -91,8 +97,7 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
 
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = nil;
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -106,32 +111,44 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.checkInLabel.hidden = NO;
     cell.checkInLabel.text = @"";
+    
+    
+    AttendeeDetails *attendee = [self.attendeesArray objectAtIndex:indexPath.row];
+    
+    cell.snoLabel.text = [NSString stringWithFormat:@"%d", indexPath.row + 1];
 
-    NSDictionary *d1 = [_attendeesArray objectAtIndex:index
-                       ];
+    
+    cell.infoLabel.text = [attendee Fst_Nm];
+    cell.additionalInfoLabel.text = [[attendee Additional_Guests] stringValue];
+    cell.confCodeLabel.text = [NSString stringWithFormat:@"Conf. Code :%@",[attendee Cnfrm_Cd]];
+    
+    
     
 
-    NSArray* arr = [d1 objectForKey:@"SB"];
-    
-    NSLog(@"ARR COUNT = %d", [arr count]);
-    
-    if([arr count] == indexPath.row){
-        index++;
-        arr = nil;
-    }
-    
-    if([arr count] != 0){
-        NSDictionary* d = [arr objectAtIndex:indexPath.row];
-        cell.snoLabel.text = [d objectForKey:@"sublastname"];
-        cell.infoLabel.text = [d objectForKey:@"subname"];
-        cell.additionalInfoLabel.text = [NSString stringWithFormat:@"[%d]",[arr count]];
-    }else{
-        cell.snoLabel.text = [d1 objectForKey:@"lastname"];
-        cell.infoLabel.text = [d1 objectForKey:@"name"];
-        cell.additionalInfoLabel.text = [NSString stringWithFormat:@"[%d]",[arr count]];
-    
-    }
-
+//    NSDictionary *d1 = [_attendeesArray objectAtIndex:index
+//                       ];
+//    
+//
+//    NSArray* arr = [d1 objectForKey:@"SB"];
+//    
+//    NSLog(@"ARR COUNT = %d", [arr count]);
+//    
+//    if([arr count] == indexPath.row){
+//        index++;
+//        arr = nil;
+//    }
+//    
+//    if([arr count] != 0){
+//        NSDictionary* d = [arr objectAtIndex:indexPath.row];
+//        cell.snoLabel.text = [d objectForKey:@"sublastname"];
+//        cell.infoLabel.text = [d objectForKey:@"subname"];
+//        cell.additionalInfoLabel.text = [NSString stringWithFormat:@"[%d]",[arr count]];
+//    }else{
+//        cell.snoLabel.text = [d1 objectForKey:@"lastname"];
+//        cell.infoLabel.text = [d1 objectForKey:@"name"];
+//        cell.additionalInfoLabel.text = [NSString stringWithFormat:@"[%d]",[arr count]];
+//    }
+//
     cell.snoLabel.backgroundColor = [UIColor lightGrayColor];
 
     cell.infoLabel.backgroundColor = [UIColor whiteColor];
@@ -248,6 +265,25 @@ heightForHeaderInSection:(NSInteger)section
 //        count ++;
 //    }
     return 0;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.title = @"Back";
+    [self performSegueWithIdentifier:@"addAttendeePage" sender:indexPath];
+}
+
+
+#pragma mark -
+#pragma PrepareSeague for specific controller
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexpath = (NSIndexPath *)sender;
+    if ([segue.identifier isEqualToString:@"addAttendeePage"]) {
+        ICGAddAttendeeViewController *viewC =  (ICGAddAttendeeViewController*) segue.destinationViewController;
+        viewC.attendeeDetail = [self.attendeesArray objectAtIndex:indexpath.row];
+    }
 }
 
 

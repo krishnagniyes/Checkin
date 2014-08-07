@@ -10,6 +10,7 @@
 #import "ICGForgotPasswordViewController.h"
 #import "ICGDataManager.h"
 #import "ICGEventListViewController.h"
+#import "ICASplashViewController.h"
 
 #define keyBoardMovementDistance 120
 #define keyBoardMovementDuration 0.3f
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *userPasswordTF;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *forgotUsernameButton;
+@property (strong, nonatomic) ICASplashViewController *splashVC;
 @end
 
 @implementation ICGLoginViewController
@@ -112,9 +114,8 @@
 
 - (IBAction)loginAction:(id)sender {
     
-    
-//    DeviceID=5654&Username=Aditya&password=aditya123
-    
+    self.usernameTF.text = @"Aditya";
+    self.userPasswordTF.text = @"aditya123";
     Lib2ErgoRequestUtils *util = [[Lib2ErgoRequestUtils alloc] init];
     
     if ([self.usernameTF.text length] == 0 || [self.userPasswordTF.text length] == 0) {
@@ -123,47 +124,8 @@
         return;
     }
     else {
-        
-        [CommonUtils startActivityIndicatorOnView:self.view withText:@"Authenticating..."];
-        NSString *service = [NSString stringWithFormat:@"%@DeviceID=%@&Username=%@&password=%@",kServiceLogin,kUniqueDeviceID,
-                             self.usernameTF.text,self.userPasswordTF.text];
-        [util doRequestForService:service usingCompletionBlock:^(id data, NSError *error) {
-        [[ICGDataManager defaultManager] parseDataForLogin:data];
-            
-            if (data != nil) {
-                NSDictionary *dict = (NSDictionary *)data;
-                if([[dict allKeys] containsObject:@"Result"])
-                {
-                    [CommonUtils showSimpleAlertWithTitle:@"Login Failed" andMessage:@"Username or password was entered incorrectly!"];
-                    [CommonUtils stopActivityIndicatorOnView:self.view];
-                }
-                else {
-                    
-                    /// Get all the data if login sucessfull
-                    
-                    [CommonUtils startActivityIndicatorOnView:self.view withText:@"Loading..."];
-//                    LoginResponse *res = [[ICGDataManager defaultManager] loginResponse];
-                    NSString* temp = @"GetEventList?DeviceID=5654&token=ZO9VK3LSPTGKAXH983A7TEVC15379G&OrganizerID=2";
-                    
-//                    [util doRequestForService:[NSString stringWithFormat:kGetEventListService,[res DeviceID],
-//                                               [res Token], [res OrganizerID]] usingCompletionBlock:^(id data, NSError *error) {
-                        [util doRequestForService:temp usingCompletionBlock:^(id data, NSError *error) {
-
-                            if(![[dict allKeys] containsObject:@"Result"]) {
-                               NSArray* arr = [[ICGDataManager defaultManager] listOfEventsFromData:data];
-                                
-                                
-                                [self performSegueWithIdentifier:@"eventlistpage" sender:self];
-                            }
-                    }];
-                    
-                    [CommonUtils stopActivityIndicatorOnView:self.view];
-                }
-            }
-            
-            [CommonUtils stopActivityIndicatorOnView:self.view];
-        }];
-        
+        [self loadData:util];
+    
     }
 }
 - (IBAction)forgotUsername:(id)sender {
@@ -186,38 +148,6 @@
     return s;
 }
 
-#pragma mark - Authentication ( Login )
-- (void) authenticate
-{
-#if 0
-    __block NSDictionary *loginDataRoot = nil;
-    __block NSDictionary *loginDataChild = nil;
-    __block BOOL loginSuccessful = NO;
-    [[GGDataManager defaultManager] authenticateUser:nil usingBlock:^(NSDictionary *data, NSError *err)
-     {
-         loginDataRoot = data;
-         [loginDataRoot enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
-          {
-              loginDataChild = [loginDataRoot objectForKey:key];
-              [loginDataChild enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
-               {
-                   if([key isEqualToString:self.userId.text] && [obj isEqualToString:self.password.text])
-                   {
-                       loginSuccessful = YES;
-                       *stop = YES;
-                   }
-               }];
-          }];
-     }];
-    if(loginSuccessful){
-        [self performSegueWithIdentifier:@"Authenticate" sender:self]; // Changes the scene to GGHomeViewController
-        [GlobalMemory setObject:self.userPasswordTF.text forKey:@"UserID"];
-    }
-    else{
-        [CommonUtils showSimpleAlertWithTitle:@"Login Failed" andMessage:@"Invalid username or password"];
-    }
-#endif
-}
 
 #pragma mark -
 #pragma PrepareSeague for specific controller
@@ -242,4 +172,72 @@
     NSLog(@"from segue id: %@", segue.identifier);
 }
 
+- (void) loadData :(Lib2ErgoRequestUtils*) util{
+    
+    [CommonUtils startActivityIndicatorOnView:self.view withText:@"Authenticating..."];
+    NSString *service = [NSString stringWithFormat:@"%@DeviceID=%@&Username=%@&password=%@",kServiceLogin,kUniqueDeviceID,
+                         self.usernameTF.text,self.userPasswordTF.text];
+    
+    [util doRequestForService:service usingCompletionBlock:^(id data, NSError *error) {
+        
+        [[ICGDataManager defaultManager] parseDataForLogin:data];
+        
+        
+        if (data != nil) {
+            NSDictionary *dict = (NSDictionary *)data;
+            if([[dict allKeys] containsObject:@"Result"])
+            {
+                [CommonUtils showSimpleAlertWithTitle:@"Login Failed" andMessage:@"Username or password was entered incorrectly!"];
+                [CommonUtils stopActivityIndicatorOnView:self.view];
+            }
+            else {
+                
+                [CommonUtils stopActivityIndicatorOnView:self.view];
+                
+                
+                self.splashVC = [[ICASplashViewController alloc] init];
+                self.splashVC.view = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.x, self.view.frame.size.width, self.view.frame.size.height)];
+                [self presentViewController:self.splashVC animated:YES completion:nil];
+                
+
+                NSString* temp = @"GetEventList?DeviceID=5654&token=ZO9VK3LSPTGKAXH983A7TEVC15379G&OrganizerID=2";
+                
+                //                    LoginResponse *res = [[ICGDataManager defaultManager] loginResponse];
+                //                    [util doRequestForService:[NSString stringWithFormat:kGetEventListService,[res DeviceID],
+                //                                               [res Token], [res OrganizerID]] usingCompletionBlock:^(id data, NSError *error) {
+                
+                
+                [util doRequestForService:temp usingCompletionBlock:^(id data, NSError *error) {
+                    
+                    if(![[dict allKeys] containsObject:@"Result"]) {
+                        
+                        sleep(2);
+                        [[ICGDataManager defaultManager] listOfEventsFromData:data];
+                        
+                        ///Get Attendee List
+                        [util doRequestForService:kTempGetAttendee usingCompletionBlock:^(id data, NSError *error) {
+                            if(![[dict allKeys] containsObject:@"Result"]) {
+                                
+                                [[ICGDataManager defaultManager] attendeeList:data];
+                                NSArray *data = [[ICGDataManager defaultManager] attendeesList];
+                                NSLog(@"Attendee Data = %@", [data description]);
+                                
+                                [self.splashVC dismissViewControllerAnimated:YES
+                                                                  completion:nil];
+                                
+                                
+                                [self performSegueWithIdentifier:@"eventlistpage" sender:self];
+                                
+                            }
+                            
+                        }];
+                    }
+                }];
+                
+            }
+        }
+        
+    }];
+    
+}
 @end
