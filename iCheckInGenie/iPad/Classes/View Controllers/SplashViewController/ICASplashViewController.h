@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ICGBaseViewController.h"
 
-@interface ICASplashViewController : ICGBaseViewController
+@interface ICASplashViewController : UIViewController
 
 @end

@@ -26,22 +26,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    [self performSelector:@selector(goToLandingPage)
-               withObject:nil
-               afterDelay:1.0f];
 }
 
-- (void)goToLandingPage{
-    
-    [self performSegueWithIdentifier:@"landingpage" sender:self];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.x, self.view.frame.size.width, self.view.frame.size.height)];
+    imgView.image = [UIImage imageNamed:@"MenuBackground"];
+    imgView.contentMode = UIViewContentModeScaleToFill;
+    [self.view addSubview:imgView];
+    [CommonUtils startActivityIndicatorOnView:self.view withText:@"Loading Configuration"];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [CommonUtils stopActivityIndicatorOnView:self.view];
 }
 
 @end
