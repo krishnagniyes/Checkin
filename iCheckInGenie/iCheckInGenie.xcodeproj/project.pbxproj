@@ -12,6 +12,7 @@
 		26495EFD198758E4008C1F96 /* CustomActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495EF7198758E4008C1F96 /* CustomActivityIndicatorView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26495EFE198758E4008C1F96 /* SimpleImageDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495EF9198758E4008C1F96 /* SimpleImageDownLoad.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26495F02198770EE008C1F96 /* LoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 26495F01198770EE008C1F96 /* LoginResponse.m */; };
+		266BB6891989E0F200FBB8A8 /* ICSubEventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 266BB6881989E0F200FBB8A8 /* ICSubEventsListViewController.m */; };
 		26B6CE3119889F8200B08E04 /* AttendeeDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B6CE3019889F8200B08E04 /* AttendeeDetails.m */; };
 		26B6CE341988AFD900B08E04 /* EventList.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B6CE331988AFD900B08E04 /* EventList.m */; };
 		6B0A10DA18BF4407007A7EF0 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A10D918BF4407007A7EF0 /* beep.mp3 */; };
@@ -203,6 +204,8 @@
 		26495EFF1987591C008C1F96 /* PickerPopupDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerPopupDelegateProtocol.h; sourceTree = "<group>"; };
 		26495F00198770EE008C1F96 /* LoginResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
 		26495F01198770EE008C1F96 /* LoginResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginResponse.m; sourceTree = "<group>"; };
+		266BB6871989E0F200FBB8A8 /* ICSubEventsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSubEventsListViewController.h; sourceTree = "<group>"; };
+		266BB6881989E0F200FBB8A8 /* ICSubEventsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSubEventsListViewController.m; sourceTree = "<group>"; };
 		26B6CE2F19889F8200B08E04 /* AttendeeDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendeeDetails.h; sourceTree = "<group>"; };
 		26B6CE3019889F8200B08E04 /* AttendeeDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendeeDetails.m; sourceTree = "<group>"; };
 		26B6CE321988AFD900B08E04 /* EventList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventList.h; sourceTree = "<group>"; };
@@ -685,6 +688,8 @@
 			children = (
 				6B6894EF18ABDFC500619D76 /* ICGEventListViewController.h */,
 				6B6894F018ABDFC500619D76 /* ICGEventListViewController.m */,
+				266BB6871989E0F200FBB8A8 /* ICSubEventsListViewController.h */,
+				266BB6881989E0F200FBB8A8 /* ICSubEventsListViewController.m */,
 			);
 			name = EventListViewController;
 			path = "iPad/Classes/View Controllers/EventListViewController";
@@ -1442,6 +1447,7 @@
 				6B53843A18CB62E200F72939 /* CustomAlertView.m in Sources */,
 				6B6894EE18ABDFB300619D76 /* ICGEvenLandingViewController.m in Sources */,
 				6BA427F318A00DC600473959 /* GlobalMemory.m in Sources */,
+				266BB6891989E0F200FBB8A8 /* ICSubEventsListViewController.m in Sources */,
 				6BA427F518A00DC600473959 /* Reachability.m in Sources */,
 				6B889B1818C2E6EA000C8EDA /* CheckIN.xcdatamodeld in Sources */,
 				6B889B8018C301FC000C8EDA /* AFHTTPSessionManager.m in Sources */,
