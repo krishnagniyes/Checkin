@@ -12,10 +12,18 @@
 
 @interface ICGDataManager : NSObject
 + (instancetype) defaultManager;
-- (RemoteOperation *)operationForType:(NSString *)type;
-- (void) fetchData:(CommpletionHandler)block;
 
-- (void)parseDataForLogin:(id) data;
 @property (nonatomic, strong) LoginResponse *loginResponse;
+
+@property (nonatomic, strong) NSArray *eventsList;
+
+@property (nonatomic, strong) NSArray *attendeesList;
+
+
+- (RemoteOperation*)operationForType:(NSString *)type;
+- (void)fetchData:(CommpletionHandler)block;
+- (void)parseDataForLogin:(id) data;
+- (NSArray*)listOfEventsFromData:(id)data;
+- (void)attendeeList:(id)data;
 
 @end

@@ -59,11 +59,11 @@
 @property (nonatomic, retain) NSString *ModuleId;
 
 @property (nonatomic, retain) NSString *Parnt_Ev_Id;
-@property (nonatomic, retain) NSString *PendingCheckIns;
+@property (nonatomic, retain) NSNumber *PendingCheckIns;
 @property (nonatomic, retain) NSString *Regs_Strt_Dt;
 @property (nonatomic, retain) NSString *Sync_Ev_Id;
-@property (nonatomic, retain) NSString *TotalAttendees;
-@property (nonatomic, retain) NSString *TotalCheckIns;
+@property (nonatomic, retain) NSNumber *TotalAttendees;
+@property (nonatomic, retain) NSNumber *TotalCheckIns;
 
 
 @end
