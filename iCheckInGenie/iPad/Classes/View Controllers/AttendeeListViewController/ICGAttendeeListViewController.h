@@ -9,5 +9,5 @@
 #import "ICGBaseViewController.h"
 
 @interface ICGAttendeeListViewController : ICGBaseViewController
-
+@property (copy, nonatomic) NSString *eventName;
 @end

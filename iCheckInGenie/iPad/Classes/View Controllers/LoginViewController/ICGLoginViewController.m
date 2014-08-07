@@ -41,6 +41,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+
 //    self.title = _navTitle;
 //    self.navigationController.navigationBarHidden = YES;
 	// Do any additional setup after loading the view.

@@ -41,7 +41,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kBackgroundColor_iPhone]]];
+//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kBackgroundColor_iPhone]]];
     self.navigationItem.hidesBackButton = YES;
     self.activeEvents = [[NSMutableArray alloc] init];
     self.closedEvents = [[NSMutableArray alloc] init];

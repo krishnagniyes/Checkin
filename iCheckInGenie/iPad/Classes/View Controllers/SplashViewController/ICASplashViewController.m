@@ -32,7 +32,7 @@
     [super viewWillAppear:animated];
 
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.x, self.view.frame.size.width, self.view.frame.size.height)];
-    imgView.image = [UIImage imageNamed:@"MenuBackground"];
+    imgView.image = [UIImage imageNamed:@"splashimage"];
     imgView.contentMode = UIViewContentModeScaleToFill;
     [self.view addSubview:imgView];
     [CommonUtils startActivityIndicatorOnView:self.view withText:@"Loading Configuration"];

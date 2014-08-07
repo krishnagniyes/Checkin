@@ -57,7 +57,10 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
 {
     [super viewDidLoad];
     
+    self.title = @"Event Name";
+    
     self.attendeesArray = (NSMutableArray *)[[ICGDataManager defaultManager] attendeesList];
+    
     
 //    for (ICGAttendeeDetailCell *attendee in self.attendeesArray) {
 //        if ([[event Ev_Sts_Cd] isEqualToString:@"Active"]) {
